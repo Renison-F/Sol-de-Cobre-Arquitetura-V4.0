@@ -1,0 +1,1487 @@
+{
+  "version": "4.0",
+  "hash": "SHA-256",
+  "notice": "Checksums detect changes, not authorship. Excludes this inventory and regenerated offline catalog to avoid circular hashes.",
+  "files": [
+    {
+      "path": "00-governanca/00-indice.md",
+      "bytes": 809,
+      "sha256": "aeb8e4a5af22e4993f7a7e8f20c1b7709ab70450886cbdc848f91580aa0a1215"
+    },
+    {
+      "path": "00-governanca/01-escopo-e-status.md",
+      "bytes": 870,
+      "sha256": "e1355f8c1092bf41ee6d2e16f1b20cb03de574db685d1241a7ca72f4a467130c"
+    },
+    {
+      "path": "00-governanca/02-definition-of-ready.md",
+      "bytes": 422,
+      "sha256": "223c84bdc1a062a729b592cf88becdb94a74424d92a7de98accc0324eef72706"
+    },
+    {
+      "path": "00-governanca/03-definition-of-done.md",
+      "bytes": 348,
+      "sha256": "4a148a306ae271b686f7cb0643f532c2b38465ffe0315bc4c4a6cfd74594977f"
+    },
+    {
+      "path": "00-governanca/04-rastreabilidade.md",
+      "bytes": 460,
+      "sha256": "fc042c54e61d49bc489ad279dd8e0480e240ff9b4bef0f8a46b490ec3f2a5f43"
+    },
+    {
+      "path": "00-governanca/05-riscos-e-premissas.md",
+      "bytes": 921,
+      "sha256": "cf685e63a3ae9bf73f9eef271b7c3f144d04b3d11e085476a0e56e0f70687ca2"
+    },
+    {
+      "path": "00-governanca/06-adr-index.md",
+      "bytes": 545,
+      "sha256": "b74f6cdbe361f0caa507b748d55efe817a3539546e615924a28fc7508908db52"
+    },
+    {
+      "path": "00-governanca/07-matriz-de-cobertura.md",
+      "bytes": 2360,
+      "sha256": "9d96b2eb18d6c3f82a70c71abad71fd3c7794d0350a4125f3aa94944f05c0338"
+    },
+    {
+      "path": "01-universo/01-o-mundo.md",
+      "bytes": 2179,
+      "sha256": "25f6e7580b08189b4b6cb9799426d8dd8e347e09458bafcc85e10eb064fe1c73"
+    },
+    {
+      "path": "01-universo/02-premissa.md",
+      "bytes": 1321,
+      "sha256": "37a7b745936535eda4352b7ebdf61e0111163c35be0d4da1f6cee6e09c51ea51"
+    },
+    {
+      "path": "01-universo/04-regras-narrativas.md",
+      "bytes": 1150,
+      "sha256": "2dca2f53678d4f99c94ca9c986c2de0b99f0b8cfc538a287ae1c0c02074bbf1b"
+    },
+    {
+      "path": "01-universo/05-cronologia.md",
+      "bytes": 794,
+      "sha256": "b597987d381f839e3794a1f06af06aab57e4d3caf5f9d34b114b51a16db5bb39"
+    },
+    {
+      "path": "01-universo/06-glossario.md",
+      "bytes": 563,
+      "sha256": "80b2a29065d8103066e8bfd61362244cc6c62252b6bb2a5ce149e7d12c61f13e"
+    },
+    {
+      "path": "01-universo/07-faccoes.md",
+      "bytes": 641,
+      "sha256": "bd084ce41545d332efb7a3f6eadf4eb0f387039c9449412a637395501fb27a7e"
+    },
+    {
+      "path": "01-universo/08-canon-v3.md",
+      "bytes": 1789,
+      "sha256": "cd2c7076ad8bffc011be5e9179360b6910417f630da75fa5f18fb4a1f5e69f58"
+    },
+    {
+      "path": "02-personagens/INDICE.md",
+      "bytes": 2817,
+      "sha256": "4e310ab27f7ddb8bd569a2b4d64f844f562bf33703a3530b6b3e537ea4c88f32"
+    },
+    {
+      "path": "02-personagens/barao-ferrugem.md",
+      "bytes": 3241,
+      "sha256": "3407e063edeb84257e13018168522a74246b35d40e97a0a1acd3fef04070772f"
+    },
+    {
+      "path": "02-personagens/britador-colosso.md",
+      "bytes": 1989,
+      "sha256": "5e04fad1489b2f6d7dcedc6eeca3dd648d0c8c5b292626b1add999046ed66ff8"
+    },
+    {
+      "path": "02-personagens/cascavel-de-silicio.md",
+      "bytes": 2008,
+      "sha256": "0a10d37d4b2fe23d8b9660c97ff5e95aef2cd270a73a1760e0562555e03ff2f3"
+    },
+    {
+      "path": "02-personagens/condutor-relampago.md",
+      "bytes": 2018,
+      "sha256": "ad0a38dfd4d4523d4809f8f218bffe1e004885345c81a86ac5fee3dc1decf434"
+    },
+    {
+      "path": "02-personagens/faisca.md",
+      "bytes": 3141,
+      "sha256": "aed917e5709f3247df19d8d8f9a19244de35dda8f2a2b66c3f1c9ebd06862b77"
+    },
+    {
+      "path": "02-personagens/fiscal-de-trilhos.md",
+      "bytes": 1999,
+      "sha256": "18cfe1661a305ab1b28e0027ff6e10c9abd7b68972ff82c8d9033eb9ce897153"
+    },
+    {
+      "path": "02-personagens/general-para-raios.md",
+      "bytes": 2008,
+      "sha256": "bbb241fbd69b8660a32ad6f076818112cf958bd7a53092ac8c669b6879f7a8ca"
+    },
+    {
+      "path": "02-personagens/guardiao-dos-canais.md",
+      "bytes": 2021,
+      "sha256": "e121ee38cf25f9f94b1cd64874d68d49be0d34e23ef847bb29e694e036e90bfc"
+    },
+    {
+      "path": "02-personagens/isadora-veredas.md",
+      "bytes": 3215,
+      "sha256": "fdb5ed425aa176d80e85db6ba59f76a8c45480439467bb58be3b6d1e328cccdd"
+    },
+    {
+      "path": "02-personagens/luna-fagulha.md",
+      "bytes": 3257,
+      "sha256": "cb5dcb10537a960b56940acb70e595eac85462d166de47906877cb4a692fdab1"
+    },
+    {
+      "path": "02-personagens/madame-engrenagem.md",
+      "bytes": 2009,
+      "sha256": "30051c0df15d258e8521a53a88e7a5467bfb128faa43ad49a8faaa1d7583ae50"
+    },
+    {
+      "path": "02-personagens/maquinista-sem-rosto.md",
+      "bytes": 2014,
+      "sha256": "aa2839d875b5fae396891afe1d785fb8e9da8d54a353e8738496ec45074c0cbb"
+    },
+    {
+      "path": "02-personagens/mara-vento.md",
+      "bytes": 3134,
+      "sha256": "a890a35c1e6c5efd92c53c289478344cf4163e78f801769b1d60040c05d2d1b0"
+    },
+    {
+      "path": "02-personagens/oraculo-de-latao.md",
+      "bytes": 2002,
+      "sha256": "2f214007bae60ee25d1e64936a871b8197a085bc539b506520dac1f5b22a6674"
+    },
+    {
+      "path": "02-personagens/trovico.md",
+      "bytes": 3133,
+      "sha256": "10054ea6ec7be14c7e9787a36274333df65bc025e2b3f8c6eef57c82dc1f948d"
+    },
+    {
+      "path": "02-personagens/ze-trovao.md",
+      "bytes": 3160,
+      "sha256": "b6650234e0ea1ba3379d90578d7ad4c82fb0a97203d95a8b77f28595a9b8ca20"
+    },
+    {
+      "path": "03-cenarios/01-estacao-por-do-sol.md",
+      "bytes": 3729,
+      "sha256": "3f25ecd6cb1df40875d5c27adb09974bcb7022ae6f7d12d1ae620d1b87b3d398"
+    },
+    {
+      "path": "03-cenarios/02-canion-dos-mil-ecos.md",
+      "bytes": 3587,
+      "sha256": "ea7e74a639e0c4f4c1585d0d4cf26cacd1c79d876fadbfa02d29448de001d0d5"
+    },
+    {
+      "path": "03-cenarios/03-minas-de-ferrugem.md",
+      "bytes": 3630,
+      "sha256": "767d9b9980a34a54d237e105fef8d13be7fc3df5ce1850b365db91bb30d24d77"
+    },
+    {
+      "path": "03-cenarios/04-cidade-fantasma.md",
+      "bytes": 3673,
+      "sha256": "d6e83373b9ccc73d1373aefa146eb2bc79a0a67b3749f687ad2d9b07f7702067"
+    },
+    {
+      "path": "03-cenarios/05-expresso-de-cobre.md",
+      "bytes": 3711,
+      "sha256": "9d9e4c45158a740a7533667d3dc03882d46d6b8ccabf6f6991714eeaef2a0557"
+    },
+    {
+      "path": "03-cenarios/06-oasis-das-vozes.md",
+      "bytes": 3715,
+      "sha256": "f89786e2a86889af68d3fd825dec4b76bb31e00d37b52bd5e9d6c78ca93d054b"
+    },
+    {
+      "path": "03-cenarios/07-serra-dos-relampagos.md",
+      "bytes": 3716,
+      "sha256": "304ab74f73439ad930b2fa33b0cce44d416f7cf0a42921919c0501a89e51d1b4"
+    },
+    {
+      "path": "03-cenarios/08-observatorio-perdido.md",
+      "bytes": 3855,
+      "sha256": "39629de787e9e65f4a01671cbedb3a8ef529543b92b732d0864897430b9babe4"
+    },
+    {
+      "path": "03-cenarios/09-cidadela-ferrugem.md",
+      "bytes": 3889,
+      "sha256": "91edd6c28714093ad39908cd514bdf11be618b6c9799f32b076c7df421162d0f"
+    },
+    {
+      "path": "03-cenarios/10-coracao-da-tempestade.md",
+      "bytes": 4158,
+      "sha256": "9be35e61f1e390f351981f97636f8e3f99b4e92e63f18b28009ebdde8942ac1f"
+    },
+    {
+      "path": "04-roteiro/ato-01.md",
+      "bytes": 1221,
+      "sha256": "9664859db470c1534599510f4567fc984dfaa003292be8370bc2e600b8bce035"
+    },
+    {
+      "path": "04-roteiro/ato-02.md",
+      "bytes": 1595,
+      "sha256": "022a80ad8426729113206d3f73dcd09caa2dbbbd2522a57268335a39349512ff"
+    },
+    {
+      "path": "04-roteiro/ato-03.md",
+      "bytes": 1502,
+      "sha256": "0d46c81d41b0e7057df301a653c6d3e2961b483174e0608f066111ca5c75ff33"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-01.md",
+      "bytes": 1933,
+      "sha256": "0de9b9d0ab6209ecffd0392e7bde09526d6ca9257e699ba1b60a8e4735b7cd94"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-02.md",
+      "bytes": 1880,
+      "sha256": "1dd4ffdfb5e5f993054bc37b9fbeaa08a82c108149e2da59d42756a0daca2e9f"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-03.md",
+      "bytes": 1946,
+      "sha256": "3eee74329b2275393b340525f0958245435eff9efd5d3f7a1531218fe1f89767"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-04.md",
+      "bytes": 1917,
+      "sha256": "1831de833818dbac7f8aef40741535fa7f9cd247f4212dd4760923c0d283afcb"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-05.md",
+      "bytes": 1962,
+      "sha256": "5574b7a87d6857d67b9986e9866016f5fcb3831f5f4d71e2657b5c3986c689aa"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-06.md",
+      "bytes": 1936,
+      "sha256": "2d7c119c9430d95daef59f1f32879108dbee57e80e990c74d4d5ec79ff7ae0a7"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-07.md",
+      "bytes": 1879,
+      "sha256": "fc5d7c7efe32798c3b3959678e299a5f3e026e773813f52bc3142da5ab39c393"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-08.md",
+      "bytes": 1963,
+      "sha256": "d9c79d02558262dc29702b0fa48dbe277a1a39bb7dcf849588b85ec5ad48ca38"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-09.md",
+      "bytes": 1963,
+      "sha256": "6bfb04678959cce57a7f2a6645524c1989631b580e43f990c69665f41ebf0c09"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-10.md",
+      "bytes": 2174,
+      "sha256": "27c2a6bde1f0c92e7e3229fb19d7e12ea1aa4caed324cd07a0cd74a39d7c46d3"
+    },
+    {
+      "path": "04-roteiro/cenas/SC-11.md",
+      "bytes": 1752,
+      "sha256": "d06c8b45d09a7fc153cc468bcc19f616970e186506dc859c44b151d815067779"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-01.md",
+      "bytes": 4994,
+      "sha256": "2add4dd76e1d03c8574b5c65efb09190e920e98452091eb1d2283c76f229862d"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-02.md",
+      "bytes": 4841,
+      "sha256": "e8cd9ec4a62f14658dc823d3e1fd1c862e18624816f7b89d4b4956ada653b00a"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-03.md",
+      "bytes": 4916,
+      "sha256": "76e8fabff2cbe423b3c984966dec4a410926a7e4566df563060ffa1ab8556d65"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-04.md",
+      "bytes": 4928,
+      "sha256": "4b71e6afd2567558e7dc07fb68070cadbbf5a25a1e3ac061bcaa8cd2a7af5d2d"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-05.md",
+      "bytes": 4966,
+      "sha256": "e9ff7d7989e06e8acaa308a13c2c14c51d8bbec5e1484dcbf17898c7a487e8ed"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-06.md",
+      "bytes": 4972,
+      "sha256": "0a3c8db270fd5d0d20b987bdb59bc8fcacac6d9c33fb1e67d6e13b05d940a242"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-07.md",
+      "bytes": 4939,
+      "sha256": "7fe0b325d4a1f909d24471214cff35b41d085eadeb6b3b7aa03f70aa2c7da5ef"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-08.md",
+      "bytes": 5071,
+      "sha256": "c2a4bf019fc7741db9a578832d4300e8d04750e833c5f382cd60e5239207e0c8"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-09.md",
+      "bytes": 4991,
+      "sha256": "a7bafb49d09d948eeb4ee4b08e3467c101cebc1edefe0b777b603d1aeefbc014"
+    },
+    {
+      "path": "04-roteiro/episodios/EP-10.md",
+      "bytes": 5184,
+      "sha256": "03b902d60ff6655e52b0eac7158a2fc13f49ee4b6b41cf8427ebe332285f99ef"
+    },
+    {
+      "path": "04-roteiro/fluxo-da-campanha.md",
+      "bytes": 760,
+      "sha256": "0f98107ccfcab153cbab29685987cb3aad3130cd11577ae1768f9778fc09fe7a"
+    },
+    {
+      "path": "04-roteiro/guia-de-dialogos.md",
+      "bytes": 811,
+      "sha256": "279714f0dbde9e1307d4f458cd238d916a43455f79ff4a4812cf0032b59a4df5"
+    },
+    {
+      "path": "04-roteiro/ramificacoes-e-finais.md",
+      "bytes": 934,
+      "sha256": "6081edfe3154204299fd74f31399ae53cf0e924a99de48795cc4793e87b0e0d5"
+    },
+    {
+      "path": "05-game-design/BESTIARIO.md",
+      "bytes": 4660,
+      "sha256": "53069d881abc851fa98b6dfa998aae1823ceccfce2f17eaff9b1dd820b8cfdc2"
+    },
+    {
+      "path": "05-game-design/GDD.md",
+      "bytes": 4298,
+      "sha256": "7c243f99fe4f5c6582876bfd34c541a2c461ffb5e9dc91894a6d13f84e000ed7"
+    },
+    {
+      "path": "05-game-design/abilities-e-combos.md",
+      "bytes": 1770,
+      "sha256": "89b673745b1b01525763a63f1c00b25a3e6c1a0c079657a88b81c23e223c4c69"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-01.md",
+      "bytes": 2668,
+      "sha256": "b8898e875f7f00b8e8c32796ec2d8652f5acb42a92ff831e0a1c6015eab4604c"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-02.md",
+      "bytes": 2705,
+      "sha256": "818c12631d28072a48342d166307f4d50a8a4caed03ff24c8aec17da065146ec"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-03.md",
+      "bytes": 2712,
+      "sha256": "fd25af2f6c8521ce5946aa97ca98956428f3c2674160a2ff56e21c003e732ce1"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-04.md",
+      "bytes": 2743,
+      "sha256": "5415f3038517b449da9c4d53a00084fc1bf80d40358db9e70257eef02420885b"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-05.md",
+      "bytes": 2776,
+      "sha256": "b37c541d53a2aa91dcac29be41bf41e551b7686fba2dfebf2650e93affdffaf2"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-06.md",
+      "bytes": 2775,
+      "sha256": "e7081438457741481492c4577eed3f7ac4afe5670c6bb0e0cdcaa5419a27e1fe"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-07.md",
+      "bytes": 2689,
+      "sha256": "7456f7fd50d82ac784c23c2bf57181b50d22b6420d7b84241f7ada48843090c3"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-08.md",
+      "bytes": 2743,
+      "sha256": "939d72fa2cb1f98bf5f91b2a6e167723a464c1b9255bde93f738196b3e15f841"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-09.md",
+      "bytes": 2770,
+      "sha256": "326dbae5af65eaad8ef0cfecc983b3bfd095bdda33391724e7cea5286bbf62c0"
+    },
+    {
+      "path": "05-game-design/bosses/BOSS-10.md",
+      "bytes": 2809,
+      "sha256": "403ef48252f32fb1f3333d4012e37c95a0669bfe170244b414adb8bb7c6ac4b3"
+    },
+    {
+      "path": "05-game-design/camera-2-5d.md",
+      "bytes": 1157,
+      "sha256": "23784050e2869bdc56f59b1c28c84038564877287744e978a68c8b4ccd5f0572"
+    },
+    {
+      "path": "05-game-design/checkpoints-saves.md",
+      "bytes": 642,
+      "sha256": "7e99974dd56d80471f5e5528eb0c99ece48b71d62715733baffcb7f35da9c457"
+    },
+    {
+      "path": "05-game-design/chefes-e-combate.md",
+      "bytes": 696,
+      "sha256": "3a27fd710a17e3495676d28b4e58dab32a82a627beb0b6eeba6a13c95256a652"
+    },
+    {
+      "path": "05-game-design/controles-touch.md",
+      "bytes": 1509,
+      "sha256": "da1972d2073b98f39beeb3d0f16ac67cff9bf1c57edd8d90adad4e22e601c88a"
+    },
+    {
+      "path": "05-game-design/curva-de-dificuldade.md",
+      "bytes": 542,
+      "sha256": "42e66dc0bf40ea0f1d9c95d80aacf228cd0f353783e1dc9a01078787a2e733c5"
+    },
+    {
+      "path": "05-game-design/economia-e-coletaveis.md",
+      "bytes": 1046,
+      "sha256": "8cb4907ea5fbc0b690b8eb9e75e77d884ba41d67e4858f9409fdab97534d6ec1"
+    },
+    {
+      "path": "05-game-design/hud-acessibilidade.md",
+      "bytes": 674,
+      "sha256": "31b738715fd0e247c88d8edfa8898ef3e34fcd94408ef3ac24e71ea51c514f5c"
+    },
+    {
+      "path": "05-game-design/progresso-e-exploracao.md",
+      "bytes": 452,
+      "sha256": "7191c253ebde9b544c706df92a7e7973eb418c4fb76f1c0d90da2c14d225f30f"
+    },
+    {
+      "path": "05-game-design/tutorializacao.md",
+      "bytes": 470,
+      "sha256": "8914b5873fda68119636c3d24e8a27cdcf3316c99515c84b2c22890f7be1f2cb"
+    },
+    {
+      "path": "05-missoes/principais/M01.md",
+      "bytes": 1288,
+      "sha256": "ace2c42c44ed116f919d8d2d049552f62a32067a88322330cb74170fec800eb5"
+    },
+    {
+      "path": "05-missoes/principais/M02.md",
+      "bytes": 1231,
+      "sha256": "0b808e6338b3f7f7ecad6c9ccf20ba02605de7fc68485659988a7bc83280949e"
+    },
+    {
+      "path": "05-missoes/principais/M03.md",
+      "bytes": 1270,
+      "sha256": "b835e73458dce4f77eff41cec2b4c17cfea9b5099d768ce1e064f79a6f32165d"
+    },
+    {
+      "path": "05-missoes/principais/M04.md",
+      "bytes": 1278,
+      "sha256": "5faf0bc89d93720d81d9beb3a9fe860c1459f8c45295aa1d01ec05ebc4e5981d"
+    },
+    {
+      "path": "05-missoes/principais/M05.md",
+      "bytes": 1276,
+      "sha256": "331608288391ed76b8cefac057feb1015fe4d0de4a8a091ac1dddab830bb1515"
+    },
+    {
+      "path": "05-missoes/principais/M06.md",
+      "bytes": 1257,
+      "sha256": "34299832b8ba0ffa63d40fe213dbc73e88c789633c948a450be589e45b8ec993"
+    },
+    {
+      "path": "05-missoes/principais/M07.md",
+      "bytes": 1285,
+      "sha256": "620fc8fa9805314786bac6fb14b7e74e3908f64dbe5c0a45fb47c8bf8dd8c536"
+    },
+    {
+      "path": "05-missoes/principais/M08.md",
+      "bytes": 1278,
+      "sha256": "8877f24537883c74749d2088a710037bba0d889b8ef5cece0ee5fd2d4c4717ec"
+    },
+    {
+      "path": "05-missoes/principais/M09.md",
+      "bytes": 1438,
+      "sha256": "67b9e203c7c199bf283808104482a3e80d67103b9e96b910c3e3350e76e0c758"
+    },
+    {
+      "path": "05-missoes/principais/M10.md",
+      "bytes": 1293,
+      "sha256": "501e2b99b68d505365b5275bf8b068143ca9c181750406ef7742bdea5fc1afee"
+    },
+    {
+      "path": "05-missoes/secundarias/S01.md",
+      "bytes": 1262,
+      "sha256": "9f3b7cc1ef243d7e7b49a47d0a785a065cac99d9604c14d2518a1dfe411a29bf"
+    },
+    {
+      "path": "05-missoes/secundarias/S02.md",
+      "bytes": 1215,
+      "sha256": "a40c8b2b8bd65e7219ce1ad77c8585fa385b90c7509818c83382e9ef7b77d6b7"
+    },
+    {
+      "path": "05-missoes/secundarias/S03.md",
+      "bytes": 1230,
+      "sha256": "12dd49e5902c11b90132e02fbd845401cb73fd5541cb414cf19d79edf15e025a"
+    },
+    {
+      "path": "05-missoes/secundarias/S04.md",
+      "bytes": 1248,
+      "sha256": "b5b3d28685a9b3e6dcda54cb23c763cb0ba4775c713f6981a246abb541c7a980"
+    },
+    {
+      "path": "05-missoes/secundarias/S05.md",
+      "bytes": 1224,
+      "sha256": "7d2f3a0f41ab959d2ef774ea43ef611f8ccf6ed1d10110f62abd01ca921682cc"
+    },
+    {
+      "path": "05-missoes/secundarias/S06.md",
+      "bytes": 1248,
+      "sha256": "ffe1300cd19a987751b985e98cfb2e0dcd14750a2a1abeaced30b3ca8ab1088c"
+    },
+    {
+      "path": "05-missoes/secundarias/S07.md",
+      "bytes": 1265,
+      "sha256": "7c96e389d797637e7a65520552491b2026d8f5d95e33d900a6167b39378a7fa4"
+    },
+    {
+      "path": "05-missoes/secundarias/S08.md",
+      "bytes": 1274,
+      "sha256": "70ae4aae6aa6fadc681c27ddcbc6ca3d2d1a61d52e83a34eede6ecf15b1fcb1d"
+    },
+    {
+      "path": "06-arquitetura/ADRs/ADR-001-unity-urp.md",
+      "bytes": 285,
+      "sha256": "35a0014fca24cc7ae1d20327db8468ebca1d7db11220dc7526efb17cb3559fbe"
+    },
+    {
+      "path": "06-arquitetura/ADRs/ADR-002-offline-first.md",
+      "bytes": 618,
+      "sha256": "3e8d50af4137440a17a78678fc20d85804826e1ef06627c6a7357a5498790032"
+    },
+    {
+      "path": "06-arquitetura/ADRs/ADR-003-licenca-premium.md",
+      "bytes": 883,
+      "sha256": "d35f9bbe94cd2327cb7177dff1debb47fa9fbeb7d4a5b81a829a0676cdc54f4c"
+    },
+    {
+      "path": "06-arquitetura/ARQUITETURA.md",
+      "bytes": 4021,
+      "sha256": "4797a81239561749294525f7e0edce60b1ea7023ca959a8917a561685f8d6b34"
+    },
+    {
+      "path": "06-arquitetura/arquitetura-do-dashboard.md",
+      "bytes": 982,
+      "sha256": "f35f5a08a9ea803c6e2c8db90c6ff33cf0f44ac69cf81bda085f6baf7fc6d236"
+    },
+    {
+      "path": "06-arquitetura/build-ci.md",
+      "bytes": 433,
+      "sha256": "f4fa994e7523d6bc927f8cd8b5b5098722dc4ffcb3ba566e0bf1322bef87e508"
+    },
+    {
+      "path": "06-arquitetura/content-pipeline.md",
+      "bytes": 517,
+      "sha256": "91ebc84c8342c835937ded9664fce7b533ae5b3b38136c4196be06a11057a091"
+    },
+    {
+      "path": "06-arquitetura/contratos-eventos.md",
+      "bytes": 437,
+      "sha256": "6214dcc858c30b9a6b2ee818d43189d3778473cf4ccdc48c4dc9be1860a22dc2"
+    },
+    {
+      "path": "06-arquitetura/modelo-de-componentes.md",
+      "bytes": 809,
+      "sha256": "07195366757fc07d6790b409ebc7814e428d6ba55ab3db135978aa52fd781d2f"
+    },
+    {
+      "path": "06-arquitetura/performance-mobile.md",
+      "bytes": 729,
+      "sha256": "4e24a8bcf29fde3d96f3a3327f20a0480882628b879c10f21964737357c08ea1"
+    },
+    {
+      "path": "06-arquitetura/save-schema.md",
+      "bytes": 520,
+      "sha256": "aa1c0e6a7798e8eb1ad574127e79069ee20b46f8f0454f4d1eb102379c680813"
+    },
+    {
+      "path": "06-arquitetura/scene-lifecycle.md",
+      "bytes": 500,
+      "sha256": "db87eac76cd50427c72cf259ff8e0f4e528e9ffa7412c5116f138556289064cc"
+    },
+    {
+      "path": "06-arquitetura/seguranca-e-privacidade.md",
+      "bytes": 644,
+      "sha256": "7bcb28e3ff2ed8cfa8d4fc61dc73398f13242c4555e5a81db4989db5b5680f98"
+    },
+    {
+      "path": "07-producao/KANBAN.md",
+      "bytes": 23062,
+      "sha256": "611f962aaa00015d657adb264285324fa4a94aae7c123ae15c23776831253241"
+    },
+    {
+      "path": "07-producao/ROADMAP.md",
+      "bytes": 890,
+      "sha256": "fc4b754f6e05a312f3e17a2f764216aaeb96239c4b52f37e79a8984554aeddc8"
+    },
+    {
+      "path": "07-producao/dependencias-e-estimativas.md",
+      "bytes": 1011,
+      "sha256": "07c9d25bc9e6f55a653073034e3ddd97afbbad249639fe242c29cd7f499157c3"
+    },
+    {
+      "path": "07-producao/equipe-e-papeis.md",
+      "bytes": 638,
+      "sha256": "a6a7a5fd6ac671e8953bb969ce6b74088ca7ba1e9d0e1e33ecf390e872aee5a8"
+    },
+    {
+      "path": "07-producao/pipeline-de-assets.md",
+      "bytes": 908,
+      "sha256": "b0d97fc8054680cb0e4a1fa9065c28f6bfe533c77db1e243106dcf5367901c42"
+    },
+    {
+      "path": "08-qualidade/CRITERIOS.md",
+      "bytes": 985,
+      "sha256": "200327d2a1bddf3f7127b4f10f4a2f48c1d14c2b8b00381559f64541527d31d3"
+    },
+    {
+      "path": "08-qualidade/RELATORIO-V3.md",
+      "bytes": 5313,
+      "sha256": "582404420225656e7abe8c704d588c3e5993840bfbce0dd10ab9baf5e8e4f237"
+    },
+    {
+      "path": "08-qualidade/RELATORIO-V4.md",
+      "bytes": 3691,
+      "sha256": "a5503311084791e48bb702110e17fccc6790e5ab8c79673994f1b1dfefab5328"
+    },
+    {
+      "path": "08-qualidade/acessibilidade-e-usabilidade.md",
+      "bytes": 501,
+      "sha256": "2b9d535b4766caf7cb644a971946fb9ce53c50361fe692cca9f4189f19c01743"
+    },
+    {
+      "path": "08-qualidade/dom-results.json",
+      "bytes": 654,
+      "sha256": "d4553a4bd387fbed96bf1a8014aaecb713b1cf0144bae4f12f78b293f26eff17"
+    },
+    {
+      "path": "08-qualidade/matriz-de-dispositivos.md",
+      "bytes": 442,
+      "sha256": "f3bdbfe1bbaf05e637641a24704e97d67d37f7b04b3aa1a5db04251ef4f2cf7f"
+    },
+    {
+      "path": "08-qualidade/plano-de-testes.md",
+      "bytes": 654,
+      "sha256": "8a99de8d4c787501f84a8ccb4304aacb46d9178a7d1d884c15def5799b1a7806"
+    },
+    {
+      "path": "08-qualidade/results-v4.json",
+      "bytes": 688,
+      "sha256": "f96eb8850d1d46a410dd0250c9bd8bbae418f550ff35ca2fe72c165485a14aef"
+    },
+    {
+      "path": "08-qualidade/validacao-do-portal.md",
+      "bytes": 821,
+      "sha256": "dc7d3c60720e4e13759aae86185a280e7fc872a360acb71f2b9cb648a39176a3"
+    },
+    {
+      "path": "09-arte-audio/13-do-concept-ao-modelo-3d.md",
+      "bytes": 3971,
+      "sha256": "708f82debc17f2a3249e3fea92970ae692dd639266482348d7ccbbbef2339155"
+    },
+    {
+      "path": "09-arte-audio/14-rig-lod-e-importacao.md",
+      "bytes": 4016,
+      "sha256": "9e8dd7e87d184753026a5344d217e17cfcbb36672dbddfbc22dc0b66b4cf8100"
+    },
+    {
+      "path": "09-arte-audio/15-entrega-e-homologacao-3d.md",
+      "bytes": 3220,
+      "sha256": "48cb4a0845deb955ae995ecdafaf2055bcda4929156cfb81d93740f6fd29b9b5"
+    },
+    {
+      "path": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "bytes": 4875,
+      "sha256": "e90077f23d955494048bb5940b060af0e48dc63aa1400ed09a4ac060c7f2e2d0"
+    },
+    {
+      "path": "09-arte-audio/cinematicas-animacoes.md",
+      "bytes": 496,
+      "sha256": "38abe2cbeaeed5894dee4d75c44a89dbf850ce8a4cec69b5f8eea7b960ecc03f"
+    },
+    {
+      "path": "09-arte-audio/direcao-de-cenarios.md",
+      "bytes": 1357,
+      "sha256": "921da049bd9962733d8dfa035a1fa481223f37959456c855b4fbf4ca8b5062b9"
+    },
+    {
+      "path": "09-arte-audio/direcao-visual.md",
+      "bytes": 1505,
+      "sha256": "bcc4c88866f0d4f3f9817fdeeec154ccbcada1162b7e04011ac66bf72ab34227"
+    },
+    {
+      "path": "09-arte-audio/especificacao-de-modelagem.md",
+      "bytes": 3465,
+      "sha256": "6d6c4ca88b78f7ab4a7970c25961f8f20a30ec12235af0485da0921f77e5a890"
+    },
+    {
+      "path": "09-arte-audio/figurantes.md",
+      "bytes": 1311,
+      "sha256": "998e387a751fe1cb97d41ed9d0d2416fa733549db8873692835353931a0f885e"
+    },
+    {
+      "path": "09-arte-audio/fx-e-mixagem.md",
+      "bytes": 490,
+      "sha256": "eb2e36b8950cb133bc0c6c99bf3b35926e9d266e51ffe47326461093d9830fb8"
+    },
+    {
+      "path": "09-arte-audio/modelagem/INDICE.md",
+      "bytes": 2582,
+      "sha256": "3e70e424e201a546a8f88f3ccc8296a7133524872d426ea54785b08219e97d9a"
+    },
+    {
+      "path": "09-arte-audio/modelagem/barao-ferrugem.md",
+      "bytes": 3361,
+      "sha256": "63407f1d5b80721c9f6d4171ec12b8fac9083c78f0a57b7c174a48387675f948"
+    },
+    {
+      "path": "09-arte-audio/modelagem/britador-colosso.md",
+      "bytes": 3390,
+      "sha256": "229e06d951c657cf5623bed9e1769698c36e355afaa4ee2bcee1a11d49b8260b"
+    },
+    {
+      "path": "09-arte-audio/modelagem/cascavel-de-silicio.md",
+      "bytes": 3453,
+      "sha256": "1611154ea3836e3b80a5d8f4cdbe10f13fb6b080e737939033297386d6f054aa"
+    },
+    {
+      "path": "09-arte-audio/modelagem/condutor-relampago.md",
+      "bytes": 3372,
+      "sha256": "5e02ab1945c9b8c8917fd002d812eb64f6f08640cc281450d2db0dc89956b43a"
+    },
+    {
+      "path": "09-arte-audio/modelagem/faisca.md",
+      "bytes": 3433,
+      "sha256": "4956b57084deb34be73b4fa9c3dbfa36a7b1cfb97a443332c6b90f4cf78b0edb"
+    },
+    {
+      "path": "09-arte-audio/modelagem/fiscal-de-trilhos.md",
+      "bytes": 3406,
+      "sha256": "2c598ae63518bf80f2209c7a5a3113c0d1ec90a5b26a2bbf7bf47ce590799dc1"
+    },
+    {
+      "path": "09-arte-audio/modelagem/general-para-raios.md",
+      "bytes": 3332,
+      "sha256": "ebde399a02f8cc7581487a42a627e5d96ead526784bffb39bcfeba19337ffa39"
+    },
+    {
+      "path": "09-arte-audio/modelagem/guardiao-dos-canais.md",
+      "bytes": 3432,
+      "sha256": "ea6a523d57b2c4f33b285e0520b2674a5e04e19bc0a767f2b71d58c23d5aaaa0"
+    },
+    {
+      "path": "09-arte-audio/modelagem/isadora-veredas.md",
+      "bytes": 3418,
+      "sha256": "2b5209fd91c7dbb4e67a5b85dd174b46cbf8f5df6176f19573c2365959f133eb"
+    },
+    {
+      "path": "09-arte-audio/modelagem/luna-fagulha.md",
+      "bytes": 3399,
+      "sha256": "501afc0bdebcbf23eede1ffd4ce4a3149211f43a7637d06430425aa35292bbac"
+    },
+    {
+      "path": "09-arte-audio/modelagem/madame-engrenagem.md",
+      "bytes": 3536,
+      "sha256": "6fd1a069e5b660191edb8e1b74e20b13da4d8b4d47f04ee41927189beba53a6d"
+    },
+    {
+      "path": "09-arte-audio/modelagem/maquina-da-seca.md",
+      "bytes": 3504,
+      "sha256": "9338b82616c77c436ab52c573d97f0b56daaf4551dee761a003410298f2206df"
+    },
+    {
+      "path": "09-arte-audio/modelagem/maquinista-sem-rosto.md",
+      "bytes": 3414,
+      "sha256": "d8cb69caa07140af2b2d6b8e9b597ab93e47aaab3c0c7ca1229b07756886767c"
+    },
+    {
+      "path": "09-arte-audio/modelagem/mara-vento.md",
+      "bytes": 3445,
+      "sha256": "486e6a6e2aa2e6092b0a63f1429545aeadcc03960a713ac09142297a056c947d"
+    },
+    {
+      "path": "09-arte-audio/modelagem/oraculo-de-latao.md",
+      "bytes": 3379,
+      "sha256": "1684cadc02614d87743586a86282cbf6e0d2a40978a7081cecb8b76b915fd4a6"
+    },
+    {
+      "path": "09-arte-audio/modelagem/trovico.md",
+      "bytes": 3364,
+      "sha256": "87b21a03ae015a8695c4dcf9237c9480292fb33b4e586032bf5786db1a1ee81a"
+    },
+    {
+      "path": "09-arte-audio/modelagem/ze-trovao.md",
+      "bytes": 3463,
+      "sha256": "94e290b8fffb692157a6e99738942cc1c899f257dc2303f6c477de832c2427cf"
+    },
+    {
+      "path": "09-arte-audio/politica-de-assets.md",
+      "bytes": 513,
+      "sha256": "e8b628f49c8e90d5f77bb2c24bf588e703d1d46dceac63baeaab297b86f92813"
+    },
+    {
+      "path": "09-arte-audio/prompts-e-proveniencia-v3.md",
+      "bytes": 18996,
+      "sha256": "fae52935cd40a9e66e5efa2dd87e3a3819bc4d65c7e474d8e4180905ec0e7d09"
+    },
+    {
+      "path": "09-arte-audio/prompts-e-proveniencia-v31.md",
+      "bytes": 7618,
+      "sha256": "a106229594ebfebc7fa96fb9876182e18bce1ae998c4403f9ba26c097beadecf"
+    },
+    {
+      "path": "09-arte-audio/prompts-e-proveniencia-v32.md",
+      "bytes": 31929,
+      "sha256": "1f9664438c48c75300bafb9d1019715bfd9f5dd74c0595266a281920debff151"
+    },
+    {
+      "path": "09-arte-audio/prompts-e-proveniencia-v33.md",
+      "bytes": 1379,
+      "sha256": "f8224204336491a15ee852443ad9479c972953903d5500e243cd464ccb515254"
+    },
+    {
+      "path": "09-arte-audio/trilha-sonora.md",
+      "bytes": 482,
+      "sha256": "b495b33bbb15685a5d17e8161f033e3b94943e790f6ec7df714918ede966be9f"
+    },
+    {
+      "path": "09-assets/README.md",
+      "bytes": 1586,
+      "sha256": "2766f54f3472f6b01aa57cf0286b0ef85208b978fa78892dccabba5a45cf878c"
+    },
+    {
+      "path": "09-assets/personagens/barao-ferrugem.png",
+      "bytes": 2408733,
+      "sha256": "1ba5474cd119340b563ea3c0995c861059f89adfcec03fdad0943a8d227df5a2"
+    },
+    {
+      "path": "09-assets/personagens/bestiario-01.png",
+      "bytes": 2495158,
+      "sha256": "3fdf9b67eeb4db57ea66bb89a803ebc3a8a94a20114708105c1f5d15830859f2"
+    },
+    {
+      "path": "09-assets/personagens/bestiario-02.png",
+      "bytes": 2745134,
+      "sha256": "29b0e49a58391bc47dbb96ea7291a41248a38e2e3f0c4aa1e6f1575ffb82b0de"
+    },
+    {
+      "path": "09-assets/personagens/bestiario-03.png",
+      "bytes": 2890706,
+      "sha256": "68a1a62fbd165d8da7e569e5d2f72b0dd3ab0a4aecef3f531e7ccc62434cb43e"
+    },
+    {
+      "path": "09-assets/personagens/britador-colosso.png",
+      "bytes": 2666454,
+      "sha256": "3795367c83436ded95fec7207b25de8bc730d7313e0f26b0a56f2c6d96acf16c"
+    },
+    {
+      "path": "09-assets/personagens/cascavel-de-silicio.png",
+      "bytes": 2572110,
+      "sha256": "84a6cbbf137c6306898a1a920d71bc4c78876ba6b328635d0e664da39c006727"
+    },
+    {
+      "path": "09-assets/personagens/condutor-relampago.png",
+      "bytes": 2436421,
+      "sha256": "bc7c2a35b0581b1b8a8d597476f0cade2a40e98e7e91afb171aca199d1ae8343"
+    },
+    {
+      "path": "09-assets/personagens/faisca-tatu.png",
+      "bytes": 2578794,
+      "sha256": "7188add8596b5b3c1487850ab1beb4f172920831172206f4e214cb2f64b702b2"
+    },
+    {
+      "path": "09-assets/personagens/figurantes.png",
+      "bytes": 2699496,
+      "sha256": "3d1e7911e9d949dba4c7e6f3f4988ef900aadceb179e15f6ab0d547f2fa19060"
+    },
+    {
+      "path": "09-assets/personagens/fiscal-de-trilhos.png",
+      "bytes": 2510804,
+      "sha256": "f1c6462e1f8163b2eaaad1ffdf0f78630015c842dc7ffacad2d8bbb773d28b16"
+    },
+    {
+      "path": "09-assets/personagens/general-para-raios.png",
+      "bytes": 2472923,
+      "sha256": "2cab248521fadf254264b954cc50c519b6cffe9a63dbd9bebecee5d2ec2d3072"
+    },
+    {
+      "path": "09-assets/personagens/guardiao-dos-canais.png",
+      "bytes": 2745442,
+      "sha256": "51b227cfbc19cca6d0c6a2467b18f540ab6697fc4de5f6fd465a790972f77033"
+    },
+    {
+      "path": "09-assets/personagens/isadora-veredas.png",
+      "bytes": 2211370,
+      "sha256": "d5e6c094401ed000766fdbbcf5837677e402aa75a01694d4c0b67c3bd9f35088"
+    },
+    {
+      "path": "09-assets/personagens/luna-fagulha.png",
+      "bytes": 2542802,
+      "sha256": "3d1e10c7b55cde75928ca00dac778ab45256629d5aea171c37f5f508d0408458"
+    },
+    {
+      "path": "09-assets/personagens/madame-engrenagem.png",
+      "bytes": 2347226,
+      "sha256": "1dcb0efd531d51db0831aa5586fa51670a7c80a71f373a970d5b08e4cc9f5162"
+    },
+    {
+      "path": "09-assets/personagens/maquina-da-seca.png",
+      "bytes": 2667345,
+      "sha256": "b016756d3eb6378fc4e33a2e0a69cf176bcbb3b83780368aa2bbe3649f4752be"
+    },
+    {
+      "path": "09-assets/personagens/maquinista-sem-rosto.png",
+      "bytes": 2521941,
+      "sha256": "a99a553ce5842bb1cba8c135a45fc96389c62059209ff9d078aa6d298d9964a3"
+    },
+    {
+      "path": "09-assets/personagens/mara-vento.png",
+      "bytes": 2536978,
+      "sha256": "03dbf7b97f3ef6a3393e06fd83f9471a5fee88abecab61a6a291b01e3c4a8c08"
+    },
+    {
+      "path": "09-assets/personagens/oraculo-de-latao.png",
+      "bytes": 2759105,
+      "sha256": "a747caab42c11ac8d17e82a1c20a832ab59fa6427514829e799ee6deb77a3e8b"
+    },
+    {
+      "path": "09-assets/personagens/trovico-falcao.png",
+      "bytes": 2655199,
+      "sha256": "a16be981ce5f7df2c784b1016588ac1cebfab1935a5751ac3569e60814f50048"
+    },
+    {
+      "path": "09-assets/personagens/ze-e-trovico.png",
+      "bytes": 2746219,
+      "sha256": "45ca67f5126da68db9ef3f0e8734eccf30fd8d60888a66b60314a84ced1c92d2"
+    },
+    {
+      "path": "09-assets/personagens/ze-trovao.png",
+      "bytes": 2505022,
+      "sha256": "b1a5302fda84f8851339eec8e1dd5553f1da5ea9043cbeaec8ad72e4c8c27c4c"
+    },
+    {
+      "path": "10-seguranca/00-SEGURANCA.md",
+      "bytes": 3958,
+      "sha256": "180aaa053d122d482795d18dcd69fdfee10bde99eb3120f9af95cc768449ffd4"
+    },
+    {
+      "path": "10-seguranca/01-modelo-de-ameacas.md",
+      "bytes": 4006,
+      "sha256": "fa46846bac10ca1ff34b5a510e0d2f65e6b39fc58c3aaa6fdbe65d1bbc267710"
+    },
+    {
+      "path": "10-seguranca/02-android.md",
+      "bytes": 3696,
+      "sha256": "8626a06a2e375ca5843144a664b00ac6f06583e1924d8ff37912a9a57e0c4ea8"
+    },
+    {
+      "path": "10-seguranca/03-ios.md",
+      "bytes": 3438,
+      "sha256": "e9138b40480d8a26ed48303e8ea3574d32551ba2f7694bb37ecff7629153a08b"
+    },
+    {
+      "path": "10-seguranca/04-protocolo-e-chaves.md",
+      "bytes": 3258,
+      "sha256": "b387461d887645f62892429e8f5420074a25f592381ceaa4ee1f4bf1f7e20ecc"
+    },
+    {
+      "path": "10-seguranca/05-offline-restauracao-e-ux.md",
+      "bytes": 3070,
+      "sha256": "cfc2f77619d3bce484668c6caec12e7e948d9a03120bfdd39a86d5e4df0701d9"
+    },
+    {
+      "path": "10-seguranca/06-backend-operacao.md",
+      "bytes": 3225,
+      "sha256": "be99045b0848248ecae89ae921686759989c7f4a3deb0b80be26d5563b2978d4"
+    },
+    {
+      "path": "10-seguranca/07-build-e-cadeia-de-suprimento.md",
+      "bytes": 2509,
+      "sha256": "60577e972bac13206604b154c4d708b150d11d30523394a339d0bb91e7615536"
+    },
+    {
+      "path": "10-seguranca/08-conteudo-e-saves.md",
+      "bytes": 2299,
+      "sha256": "0aa67a45dedd4582f4711edb8393a09467155f67ed36557b50a107dafe3cae2e"
+    },
+    {
+      "path": "10-seguranca/09-privacidade-e-dados.md",
+      "bytes": 1911,
+      "sha256": "c7e37c197be1b4e902de0fad74fe95dbba5ff27b9360846234a4271b9fee3713"
+    },
+    {
+      "path": "10-seguranca/10-incidentes-e-preservacao.md",
+      "bytes": 1911,
+      "sha256": "be61fc9d97c3483ee1b2935c16c2ad336a801c020426a8edace8aa0f2b3b920c"
+    },
+    {
+      "path": "10-seguranca/11-testes-e-fontes.md",
+      "bytes": 3213,
+      "sha256": "281789d7f09ec5527465031d6590286df510b124881a62360752b7704e0d8c7a"
+    },
+    {
+      "path": "11-contratos/README.md",
+      "bytes": 3171,
+      "sha256": "be1f58ed4557c51a07c2a321ca5e5452636343bffbf9598244b27d296a7f25cd"
+    },
+    {
+      "path": "11-contratos/backlog.json",
+      "bytes": 52971,
+      "sha256": "3b2f50333bb70a82c34bf9d02d1230eba3324b1919f09fd18b471e9b5ca17a30"
+    },
+    {
+      "path": "11-contratos/bestiario.json",
+      "bytes": 7163,
+      "sha256": "8ea940d490765ff2dae1ecdad88400035612da4f88cbb24da28ab7b8d2390225"
+    },
+    {
+      "path": "11-contratos/campanha.json",
+      "bytes": 32987,
+      "sha256": "67716048f2c31536a574ff3dd6d000264d5e971d99eaaf26caa1ab797de77072"
+    },
+    {
+      "path": "11-contratos/dialogos-pt-BR.csv",
+      "bytes": 6447,
+      "sha256": "98d5423b6e4dd4e1b812c47954055f5f3b41bded48170fee7cc08be683237111"
+    },
+    {
+      "path": "11-contratos/elenco.json",
+      "bytes": 13234,
+      "sha256": "be00d42d3efece71eb1b81f5ee9d2bd73a8470f8b6b1db19d6dd34b0721f43b1"
+    },
+    {
+      "path": "11-contratos/handoff.template.json",
+      "bytes": 1182,
+      "sha256": "0d3acdfdae1bbf09680e36a6bf5fe665bf33ae8e636aa8f75a9e7d32d2eb907f"
+    },
+    {
+      "path": "11-contratos/license.schema.json",
+      "bytes": 1147,
+      "sha256": "432d64805188f4a1c13a916f0b34a434171eb71186f9e36d8c508e39eab89d1a"
+    },
+    {
+      "path": "11-contratos/licensing.sql",
+      "bytes": 2129,
+      "sha256": "2c8d6049ec57b635eab1f3ec65887871498260e19f01809a4b0bee8cb1585bdc"
+    },
+    {
+      "path": "11-contratos/modelagem-resumo.csv",
+      "bytes": 1749,
+      "sha256": "1a10e3f98611892fd6e9c4118e5bc8bc56364836b699fdb7540162794ad242a8"
+    },
+    {
+      "path": "11-contratos/modelagem-secundarios.json",
+      "bytes": 20953,
+      "sha256": "8e0ded236a716e56ba758388fe74dba64c09e7fa7a386e1a0f8c03d860a1d2aa"
+    },
+    {
+      "path": "11-contratos/modelagem.json",
+      "bytes": 26648,
+      "sha256": "6e552fdff72f7d4c7ad08784695340990b2b3d94ba1df26b4a552303e1da47c2"
+    },
+    {
+      "path": "11-contratos/openapi.yaml",
+      "bytes": 6809,
+      "sha256": "f5a6939c387b03e6a77dbe17289d48c3eb8c34ac378f4c96fcf0ff6238397081"
+    },
+    {
+      "path": "11-contratos/save.example.json",
+      "bytes": 275,
+      "sha256": "4e7f05b727ecc53782147389c7a262cd5051f69b466008dea599d0645fb0f970"
+    },
+    {
+      "path": "11-contratos/save.schema.json",
+      "bytes": 1610,
+      "sha256": "f63db982433245f0158f5722266fb1ebb5548ea5cba5ed0d25150ffc273704af"
+    },
+    {
+      "path": "12-desenvolvimento/00-COMECE-AQUI.md",
+      "bytes": 3443,
+      "sha256": "e0c70b1269e9e8bd2fed6c1f4b209857ea8757fec8a954c98b082b7fb512e322"
+    },
+    {
+      "path": "12-desenvolvimento/01-slice-e-marcos.md",
+      "bytes": 1439,
+      "sha256": "23df43847a0b882e05f2252b51ba374fab50ce55a34c977e3727521c77c8d58f"
+    },
+    {
+      "path": "12-desenvolvimento/02-telas-e-fluxos.md",
+      "bytes": 2346,
+      "sha256": "5ba5b02fb6ffb11c2f1dd4f1b2bc7778a8ab77101d54e8d275d201e7850f5311"
+    },
+    {
+      "path": "12-desenvolvimento/03-save-e-migracao.md",
+      "bytes": 1679,
+      "sha256": "c4e1bc4cbb2bbb53f93936ea6aeba11a1e19a008c5e72bdace671385d7901497"
+    },
+    {
+      "path": "12-desenvolvimento/04-orcamentos-tecnicos.md",
+      "bytes": 1972,
+      "sha256": "91480279f5a672fee1d5afa4d023be3c621e416fe7b0daf7514e386d6b2279d2"
+    },
+    {
+      "path": "12-desenvolvimento/05-ci-e-editor.md",
+      "bytes": 1947,
+      "sha256": "aa16c60a806f5cffbccee74b2f002f6767e92abd45101648d7e12625af7becec"
+    },
+    {
+      "path": "12-desenvolvimento/06-audio-localizacao-e-acessibilidade.md",
+      "bytes": 2070,
+      "sha256": "7dbf013717fa7e5c4e84074ad5038aec63e6b44248097fa71f485ce6f9a5602c"
+    },
+    {
+      "path": "12-desenvolvimento/07-publicacao-e-operacao.md",
+      "bytes": 1699,
+      "sha256": "4c4be65f2a2953af7174f8aeaa7ce99b82aeb3f7b94ed9fe88e588e4987343cd"
+    },
+    {
+      "path": "12-desenvolvimento/08-bootstrap-local-v4.md",
+      "bytes": 4617,
+      "sha256": "3734b4af8785551a034a0d347b5c3dd8128f565dd09a90140b66beb869ec3288"
+    },
+    {
+      "path": "12-desenvolvimento/09-ordem-de-implementacao.md",
+      "bytes": 2913,
+      "sha256": "84e1320a9345db0baf740c6c1b680555e23d4cf320c077f415ec0df4ad715214"
+    },
+    {
+      "path": "12-desenvolvimento/10-modulos-e-contratos.md",
+      "bytes": 3680,
+      "sha256": "c4210bb916bee723b6a6a9b0f3b180186cc946ca53e1e5a00d34580986ee5787"
+    },
+    {
+      "path": "12-desenvolvimento/11-conteudo-e-save.md",
+      "bytes": 2588,
+      "sha256": "9db0be1acc4daee2bd8317d68aba5fe1daec9122efb86d31a782195e680edd51"
+    },
+    {
+      "path": "12-desenvolvimento/12-qualidade-e-integracao.md",
+      "bytes": 2265,
+      "sha256": "2c6a62dac40479e2111ada44849e2c39e2a10358f92f48f12343cab994e8341e"
+    },
+    {
+      "path": "12-desenvolvimento/13-handoff-claude-codex.md",
+      "bytes": 2934,
+      "sha256": "06934a178ce1428019306b6cc34f460b3638944ed52a07be77cdd58ceaf79fef"
+    },
+    {
+      "path": "12-desenvolvimento/14-decisoes-e-fontes-v4.md",
+      "bytes": 3163,
+      "sha256": "06dfed3e23cd467fbdc394c104af226ff606b02099cbabb2283536b59d495326"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 3236,
+      "sha256": "428d77b9e6fc95f2fd551eea4ccac2aa5f11c0b2d2928e5441416390a9abd060"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4859,
+      "sha256": "03a9cae07a9a112b92793f5343b5a172b1032c9f4fc7d4cf3e5ab2768b7f2fe8"
+    },
+    {
+      "path": "dashboard/assets/favicon.svg",
+      "bytes": 439,
+      "sha256": "b99da3921ba5fd63227963dfdeba63e389f1e05b3d5fbc8e3f14a666ebd14388"
+    },
+    {
+      "path": "dashboard/css/app.css",
+      "bytes": 30275,
+      "sha256": "9c571d39948a1403ba3197c75dfc1d69101dc9a3079453c527a66b31213da1a0"
+    },
+    {
+      "path": "dashboard/css/tokens.css",
+      "bytes": 901,
+      "sha256": "5d9b7ca2bc437147624af50a58973c9c44c05cef41222444d95e6dcc6c17ee98"
+    },
+    {
+      "path": "dashboard/js/app.js",
+      "bytes": 68628,
+      "sha256": "b3d482ff0de978df6fac1443f54bd3bfb4d2b3120c90dabd071f22069953dfc9"
+    },
+    {
+      "path": "dashboard/vendor/font-awesome/LICENSE.txt",
+      "bytes": 7427,
+      "sha256": "329f24fdba0c57714d7d202d30a74767feac6907685ee24f0abbf1bd47581a07"
+    },
+    {
+      "path": "dashboard/vendor/font-awesome/css/all.min.css",
+      "bytes": 74320,
+      "sha256": "f6c5904966ef29cecdbc1d8d87240ac0fd595532db6475143e0e220924c688d0"
+    },
+    {
+      "path": "dashboard/vendor/font-awesome/webfonts/fa-brands-400.woff2",
+      "bytes": 101180,
+      "sha256": "34ce05b1507e4f0f9d3108eb397855d72fbc8cfad6fb93ae8af1716fb312f59e"
+    },
+    {
+      "path": "dashboard/vendor/font-awesome/webfonts/fa-regular-400.woff2",
+      "bytes": 19000,
+      "sha256": "a4b951c0f582686a6b73f4e0ec29dbd7437daa7e26a512d8015b74d9ec798ea6"
+    },
+    {
+      "path": "dashboard/vendor/font-awesome/webfonts/fa-solid-900.woff2",
+      "bytes": 113260,
+      "sha256": "ff6d96ef6f1b29124a8daa657809d480d7278401ab16320fdb3edf0b658d6492"
+    },
+    {
+      "path": "dashboard/vendor/nunito/LICENSE",
+      "bytes": 4314,
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3"
+    },
+    {
+      "path": "dashboard/vendor/nunito/files/nunito-latin-400-normal.woff2",
+      "bytes": 16336,
+      "sha256": "7fcef0e8c04670071ce83256577b01215900bce537ba92bf6829c8a5f405f40f"
+    },
+    {
+      "path": "dashboard/vendor/nunito/files/nunito-latin-500-normal.woff2",
+      "bytes": 16400,
+      "sha256": "7318f06057538285842ba915886261a8dcfc5f8c504468f7869f3eaea456cc54"
+    },
+    {
+      "path": "dashboard/vendor/nunito/files/nunito-latin-600-normal.woff2",
+      "bytes": 16616,
+      "sha256": "2591f0add8613249972787634bab6b6fbff68e6d65c47a89fcd27d088a3aab16"
+    },
+    {
+      "path": "dashboard/vendor/nunito/files/nunito-latin-700-normal.woff2",
+      "bytes": 16224,
+      "sha256": "648834d5bb4c5f69a5ebd58ba6df0ade9678ea6ab0cad3f2cd027c00216e5f66"
+    },
+    {
+      "path": "dashboard/vendor/nunito/files/nunito-latin-800-normal.woff2",
+      "bytes": 16532,
+      "sha256": "7ff4cc9b6ddc2772a07e33f36e8c373f4bc83f59fa6ae0300967b6d36e047990"
+    },
+    {
+      "path": "dashboard/vendor/nunito/files/nunito-latin-900-normal.woff2",
+      "bytes": 16616,
+      "sha256": "70f6c332de5b35335b046448a79439d21b4fca9ce7f7516ec73b95d58b33bf51"
+    },
+    {
+      "path": "dashboard/vendor/nunito/nunito.css",
+      "bytes": 1269,
+      "sha256": "5c9a352624e542d6ae18527f0e02a0153e1aae96774cd5b7b4b0912fdc2f2265"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4252,
+      "sha256": "d7d091833d4c53e2e3ec04bd28b8aced90f228ea83a9a7e88c6935404ba4aea9"
+    },
+    {
+      "path": "security-reference/README.md",
+      "bytes": 1661,
+      "sha256": "0cc62b1912ff447b61e585c1024a519a43e3477fadc818f1680614be5e4393f8"
+    },
+    {
+      "path": "security-reference/demo.py",
+      "bytes": 1138,
+      "sha256": "5b0292b100977d6b2e4cb8d8248ae7a19448447580c15437f49571c37badb5d5"
+    },
+    {
+      "path": "security-reference/licensing.py",
+      "bytes": 6529,
+      "sha256": "c83c4b1b9a6bfdaac0e6af72054f174cebee0f9e1dc7e6a298687e7ecdb9d8e0"
+    },
+    {
+      "path": "security-reference/requirements.txt",
+      "bytes": 21,
+      "sha256": "8b5c18678b29b5e8e0fb586a35ac1dce3ccd9da321e8f12ace0e118350b4e568"
+    },
+    {
+      "path": "security-reference/tests/test_licensing.py",
+      "bytes": 7161,
+      "sha256": "a711c23c41539b6de7459ffad4176bc16d74ad0e0e58784a42751052a1ce3eed"
+    },
+    {
+      "path": "serve.py",
+      "bytes": 5857,
+      "sha256": "f62efcd3037866abd2eea4d1b27cf95c52e995d67896936fba6a4826c68cffd5"
+    },
+    {
+      "path": "tools/qa/package-lock.json",
+      "bytes": 17552,
+      "sha256": "179d7f2b7cb2010521654aca773f52e94b2f2ae2e9ab911901ae95618c0c6f16"
+    },
+    {
+      "path": "tools/qa/package.json",
+      "bytes": 50,
+      "sha256": "d28335451db5d7a0b19c61a4882825a50679fcb0758fdfe70f730bf5028bf8a6"
+    },
+    {
+      "path": "tools/reindex.py",
+      "bytes": 1965,
+      "sha256": "0b16b1e7fffa3a5845c0c506ee37ad3c43ce2a4c96aa8109d3d8801cd1d6c916"
+    },
+    {
+      "path": "tools/run_unity.py",
+      "bytes": 1930,
+      "sha256": "4fa7f99103b12dba8dea354b33468466c8fc40e626f5cedd7743e1a9af144fda"
+    },
+    {
+      "path": "tools/test_docs_server.py",
+      "bytes": 3650,
+      "sha256": "efa99611635e9c513cf94b582071b2301eecb4db3120dbc7f29c37937dbe684a"
+    },
+    {
+      "path": "tools/test_model_delivery.py",
+      "bytes": 3145,
+      "sha256": "b5cf09fe910c171cb4f36cf5bb89d25b65549cf163778c6f0382c912b9f98f3c"
+    },
+    {
+      "path": "tools/test_portal_dom.cjs",
+      "bytes": 6110,
+      "sha256": "14fc930fb3afda9a0f99cdebd48583563dc9bd19f598162a6db49637db0c7ff5"
+    },
+    {
+      "path": "tools/validate_model_delivery.py",
+      "bytes": 5207,
+      "sha256": "db76bc273e12db83eca390b1096a0e152871542a02316dd1fafb5461919d4a35"
+    },
+    {
+      "path": "tools/validate_production.py",
+      "bytes": 3879,
+      "sha256": "f6a57fafc979089a74246c7ef58b09f71280f004a2c263b50a16e2c96140be46"
+    },
+    {
+      "path": "tools/validate_project.py",
+      "bytes": 2723,
+      "sha256": "4f05697cd96880d2af1506c373c031e1d4e34efeaed78dec30b95b2b1e485592"
+    },
+    {
+      "path": "unity-project-template/.gitattributes",
+      "bytes": 269,
+      "sha256": "37b78f9025fc486a40a61b4b57efcd6e904f86a1813b692cbfd642f681cd934a"
+    },
+    {
+      "path": "unity-project-template/.gitignore",
+      "bytes": 96,
+      "sha256": "e94dd0958329d4f5d0968565a17943732be2f5d30a5af6a7e70a5a5375d42a1b"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/Core/GamePhase.cs",
+      "bytes": 990,
+      "sha256": "fd167ad8d23049d287f638889c2b66ba6c873e3b1773e5fc979079dbcf6502ae"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/Core/GameSignals.cs",
+      "bytes": 617,
+      "sha256": "c6a5d590c42105d977939490faad29950ba4b24ff0385c6f84dea0d43e14545f"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/Gameplay/IAbility.cs",
+      "bytes": 190,
+      "sha256": "463f7d815d9498972d693a3c82806d1de9e9926ce089381368915e6312bbac80"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/Narrative/QuestState.cs",
+      "bytes": 782,
+      "sha256": "e968bea14b279f57d44538e9ab2fb94b8ff942bbaedd72ba828a956babdb4e14"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/Progression/SaveSnapshot.cs",
+      "bytes": 337,
+      "sha256": "7a3c21bb330b3a5d52e0694555ece5a1ad3a4df8b54b67f204c9457e6d131b2a"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/Security/ISecurityAdapters.cs",
+      "bytes": 1186,
+      "sha256": "78fc16e3370b8fd018a33d3918c4bd861d0a37e9e2d7ea2d9cae1c09101793e4"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/Security/LicensePolicy.cs",
+      "bytes": 1151,
+      "sha256": "87025377044edd35f87b2a4662407b454c1c9074cc63bd22b5cd2c6c5e70f991"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/Security/RsaLicenseVerifier.cs",
+      "bytes": 4190,
+      "sha256": "5f0c801a29f9537f1a7aa66b05fc1f20425ecfdc36bd89aee4107e2b2904ea1f"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Domain/SolDeCobre.Domain.asmdef",
+      "bytes": 336,
+      "sha256": "a14e45da951b60183eaea47cb9d4079eea6ce124d28e18503b6dfad996a79238"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Editor/ProjectBootstrap.cs",
+      "bytes": 8734,
+      "sha256": "06e359fecb511c4fdc7d6a2033396fcc336f59a0eaafba59628a0504c7a86f2c"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Editor/SolDeCobre.Editor.asmdef",
+      "bytes": 431,
+      "sha256": "3ca52c121653a5edba4f72c3aea11f3b8dcd2872b04cdaf53681a3b622d58057"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/README.md",
+      "bytes": 2143,
+      "sha256": "185f2bd1369c293f969b10a71c9fe7b3120c62c002395819df886ff112f07ab6"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/Gameplay/HeroDefinition.cs",
+      "bytes": 403,
+      "sha256": "136e00e9ff5eb453db7c7526d0850b60df245e18beffcd526422d2239335a771"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/Gameplay/PlayerInputBridge.cs",
+      "bytes": 2124,
+      "sha256": "c6fe6bbe33e61fd1fa5ba303c5032d2f6de482080d545a043cea29c583edde97"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/Gameplay/PlayerMotor2_5D.cs",
+      "bytes": 2024,
+      "sha256": "33c8147daba9a1460629beee5f175a9047054a3bb152ae9f98901569e73bc117"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/Narrative/QuestDefinition.cs",
+      "bytes": 342,
+      "sha256": "8bf7f1d9f86cb3ae500ac55899023c838c51685d70066eb190fc2d25a020a156"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/Narrative/QuestRules.cs",
+      "bytes": 300,
+      "sha256": "14a75c79dbe1a72c957f45b3770e12b8f8696e7aa6c5ab06e0c51451b3eaf104"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/Presentation/CameraFollow2_5D.cs",
+      "bytes": 586,
+      "sha256": "7631ff8249766d9cd7f9cca51b178347cfb83ae27afa5bea22781cdfb6575c69"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/Progression/LocalSaveRepository.cs",
+      "bytes": 3780,
+      "sha256": "393a0985f0919b2a1e6b7a1afeabe5b7c3aa0ba8691733368fcf4f87fef1b30f"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/SolDeCobre.Runtime.asmdef",
+      "bytes": 390,
+      "sha256": "f6a151d87d2a7e64cdde14e77cf0b74cf8d0544e71ae99637c4bea1eb83baecc"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Runtime/World/CheckpointMarker.cs",
+      "bytes": 397,
+      "sha256": "0db7b0f0757ec7669bb2228a699c818551060f4e81dda30189dee86f59825315"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Tests/EditMode/DomainInvariantTests.cs",
+      "bytes": 2076,
+      "sha256": "7f026c02733a20b25651a059e32845c60a035252b90f4f835e9bc956012b2b8c"
+    },
+    {
+      "path": "unity-project-template/Assets/_Game/Tests/EditMode/SolDeCobre.Tests.EditMode.asmdef",
+      "bytes": 446,
+      "sha256": "7e5bc2dd6276c38253e0022e89fa8a4bddd6671b4bda2109f4b44b9daacc3dec"
+    }
+  ]
+}

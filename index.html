@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#454474">
+<meta name="description" content="Sol de Cobre: portal interativo de arquitetura de jogo, game bible, fases, narrativa e explorador ao vivo.">
+<title>Sol de Cobre · Arquitetura, universo e produção</title>
+<link rel="icon" type="image/svg+xml" href="dashboard/assets/favicon.svg">
+<link rel="stylesheet" href="dashboard/vendor/nunito/nunito.css">
+<link rel="stylesheet" href="dashboard/vendor/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="dashboard/css/tokens.css">
+<link rel="stylesheet" href="dashboard/css/app.css">
+</head><body>
+<a href="#appMain" class="skip-link">Ir para o conteúdo</a>
+<div class="sidebar-overlay" id="sidebarBackdrop"></div>
+<aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+ <div class="brand"><div class="brand-mark"><i class="fa-solid fa-sun" aria-hidden="true"></i></div><div class="brand-copy"><strong>SOL DE COBRE</strong><small>Game Bible & arquitetura</small></div><button class="sidebar-close icon-button" data-action="close-menu" aria-label="Fechar menu"><i class="fa-solid fa-xmark"></i></button></div>
+ <div class="sidebar-searchhint"><span class="sidebar-status-dot"></span><span>Preprodução <b>v4.0</b></span><span class="tiny-pill">DOCS</span></div>
+ <nav class="nav-main" id="mainNav" aria-label="Seções da arquitetura"></nav>
+ <div class="sidebar-footer"><div class="project-meta"><i class="fa-solid fa-code-branch"></i><div><strong>Referência narrativa</strong><small>Worldbuilding · Design · Unity</small></div></div><p>22 pranchas • 60 sequências • segurança em camadas</p></div>
+</aside>
+<div class="app-wrapper">
+ <header class="topbar"><div class="topbar-left"><button class="icon-button mobile-menu" data-action="open-menu" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button><div><div class="current-title" id="pageTitle">Visão geral</div><div class="breadcrumb" id="breadcrumbs">Documentação / Painel do projeto</div></div></div>
+ <div class="topbar-actions"><button class="top-search" data-action="search" aria-label="Buscar documentação"><i class="fa-solid fa-magnifying-glass"></i><span>Buscar documentação</span><kbd>Ctrl K</kbd></button><button class="icon-button" data-action="navigate" data-id="explorer" title="Explorador de arquivos" aria-label="Explorador de arquivos"><i class="fa-solid fa-folder-tree"></i></button><button class="icon-button" data-action="theme" aria-label="Alternar tema" id="themeButton"><i class="fa-solid fa-moon"></i></button></div></header>
+ <main id="appMain" class="main-content" tabindex="-1"><div class="loading-screen"><span class="spinner"></span><strong>Construindo o atlas do Sol de Cobre…</strong></div></main>
+ <footer class="main-footer">SOL DE COBRE <span>·</span> Bíblia do jogo v4.0 <span>·</span> Documentação e protótipos <span>·</span> Imagens conceituais não são modelos GLB</footer>
+</div>
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Busca global" aria-hidden="true"><div class="search-modal"><div class="search-input-wrap"><i class="fa-solid fa-magnifying-glass"></i><input id="globalSearch" type="search" autocomplete="off" placeholder="Buscar fases, personagens, sistemas, arquivos…" aria-label="Pesquisar todo o acervo"><button class="icon-button" data-action="close-search" aria-label="Fechar pesquisa"><i class="fa-solid fa-xmark"></i></button></div><div id="searchResults" class="search-results"></div><div class="search-footer">Pesquise por nome de arquivo, trecho de roteiro, missão ou habilidade. <kbd>ESC</kbd> para sair.</div></div></div>
+<div class="toast-wrap" id="toastWrap" aria-live="polite"></div>
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true"><button class="lightbox-close icon-button" data-action="close-lightbox" aria-label="Fechar imagem"><i class="fa-solid fa-xmark"></i></button><img id="lightboxImage" alt=""><p id="lightboxCaption"></p></div>
+<script src="dashboard/data/catalog.js"></script>
+<script src="dashboard/js/app.js"></script>
+</body></html>
