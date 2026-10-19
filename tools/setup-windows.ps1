@@ -1,15 +1,16 @@
 <#
 .SYNOPSIS
-  Prepara o ambiente local (Windows) do Sol de Cobre: dependências não-GUI, clone do
-  repo de arquitetura e cópia do kit _Game para o projeto Unity. NÃO instala o Unity
-  (instalação licenciada via Unity Hub é manual — ver START-AQUI-WINDOWS.md).
+  Prepara o ambiente local (Windows) do Sol de Cobre: dependencias nao-GUI, clone do
+  repo de arquitetura e copia do kit _Game para o projeto Unity. NAO instala o Unity
+  (instalacao licenciada via Unity Hub e manual - ver START-AQUI-WINDOWS.md).
 
-.EXEMPLO
+  OBS: script em ASCII de proposito (o Windows PowerShell 5.1 le .ps1 sem BOM como ANSI;
+  acentos/setas quebrariam o parse). Mensagens vao sem acento por isso.
+
+.EXAMPLE
   # 1) Crie o projeto URP no Unity Hub em C:\Projetos\SolDeCobre\Game
   # 2) Rode:
-  powershell -ExecutionPolicy Bypass -File tools\setup-windows.ps1 `
-     -ArchDir "C:\Projetos\SolDeCobre\Arquitetura" `
-     -GameDir "C:\Projetos\SolDeCobre\Game" -InstallDeps
+  powershell -ExecutionPolicy Bypass -File tools\setup-windows.ps1 -ArchDir "C:\Projetos\SolDeCobre\Arquitetura" -GameDir "C:\Projetos\SolDeCobre\Game" -InstallDeps
 #>
 [CmdletBinding()]
 param(
@@ -17,7 +18,7 @@ param(
   [string]$ArchDir = "C:\Projetos\SolDeCobre\Arquitetura",
   [string]$GameDir  = "C:\Projetos\SolDeCobre\Game",
   [switch]$InstallDeps,
-  [string]$UnityEditor = ""   # opcional: caminho do Unity.exe 6000.3.24f1 para rodar EditMode
+  [string]$UnityEditor = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -26,24 +27,24 @@ function Ok($m)   { Write-Host "    [ok] $m" -ForegroundColor Green }
 function Warn($m) { Write-Host "    [!]  $m" -ForegroundColor Yellow }
 function Have($c) { $null -ne (Get-Command $c -ErrorAction SilentlyContinue) }
 
-Step "Verificando dependências (git, git-lfs, dotnet, python)"
+Step "Verificando dependencias (git, git-lfs, dotnet, python)"
 $deps = @(
-  @{ cmd="git";    winget="Git.Git";               nome="Git" },
-  @{ cmd="git-lfs";winget="GitHub.GitLFS";         nome="Git LFS" },
-  @{ cmd="dotnet"; winget="Microsoft.DotNet.SDK.8";nome=".NET SDK 8 (testes locais)" },
-  @{ cmd="python"; winget="Python.Python.3.12";    nome="Python 3 (validadores)" }
+  @{ cmd="git";     winget="Git.Git";                nome="Git" },
+  @{ cmd="git-lfs"; winget="GitHub.GitLFS";          nome="Git LFS" },
+  @{ cmd="dotnet";  winget="Microsoft.DotNet.SDK.8"; nome=".NET SDK 8 (testes locais)" },
+  @{ cmd="python";  winget="Python.Python.3.12";     nome="Python 3 (validadores)" }
 )
 foreach ($d in $deps) {
   if (Have $d.cmd) { Ok "$($d.nome) presente" }
   elseif ($InstallDeps -and (Have "winget")) {
-    Warn "Instalando $($d.nome) via winget…"
+    Warn "Instalando $($d.nome) via winget..."
     winget install --id $($d.winget) -e --accept-source-agreements --accept-package-agreements
   } else {
     Warn "$($d.nome) ausente. Instale, ou rode com -InstallDeps (precisa de winget). winget id: $($d.winget)"
   }
 }
 
-Step "Clonando/atualizando o repositório de arquitetura em $ArchDir"
+Step "Clonando/atualizando o repositorio de arquitetura em $ArchDir"
 if (Test-Path (Join-Path $ArchDir ".git")) {
   git -C $ArchDir pull --ff-only
   Ok "Repo atualizado"
@@ -55,9 +56,9 @@ if (Test-Path (Join-Path $ArchDir ".git")) {
 if (Have "git-lfs") { git -C $ArchDir lfs install | Out-Null; Ok "Git LFS inicializado" }
 
 $kit = Join-Path $ArchDir "unity-project-template"
-if (-not (Test-Path (Join-Path $kit "Assets\_Game"))) { throw "Kit _Game não encontrado em $kit." }
+if (-not (Test-Path (Join-Path $kit "Assets\_Game"))) { throw "Kit _Game nao encontrado em $kit." }
 
-Step "Validando a camada Domain (engine-free) com .NET, se disponível"
+Step "Validando a camada Domain (engine-free) com .NET, se disponivel"
 if (Have "dotnet") {
   $verify = Join-Path $env:TEMP "sc-verify"
   New-Item -ItemType Directory -Force -Path $verify | Out-Null
@@ -84,17 +85,17 @@ if (Have "dotnet") {
   Push-Location $verify
   try { dotnet test --nologo; Ok "Testes de Domain executados (deve passar 95/95)" }
   finally { Pop-Location }
-} else { Warn "Sem dotnet: pule — os mesmos testes rodam no Unity (Test Runner → EditMode)." }
+} else { Warn "Sem dotnet: pule. Os mesmos testes rodam no Unity (Test Runner, EditMode)." }
 
 Step "Copiando o kit _Game e a config Git para o projeto Unity em $GameDir"
 if (-not (Test-Path (Join-Path $GameDir "Assets"))) {
-  Warn "O projeto Unity ainda não existe em $GameDir."
-  Warn "Crie-o primeiro no Unity Hub (Universal 3D / URP, baseline 6000.3.24f1) e rode de novo."
+  Warn "O projeto Unity ainda nao existe em $GameDir."
+  Warn "Crie primeiro no Unity Hub (Universal 3D / URP, baseline 6000.3.24f1) e rode de novo."
 } else {
   $dstGame = Join-Path $GameDir "Assets\_Game"
   if (Test-Path $dstGame) {
     $backup = Join-Path $GameDir ("_Game_backup_" + (Get-Date -Format "yyyyMMdd_HHmmss"))
-    Warn "Já existe Assets\_Game — movendo para backup fora de Assets: $backup (migrar por diff, sem duplicar)."
+    Warn "Ja existe Assets\_Game - movendo para backup fora de Assets: $backup (migrar por diff)."
     Move-Item $dstGame $backup
   }
   Copy-Item (Join-Path $kit "Assets\_Game") (Join-Path $GameDir "Assets\") -Recurse
@@ -112,16 +113,16 @@ if ($UnityEditor -ne "" -and (Test-Path $UnityEditor) -and (Test-Path (Join-Path
   } else { Warn "Sem python: rode os testes pelo Test Runner do Editor." }
 }
 
-Step "Próximos passos manuais (Unity — licenciado/GUI)"
+Step "Proximos passos manuais (Unity - licenciado/GUI)"
 Write-Host @"
-  1. Unity Hub: instalar Unity 6000.3.24f1 + módulo Android (e iOS se for buildar no Mac).
-  2. Se ainda não criou: novo projeto Universal 3D / URP em $GameDir.
+  1. Unity Hub: instalar Unity 6000.3.24f1 + modulo Android (e iOS se for buildar no Mac).
+  2. Se ainda nao criou: novo projeto Universal 3D / URP em $GameDir.
   3. Package Manager: adicionar com.unity.inputsystem e com.unity.test-framework
-     (ver $kit\Packages\README.md). Player → Active Input Handling = Input System.
-  4. Esperar compilar. Test Runner → EditMode: devem passar os 95 testes.
-  5. Menu Sol de Cobre → Bootstrap → Create movement laboratory (andar/saltar/câmera).
-  6. Menu Sol de Cobre → Bootstrap → Create Estação slice (graybox do confronto).
+     (ver $kit\Packages\README.md). Player: Active Input Handling = Input System.
+  4. Esperar compilar. Test Runner, EditMode: devem passar os 95 testes.
+  5. Menu 'Sol de Cobre' > Bootstrap > Create movement laboratory (andar/saltar/camera).
+  6. Menu 'Sol de Cobre' > Bootstrap > Create Estacao slice (graybox do confronto).
   7. Montar o canvas da HUD: $kit\Assets\_Game\UI\HUD-CANVAS.md
   Guia completo: START-AQUI-WINDOWS.md
 "@ -ForegroundColor Gray
-Ok "Ambiente preparado (parte automatizável)."
+Ok "Ambiente preparado (parte automatizavel)."
