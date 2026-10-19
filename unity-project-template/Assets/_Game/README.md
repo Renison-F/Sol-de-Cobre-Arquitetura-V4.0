@@ -1,11 +1,13 @@
-# Incrementos A–D (headless) adicionados
+# Incrementos A–E (headless) adicionados
 
 Ver `12-desenvolvimento/15-incrementos-a-d-headless.md`. Resumo do que entrou:
-- **Domain** (engine-free, testado com Roslyn, 44 testes EditMode): `GamePhase` estendido;
-  `Gameplay/AxisProcessing`, `TargetSelection`, `AbilityController`, `CompanionDispatch`;
+- **Domain** (engine-free, testado com Roslyn, **60 testes EditMode**): `GamePhase` estendido;
+  `Gameplay/AxisProcessing`, `TargetSelection`, `AbilityController`, `CompanionDispatch`,
+  `EnemyThreatCycle`, `BossEncounter`, `HeroVitality`; `Narrative/MissionProgress`;
   `Progression/SaveDataV3`, `SaveValidationV3`, `FlagCatalog`, `SaveMigrator`, `ISaveCodec`, `SaveStore`.
 - **Runtime:** `GameplayControls`, `PlayerInputBridge` (reescrito), `CameraFollow2_5D`,
   `AbilityTargetSource/Targeting`, `LassoAbility`, `AbilityDriver`, `World/CompanionController`,
+  `World/FiscalBoss`, `World/CommonEnemy`, `Narrative/MissionController`,
   `Progression/UnityJsonSaveCodec`, `SaveSystem`.
 - **UI** (novo assembly `SolDeCobre.UI`): `TouchHoldButton`, `TouchHud` (ver `UI/README.md`).
 - Config Git (`.gitignore`/`.gitattributes`) e `Packages/README.md` na raiz do template.

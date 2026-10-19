@@ -1,4 +1,4 @@
-# Incrementos A–D (execução headless) — resposta de implementação
+# Incrementos A–E (execução headless) — resposta de implementação
 
 Branch: `feat/incrementos-a-d-headless`. Trabalho sobre o kit `unity-project-template/`
 (o código que se copia para `Game/Assets`). Seguindo `13-handoff-claude-codex.md`:
@@ -60,6 +60,28 @@ fora do projeto Unity: **44/44 testes EditMode passam**. Runtime/Editor/UI usam
   um equivalente engine-free); validar no Editor/aparelho. Casos de suspensão em
   ataque/cutscene (restauração sem hitbox) dependem da integração em cena.
 
+## E — encontro (duas famílias + Fiscal)
+
+- **Arquivos (Domain, testado — 16 testes novos):** `Narrative/MissionProgress.cs`,
+  `Gameplay/EnemyThreatCycle.cs`, `Gameplay/BossEncounter.cs`, `Gameplay/HeroVitality.cs`
+  (+`EncounterTests.cs`). **Runtime (revisado):** `World/FiscalBoss.cs`, `World/CommonEnemy.cs`,
+  `Narrative/MissionController.cs`.
+- **Funciona (testado):**
+  - **Fiscal (BOSS-01):** `Dormant→Intro→Telegraph→Active→Recover→Exposed→Reposition`;
+    **3 exposições** (Carimbo tel1.2/0.3/2.5 e Varredura tel1.4/0.6/1.8), um acerto válido
+    por janela, **blindado fora da janela** (feedback sem dano), avanço por **timer/deadline**
+    (não espera callback), **pausa congela timers**, **checkpoint restaura a fase atual**
+    mantendo exposições concluídas, e **derrota/vitória idempotentes** (publica BOSS_01_DEFEATED
+    uma vez; reentrada após vitória não reconta).
+  - **Inimigo comum:** ameaça Prepare/Active/Recover, dano só em Active, recuo mínimo 1,5 s,
+    pausa não dispara ataque, assistência +35% no aviso, derrota publica ID uma vez.
+  - **Missão M01 ordenada:** flags em ordem; fora de ordem rejeitada; evento repetido/atrasado
+    é no-op seguro; recompensa concedida uma única vez; restauração por prefixo do save.
+  - **Vida do herói:** 5 unidades, dano 1 (ou 0,5 com assistência), morte/reset.
+- **Limite:** arena, hitboxes espaciais, blocos de carga, clipes de animação e movimento de
+  dive/turret são trabalho de cena; `CommonEnemy` traz patrol/hover. Validar em 30/60 FPS,
+  bordas, callback de animação ausente e reentrada após vitória (QA de BOSS-01.md) no Editor.
+
 ## Como homologar localmente (resumo)
 
 1. Criar projeto URP no Unity **6000.3.24f1**; copiar `_Game` e os arquivos Git (A).
@@ -70,5 +92,7 @@ fora do projeto Unity: **44/44 testes EditMode passam**. Runtime/Editor/UI usam
 
 ## Próximo passo e pré-condição
 
-Depois do gate acima: Incremento E (encontro com o Fiscal) e o recorte do slice da Estação
-(`09-ordem-de-implementacao.md`). Pré-condição: Editor compilando o kit e EditMode verde.
+Depois do gate acima: Incremento F (apresentação — Mara/Faísca/Fiscal, trecho da Estação,
+HUD/áudio) e o recorte do slice de 8–12 min (`09-ordem-de-implementacao.md`). Em paralelo,
+G (acesso comercial) depende de contas/sandbox reais do proprietário. Pré-condição: Editor
+compilando o kit e EditMode verde (os mesmos testes do harness).
