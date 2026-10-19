@@ -83,7 +83,11 @@ if (Have "dotnet") {
 "@
   Set-Content -Path (Join-Path $verify "sc-verify.csproj") -Value $csproj -Encoding UTF8
   Push-Location $verify
-  try { dotnet test --nologo; Ok "Testes de Domain executados (deve passar 95/95)" }
+  try {
+    dotnet test --nologo
+    if ($LASTEXITCODE -eq 0) { Ok "Testes de Domain OK (95/95)" }
+    else { Warn "dotnet test nao passou (ou SDK ausente). Opcional: os 95 testes rodam no Unity (EditMode)." }
+  }
   finally { Pop-Location }
 } else { Warn "Sem dotnet: pule. Os mesmos testes rodam no Unity (Test Runner, EditMode)." }
 
