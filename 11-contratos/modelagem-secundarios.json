@@ -1,0 +1,767 @@
+{
+  "version": 1,
+  "status": "production_targets_not_measured",
+  "units": "meters",
+  "assets": [
+    {
+      "asset_id": "ENM-01",
+      "slug": "enm-01",
+      "name": "Operário-drone",
+      "concept": "09-assets/personagens/bestiario-01.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        5000,
+        2500,
+        1250
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Alça de manutenção destacada do corpo.",
+      "skeleton": "Root, corpo e pivôs de alça/propulsão; trajetória vem da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-02",
+      "slug": "enm-02",
+      "name": "Morcego de caldeira",
+      "concept": "09-assets/personagens/bestiario-01.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        6000,
+        3000,
+        1500
+      ],
+      "max_deform_bones": 32,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Asas mecânicas e caldeira separadas.",
+      "skeleton": "Root, corpo e asas articuladas; clipe de mergulho in-place com trajetória da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-03",
+      "slug": "enm-03",
+      "name": "Ecomorcego",
+      "concept": "09-assets/personagens/bestiario-01.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        6000,
+        3000,
+        1500
+      ],
+      "max_deform_bones": 32,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Morcego orgânico estilizado com equipamento de eco; não copiar malha robótica sem adaptar.",
+      "skeleton": "Root, corpo e asas articuladas; clipe de mergulho in-place com trajetória da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-04",
+      "slug": "enm-04",
+      "name": "Pedra-viva",
+      "concept": "09-assets/personagens/bestiario-01.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        8000,
+        4000,
+        2000
+      ],
+      "max_deform_bones": 36,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Pedras podem ser rígidas com core separado; weakpoint abre após rolagem.",
+      "skeleton": "Root, locomoção e pivôs de mecanismo; rig específico da anatomia.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-05",
+      "slug": "enm-05",
+      "name": "Mineiro de lata",
+      "concept": "09-assets/personagens/bestiario-01.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        8000,
+        4000,
+        2000
+      ],
+      "max_deform_bones": 36,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Picareta e mão com socket; não soldar ferramenta ao torso.",
+      "skeleton": "Root, locomoção e pivôs de mecanismo; rig específico da anatomia.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-06",
+      "slug": "enm-06",
+      "name": "Sentinela de carvão",
+      "concept": "09-assets/personagens/bestiario-01.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        7000,
+        3500,
+        1750
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled"
+      ],
+      "parts": "Respiro/jato como peça e VFX distintos.",
+      "skeleton": "Base estática, pivôs de mira/abertura e socket do efeito de ataque.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-07",
+      "slug": "enm-07",
+      "name": "Lampião autônomo",
+      "concept": "09-assets/personagens/bestiario-02.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        5000,
+        2500,
+        1250
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Vidro do lampião com overdraw limitado; alça rígida.",
+      "skeleton": "Root, corpo e pivôs de alça/propulsão; trajetória vem da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-08",
+      "slug": "enm-08",
+      "name": "Espantalho de aço",
+      "concept": "09-assets/personagens/bestiario-02.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        8000,
+        4000,
+        2000
+      ],
+      "max_deform_bones": 36,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Membros finos e roupa por poucos auxiliares, sem cloth obrigatório.",
+      "skeleton": "Root, locomoção e pivôs de mecanismo; rig específico da anatomia.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-09",
+      "slug": "enm-09",
+      "name": "Guarda de acoplamento",
+      "concept": "09-assets/personagens/bestiario-02.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        8000,
+        4000,
+        2000
+      ],
+      "max_deform_bones": 36,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Acoplador e mãos separados; contato de aterramento legível.",
+      "skeleton": "Root, locomoção e pivôs de mecanismo; rig específico da anatomia.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-10",
+      "slug": "enm-10",
+      "name": "Drone-pantógrafo",
+      "concept": "09-assets/personagens/bestiario-02.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        5000,
+        2500,
+        1250
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Pantógrafo abre com pivôs rígidos.",
+      "skeleton": "Root, corpo e pivôs de alça/propulsão; trajetória vem da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-11",
+      "slug": "enm-11",
+      "name": "Caranguejo ferrífero",
+      "concept": "09-assets/personagens/bestiario-02.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        8000,
+        4000,
+        2000
+      ],
+      "max_deform_bones": 36,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Pinça, válvula e pernas articuladas sem malha de metal elástica.",
+      "skeleton": "Root, locomoção e pivôs de mecanismo; rig específico da anatomia.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-12",
+      "slug": "enm-12",
+      "name": "Sentinela hidráulica",
+      "concept": "09-assets/personagens/bestiario-02.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        7000,
+        3500,
+        1750
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled"
+      ],
+      "parts": "Reservatório/console com leitura simples de pressão.",
+      "skeleton": "Base estática, pivôs de mira/abertura e socket do efeito de ataque.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-13",
+      "slug": "enm-13",
+      "name": "Balão-sentinela",
+      "concept": "09-assets/personagens/bestiario-03.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        5000,
+        2500,
+        1250
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Envelope opaco, hélices/lastro em peças distintas.",
+      "skeleton": "Root, corpo e pivôs de alça/propulsão; trajetória vem da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-14",
+      "slug": "enm-14",
+      "name": "Coruja de cobre",
+      "concept": "09-assets/personagens/bestiario-03.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        6000,
+        3000,
+        1500
+      ],
+      "max_deform_bones": 32,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Asas em grupos de placas; lente/olhos legíveis na distância de mergulho.",
+      "skeleton": "Root, corpo e asas articuladas; clipe de mergulho in-place com trajetória da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-15",
+      "slug": "enm-15",
+      "name": "Projeção guardiã",
+      "concept": "09-assets/personagens/bestiario-03.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        5000,
+        2500,
+        1250
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Figura projetada e base como peças independentes; não exige novo corpo humano deformável complexo.",
+      "skeleton": "Root, corpo e pivôs de alça/propulsão; trajetória vem da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-16",
+      "slug": "enm-16",
+      "name": "Sentinela de lente",
+      "concept": "09-assets/personagens/bestiario-03.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        7000,
+        3500,
+        1750
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled"
+      ],
+      "parts": "Base, tripé e lente em pivôs; feixe como VFX externo.",
+      "skeleton": "Base estática, pivôs de mira/abertura e socket do efeito de ataque.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-17",
+      "slug": "enm-17",
+      "name": "Sentinela de cobre",
+      "concept": "09-assets/personagens/bestiario-03.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        8000,
+        4000,
+        2000
+      ],
+      "max_deform_bones": 36,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Escudo abre por pivô, mantendo hitbox de gameplay independente.",
+      "skeleton": "Root, locomoção e pivôs de mecanismo; rig específico da anatomia.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-18",
+      "slug": "enm-18",
+      "name": "Torre de vapor",
+      "concept": "09-assets/personagens/bestiario-03.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        7000,
+        3500,
+        1750
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled"
+      ],
+      "parts": "Válvula e chaminés separados; vapor por VFX com teto.",
+      "skeleton": "Base estática, pivôs de mira/abertura e socket do efeito de ataque.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "ENM-19",
+      "slug": "enm-19",
+      "name": "Sentinela da Aurora",
+      "concept": "09-assets/personagens/bestiario-03.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Generic",
+      "lod_triangles": [
+        5000,
+        2500,
+        1250
+      ],
+      "max_deform_bones": 20,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "attack_origin",
+        "counter_target"
+      ],
+      "clips": [
+        "idle",
+        "notice",
+        "attack",
+        "recover",
+        "disabled",
+        "locomotion"
+      ],
+      "parts": "Anéis/core com pivôs e dois modos de resposta visual.",
+      "skeleton": "Root, corpo e pivôs de alça/propulsão; trajetória vem da IA.",
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "NPC-01",
+      "slug": "npc-01",
+      "name": "Ferroviários",
+      "concept": "09-assets/personagens/figurantes.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Humanoid",
+      "lod_triangles": [
+        10000,
+        5000,
+        2500
+      ],
+      "max_deform_bones": 55,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "hand_tool",
+        "work_target"
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "work_loop",
+        "warn",
+        "evacuate",
+        "celebrate"
+      ],
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "NPC-02",
+      "slug": "npc-02",
+      "name": "Jardineiros e operadores de água",
+      "concept": "09-assets/personagens/figurantes.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Humanoid",
+      "lod_triangles": [
+        10000,
+        5000,
+        2500
+      ],
+      "max_deform_bones": 55,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "hand_tool",
+        "work_target"
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "work_loop",
+        "warn",
+        "evacuate",
+        "celebrate"
+      ],
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    },
+    {
+      "asset_id": "NPC-03",
+      "slug": "npc-03",
+      "name": "Técnicos da Cidadela",
+      "concept": "09-assets/personagens/figurantes.png",
+      "profile": "09-arte-audio/16-bestiario-e-figurantes-3d.md",
+      "rig_type": "Humanoid",
+      "lod_triangles": [
+        10000,
+        5000,
+        2500
+      ],
+      "max_deform_bones": 55,
+      "max_influences": 4,
+      "max_material_slots": 2,
+      "max_texture_edge": 1024,
+      "sockets": [
+        "hand_tool",
+        "work_target"
+      ],
+      "clips": [
+        "idle",
+        "walk",
+        "work_loop",
+        "warn",
+        "evacuate",
+        "celebrate"
+      ],
+      "model_status": "not_produced",
+      "source_format": "blend",
+      "runtime_format": "fbx",
+      "preview_format": "glb_optional"
+    }
+  ]
+}

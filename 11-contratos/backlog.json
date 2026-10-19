@@ -1,0 +1,2109 @@
+{
+  "version": 3,
+  "base_hours": 7712,
+  "contingency_percent": 30,
+  "tasks": [
+    {
+      "id": "DEV-01",
+      "epic": "Core",
+      "title": "Repositório, LFS e projeto URP baseline",
+      "role": "Tech Lead",
+      "hours": 12,
+      "depends": [],
+      "accept": "Projeto abre, versões e locks commitados",
+      "milestone": "M0",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-02",
+      "epic": "Core",
+      "title": "Assemblies, CompositionRoot e fronteiras",
+      "role": "Gameplay",
+      "hours": 20,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Domain sem UnityEngine; build compila",
+      "milestone": "M0",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-03",
+      "epic": "Core",
+      "title": "Input System touch/teclado/gamepad",
+      "role": "Gameplay",
+      "hours": 32,
+      "depends": [
+        "DEV-02"
+      ],
+      "accept": "Multitouch e cancelamento de foco funcionam",
+      "milestone": "M1",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-04",
+      "epic": "Core",
+      "title": "Motor Mara com salto variável e coyote",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "DEV-03"
+      ],
+      "accept": "Gaps do slice passam em 30/60 FPS",
+      "milestone": "M1",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-05",
+      "epic": "Core",
+      "title": "Câmera, volumes e safe framing",
+      "role": "Gameplay",
+      "hours": 24,
+      "depends": [
+        "DEV-04"
+      ],
+      "accept": "Pousos visíveis nos ratios alvo",
+      "milestone": "M1",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-06",
+      "epic": "Core",
+      "title": "Laço, alvo e sockets",
+      "role": "Gameplay",
+      "hours": 48,
+      "depends": [
+        "DEV-04"
+      ],
+      "accept": "Alcance, cancelamento e balanço sem softlock",
+      "milestone": "M1",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-07",
+      "epic": "Core",
+      "title": "Mascote Faísca e canais",
+      "role": "Gameplay",
+      "hours": 32,
+      "depends": [
+        "DEV-06"
+      ],
+      "accept": "Entrar, retornar e falhar com segurança",
+      "milestone": "M1",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-08",
+      "epic": "Core",
+      "title": "DTO schema3 e três slots",
+      "role": "Gameplay",
+      "hours": 24,
+      "depends": [
+        "DEV-02"
+      ],
+      "accept": "Schemas e catálogos validados",
+      "milestone": "M1",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-09",
+      "epic": "Core",
+      "title": "Migração, backup e I/O atômico nativo",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "DEV-08"
+      ],
+      "accept": "Crash/disco cheio preservam progresso",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-10",
+      "epic": "Core",
+      "title": "Quest state e idempotência",
+      "role": "Gameplay",
+      "hours": 32,
+      "depends": [
+        "DEV-02"
+      ],
+      "accept": "Eventos repetidos não duplicam prêmio",
+      "milestone": "M1",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-11",
+      "epic": "Core",
+      "title": "Checkpoints e suspensão mobile",
+      "role": "Gameplay",
+      "hours": 32,
+      "depends": [
+        "DEV-09",
+        "DEV-10"
+      ],
+      "accept": "Retoma mecanismos/posição em ponto seguro",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-12",
+      "epic": "Core",
+      "title": "Diálogo, legenda e skip",
+      "role": "Gameplay",
+      "hours": 32,
+      "depends": [
+        "DEV-10"
+      ],
+      "accept": "Mesmo estado com cena vista ou pulada",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-13",
+      "epic": "Core",
+      "title": "Pool e famílias de inimigos",
+      "role": "Gameplay",
+      "hours": 48,
+      "depends": [
+        "DEV-04"
+      ],
+      "accept": "19 variantes configuráveis sem copiar IA",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-14",
+      "epic": "Core",
+      "title": "Sistema de chefes por configuração",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Hitboxes canceladas e vitória única",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-15",
+      "epic": "Core",
+      "title": "Zé, troca segura e impacto",
+      "role": "Gameplay",
+      "hours": 56,
+      "depends": [
+        "DEV-04",
+        "DEV-06"
+      ],
+      "accept": "Troca não penetra nem perde objetivo",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-16",
+      "epic": "Core",
+      "title": "Aterramento e mecanismos elétricos",
+      "role": "Gameplay",
+      "hours": 32,
+      "depends": [
+        "DEV-15"
+      ],
+      "accept": "Sinal de ameaça acessível e cancelável",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-17",
+      "epic": "Core",
+      "title": "Trovico e alvos aéreos",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "DEV-07"
+      ],
+      "accept": "Alcance/LOS/retorno e interrupção",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-18",
+      "epic": "Core",
+      "title": "Água, pressão e válvulas",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "DEV-10"
+      ],
+      "accept": "Puzzle recupera estado local sem perder canal",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-19",
+      "epic": "Core",
+      "title": "Trem e cenário em movimento relativo",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "DEV-05",
+        "DEV-13"
+      ],
+      "accept": "Sem drift de física ou câmera",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-20",
+      "epic": "Core",
+      "title": "Lentes e gravidade por volume",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "DEV-05",
+        "DEV-10"
+      ],
+      "accept": "Controle preservado e restauração correta",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-21",
+      "epic": "Core",
+      "title": "Menus, slots, pausa e Atlas",
+      "role": "UI",
+      "hours": 56,
+      "depends": [
+        "DEV-08",
+        "DEV-12"
+      ],
+      "accept": "12 telas e caminhos de erro navegáveis",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-22",
+      "epic": "Core",
+      "title": "Opções e assistência persistidas",
+      "role": "UI",
+      "hours": 32,
+      "depends": [
+        "DEV-21"
+      ],
+      "accept": "Canhoto, mix, legenda, flash e remap",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-23",
+      "epic": "Core",
+      "title": "Áudio por prioridade e stems",
+      "role": "Audio Dev",
+      "hours": 40,
+      "depends": [
+        "DEV-12"
+      ],
+      "accept": "Aviso audível e transição sem corte",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-24",
+      "epic": "Core",
+      "title": "Catálogo de assets e carga aditiva",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "DEV-02"
+      ],
+      "accept": "Unload sem referência perdida ou pico OOM",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "DEV-25",
+      "epic": "Core",
+      "title": "Ferramentas Editor de IDs e checkpoints",
+      "role": "Tools",
+      "hours": 32,
+      "depends": [
+        "DEV-10",
+        "DEV-24"
+      ],
+      "accept": "Cena inválida bloqueia build de conteúdo",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-01",
+      "epic": "Segurança",
+      "title": "Gateway, projeto sandbox e cofre/KMS",
+      "role": "Backend",
+      "hours": 40,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Sem segredo em repo/cliente; TLS e papéis",
+      "milestone": "M0",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-02",
+      "epic": "Segurança",
+      "title": "Principal de instalação e posse de chave",
+      "role": "Backend",
+      "hours": 48,
+      "depends": [
+        "SEC-DEV-01"
+      ],
+      "accept": "Instalação A não redefine chave de B",
+      "milestone": "M1",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-03",
+      "epic": "Segurança",
+      "title": "Android bridge e verificação Play Integrity",
+      "role": "Platform",
+      "hours": 64,
+      "depends": [
+        "SEC-DEV-02"
+      ],
+      "accept": "Compra/app/certificado/hash/tempo verificados",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-04",
+      "epic": "Segurança",
+      "title": "iOS bridge AppTransaction + App Attest",
+      "role": "Platform",
+      "hours": 80,
+      "depends": [
+        "SEC-DEV-02"
+      ],
+      "accept": "Cadeia, bundle, ambiente, contador e challenge",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-05",
+      "epic": "Segurança",
+      "title": "Persistência de concessão e idempotência/outbox",
+      "role": "Backend",
+      "hours": 48,
+      "depends": [
+        "SEC-DEV-02"
+      ],
+      "accept": "Crash/replay/corrida em duas instâncias",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-06",
+      "epic": "Segurança",
+      "title": "Verificador Unity interoperável e storage",
+      "role": "Platform",
+      "hours": 40,
+      "depends": [
+        "SEC-DEV-03",
+        "SEC-DEV-04"
+      ],
+      "accept": "Vetores Python/C# e IL2CPP no aparelho",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-07",
+      "epic": "Segurança",
+      "title": "Fluxos ativar/renovar/restaurar e UX offline",
+      "role": "UI",
+      "hours": 40,
+      "depends": [
+        "DEV-21",
+        "SEC-DEV-06"
+      ],
+      "accept": "Cache e erro preservam campanha",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-08",
+      "epic": "Segurança",
+      "title": "Manifesto assinado e atualização de conteúdo",
+      "role": "Backend",
+      "hours": 32,
+      "depends": [
+        "DEV-24",
+        "SEC-DEV-01"
+      ],
+      "accept": "Bundle adulterado não é promovido",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-09",
+      "epic": "Segurança",
+      "title": "Operação, métricas e recovery drill",
+      "role": "SRE",
+      "hours": 40,
+      "depends": [
+        "SEC-DEV-05"
+      ],
+      "accept": "Restore banco, cota e fornecedor indisponível",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "SEC-DEV-10",
+      "epic": "Segurança",
+      "title": "Pentest backend e binário de release",
+      "role": "Security",
+      "hours": 80,
+      "depends": [
+        "SEC-DEV-06",
+        "SEC-DEV-09"
+      ],
+      "accept": "Achados corrigidos/retestados; gate registrado",
+      "milestone": "M6",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-01-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Estação Pôr do Sol",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "DEV-14"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-01-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Fiscal de Trilhos",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-01-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-01-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Estação Pôr do Sol",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-01-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-01-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-01",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-01-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-01-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Estação Pôr do Sol",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-01-BOSS",
+        "LVL-01-ART",
+        "LVL-01-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-02-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Cânion dos Mil Ecos",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-01-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-02-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Cascavel de Silício",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-02-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-02-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Cânion dos Mil Ecos",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-02-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-02-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-02",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-02-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-02-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Cânion dos Mil Ecos",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-02-BOSS",
+        "LVL-02-ART",
+        "LVL-02-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-03-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Minas de Ferrugem",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-02-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-03-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Britador Colosso",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-03-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-03-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Minas de Ferrugem",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-03-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-03-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-03",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-03-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-03-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Minas de Ferrugem",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-03-BOSS",
+        "LVL-03-ART",
+        "LVL-03-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-04-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Cidade Fantasma",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-03-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-04-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Maquinista Sem Rosto",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-04-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-04-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Cidade Fantasma",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-04-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-04-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-04",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-04-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M3",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-04-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Cidade Fantasma",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-04-BOSS",
+        "LVL-04-ART",
+        "LVL-04-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-05-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — O Expresso de Cobre",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-04-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-05-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Condutor Relâmpago",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-05-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-05-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — O Expresso de Cobre",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-05-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-05-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-05",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-05-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-05-QA",
+      "epic": "Campanha",
+      "title": "QA completo — O Expresso de Cobre",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-05-BOSS",
+        "LVL-05-ART",
+        "LVL-05-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-06-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Oásis das Vozes",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-05-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-06-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Guardião dos Canais",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-06-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-06-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Oásis das Vozes",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-06-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-06-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-06",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-06-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-06-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Oásis das Vozes",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-06-BOSS",
+        "LVL-06-ART",
+        "LVL-06-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-07-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Serra dos Relâmpagos",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-06-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-07-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto General Para-Raios",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-07-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-07-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Serra dos Relâmpagos",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-07-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-07-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-07",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-07-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-07-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Serra dos Relâmpagos",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-07-BOSS",
+        "LVL-07-ART",
+        "LVL-07-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-08-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Observatório Perdido",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-07-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-08-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Oráculo de Latão",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-08-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-08-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Observatório Perdido",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-08-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-08-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-08",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-08-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-08-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Observatório Perdido",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-08-BOSS",
+        "LVL-08-ART",
+        "LVL-08-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-09-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Cidadela Ferrugem",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-08-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-09-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Madame Engrenagem",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-09-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-09-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Cidadela Ferrugem",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-09-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-09-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-09",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-09-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-09-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Cidadela Ferrugem",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-09-BOSS",
+        "LVL-09-ART",
+        "LVL-09-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-10-GRAY",
+      "epic": "Campanha",
+      "title": "Greybox e checkpoints — Coração da Tempestade",
+      "role": "Level Design",
+      "hours": 48,
+      "depends": [
+        "LVL-09-GRAY"
+      ],
+      "accept": "Seis seções, rota principal e opcionais recuperáveis",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-10-BOSS",
+      "epic": "Campanha",
+      "title": "Confronto Barão Ferrugem",
+      "role": "Gameplay",
+      "hours": 40,
+      "depends": [
+        "LVL-10-GRAY",
+        "DEV-14"
+      ],
+      "accept": "Dois ataques específicos e fases da ficha",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-10-ART",
+      "epic": "Campanha",
+      "title": "Kit e lighting — Coração da Tempestade",
+      "role": "Environment",
+      "hours": 100,
+      "depends": [
+        "LVL-10-GRAY"
+      ],
+      "accept": "Kit modular, materiais, LOD e budget no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-10-NAR",
+      "epic": "Campanha",
+      "title": "Diálogo e encenação EP-10",
+      "role": "Narrative",
+      "hours": 24,
+      "depends": [
+        "LVL-10-GRAY",
+        "DEV-12"
+      ],
+      "accept": "Falas/flags e skip sem contradição",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "LVL-10-QA",
+      "epic": "Campanha",
+      "title": "QA completo — Coração da Tempestade",
+      "role": "QA",
+      "hours": 24,
+      "depends": [
+        "LVL-10-BOSS",
+        "LVL-10-ART",
+        "LVL-10-NAR"
+      ],
+      "accept": "30/60 FPS, morte, save, replay e assistência",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-01-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Mara Vento",
+      "role": "3D Artist",
+      "hours": 64,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-01-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Mara Vento",
+      "role": "Animator",
+      "hours": 56,
+      "depends": [
+        "CHR-01-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-02-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Zé Trovão",
+      "role": "3D Artist",
+      "hours": 64,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-02-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Zé Trovão",
+      "role": "Animator",
+      "hours": 56,
+      "depends": [
+        "CHR-02-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-03-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Faísca",
+      "role": "3D Artist",
+      "hours": 64,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-03-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Faísca",
+      "role": "Animator",
+      "hours": 56,
+      "depends": [
+        "CHR-03-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-04-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Trovico",
+      "role": "3D Artist",
+      "hours": 64,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-04-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Trovico",
+      "role": "Animator",
+      "hours": 56,
+      "depends": [
+        "CHR-04-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-05-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Luna Fagulha",
+      "role": "3D Artist",
+      "hours": 64,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-05-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Luna Fagulha",
+      "role": "Animator",
+      "hours": 56,
+      "depends": [
+        "CHR-05-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-06-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Isadora Veredas",
+      "role": "3D Artist",
+      "hours": 64,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-06-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Isadora Veredas",
+      "role": "Animator",
+      "hours": 56,
+      "depends": [
+        "CHR-06-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-07-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Barão Ferrugem",
+      "role": "3D Artist",
+      "hours": 64,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-07-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Barão Ferrugem",
+      "role": "Animator",
+      "hours": 56,
+      "depends": [
+        "CHR-07-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-08-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Fiscal de Trilhos",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-08-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Fiscal de Trilhos",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-08-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-09-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Cascavel de Silício",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-09-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Cascavel de Silício",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-09-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-10-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Britador Colosso",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-10-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Britador Colosso",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-10-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-11-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Maquinista Sem Rosto",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-11-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Maquinista Sem Rosto",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-11-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-12-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Condutor Relâmpago",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-12-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Condutor Relâmpago",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-12-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-13-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Guardião dos Canais",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-13-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Guardião dos Canais",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-13-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-14-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — General Para-Raios",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-14-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — General Para-Raios",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-14-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-15-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Oráculo de Latão",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-15-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Oráculo de Latão",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-15-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-16-MODEL",
+      "epic": "Personagens",
+      "title": "Malha, UV, texturas e LOD — Madame Engrenagem",
+      "role": "3D Artist",
+      "hours": 80,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Prancha resolvida em vistas técnicas e budget",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "CHR-16-RIG",
+      "epic": "Personagens",
+      "title": "Rig, clips e prefab — Madame Engrenagem",
+      "role": "Animator",
+      "hours": 64,
+      "depends": [
+        "CHR-16-MODEL"
+      ],
+      "accept": "Clips da ficha, sockets, collider, import e device QA",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-01-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-01",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-02-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-02",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-03-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-03",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-04-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-04",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-05-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-05",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-06-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-06",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-07-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-07",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-08-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-08",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-09-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-09",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-10-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-10",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-11-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-11",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-12-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-12",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-13-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-13",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-14-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-14",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-15-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-15",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-16-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-16",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-17-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-17",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-18-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-18",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "ENM-19-ASSET",
+      "epic": "Bestiário",
+      "title": "Malha/rig/prefab da variante ENM-19",
+      "role": "3D Artist",
+      "hours": 32,
+      "depends": [
+        "DEV-13"
+      ],
+      "accept": "Visual da célula correta e comportamento da família",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "SIDE-01",
+      "epic": "Narrativa",
+      "title": "Implementar e testar opcional S01",
+      "role": "Level Design",
+      "hours": 16,
+      "depends": [
+        "LVL-01-GRAY",
+        "DEV-10"
+      ],
+      "accept": "Aceitar/adiar/replay sem bloquear final",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "SIDE-02",
+      "epic": "Narrativa",
+      "title": "Implementar e testar opcional S02",
+      "role": "Level Design",
+      "hours": 16,
+      "depends": [
+        "LVL-02-GRAY",
+        "DEV-10"
+      ],
+      "accept": "Aceitar/adiar/replay sem bloquear final",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "SIDE-03",
+      "epic": "Narrativa",
+      "title": "Implementar e testar opcional S03",
+      "role": "Level Design",
+      "hours": 16,
+      "depends": [
+        "LVL-03-GRAY",
+        "DEV-10"
+      ],
+      "accept": "Aceitar/adiar/replay sem bloquear final",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "SIDE-04",
+      "epic": "Narrativa",
+      "title": "Implementar e testar opcional S04",
+      "role": "Level Design",
+      "hours": 16,
+      "depends": [
+        "LVL-04-GRAY",
+        "DEV-10"
+      ],
+      "accept": "Aceitar/adiar/replay sem bloquear final",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "SIDE-05",
+      "epic": "Narrativa",
+      "title": "Implementar e testar opcional S05",
+      "role": "Level Design",
+      "hours": 16,
+      "depends": [
+        "LVL-05-GRAY",
+        "DEV-10"
+      ],
+      "accept": "Aceitar/adiar/replay sem bloquear final",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "SIDE-06",
+      "epic": "Narrativa",
+      "title": "Implementar e testar opcional S06",
+      "role": "Level Design",
+      "hours": 16,
+      "depends": [
+        "LVL-06-GRAY",
+        "DEV-10"
+      ],
+      "accept": "Aceitar/adiar/replay sem bloquear final",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "SIDE-07",
+      "epic": "Narrativa",
+      "title": "Implementar e testar opcional S07",
+      "role": "Level Design",
+      "hours": 16,
+      "depends": [
+        "LVL-07-GRAY",
+        "DEV-10"
+      ],
+      "accept": "Aceitar/adiar/replay sem bloquear final",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "SIDE-08",
+      "epic": "Narrativa",
+      "title": "Implementar e testar opcional S08",
+      "role": "Level Design",
+      "hours": 16,
+      "depends": [
+        "LVL-08-GRAY",
+        "DEV-10"
+      ],
+      "accept": "Aceitar/adiar/replay sem bloquear final",
+      "milestone": "M4",
+      "status": "Backlog"
+    },
+    {
+      "id": "PROD-01",
+      "epic": "Produção",
+      "title": "Revisão técnica de pranchas e escala",
+      "role": "Art Lead",
+      "hours": 40,
+      "depends": [
+        "DEV-04"
+      ],
+      "accept": "Turnarounds técnicos consistentes para modelagem",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "PROD-02",
+      "epic": "Produção",
+      "title": "Máquina da Seca: modelo modular e animação",
+      "role": "3D Artist",
+      "hours": 160,
+      "depends": [
+        "DEV-14"
+      ],
+      "accept": "Anéis, válvulas e três estados seguros",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "PROD-03",
+      "epic": "Produção",
+      "title": "Três famílias de figurantes e crowd",
+      "role": "3D Artist",
+      "hours": 96,
+      "depends": [
+        "DEV-24"
+      ],
+      "accept": "Rig compartilhável, 3 variantes e teto de crowd",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "PROD-04",
+      "epic": "Produção",
+      "title": "Composição e produção de trilha/stems",
+      "role": "Composer",
+      "hours": 200,
+      "depends": [
+        "LVL-01-GRAY"
+      ],
+      "accept": "Motivos originais e atribuições",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "PROD-05",
+      "epic": "Produção",
+      "title": "SFX, vocalizações e mix",
+      "role": "Sound",
+      "hours": 120,
+      "depends": [
+        "DEV-23"
+      ],
+      "accept": "Avisos e interações consistentes no aparelho",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "PROD-06",
+      "epic": "Produção",
+      "title": "Texto final PT-BR e tabela de localização",
+      "role": "Narrative",
+      "hours": 64,
+      "depends": [
+        "LVL-10-NAR"
+      ],
+      "accept": "IDs únicos e teste de expansão de texto",
+      "milestone": "M5",
+      "status": "Backlog"
+    },
+    {
+      "id": "QA-01",
+      "epic": "Produção",
+      "title": "Testes externos do slice",
+      "role": "QA",
+      "hours": 32,
+      "depends": [
+        "LVL-01-QA"
+      ],
+      "accept": "Observação e ajustes priorizados",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "QA-02",
+      "epic": "Produção",
+      "title": "Campanha completa e migração de saves",
+      "role": "QA",
+      "hours": 80,
+      "depends": [
+        "LVL-10-QA",
+        "DEV-09"
+      ],
+      "accept": "Início ao fim, upgrade e recovery",
+      "milestone": "M6",
+      "status": "Backlog"
+    },
+    {
+      "id": "QA-03",
+      "epic": "Produção",
+      "title": "Matriz de dispositivos e thermal soak",
+      "role": "QA",
+      "hours": 80,
+      "depends": [
+        "LVL-10-ART"
+      ],
+      "accept": "Evidência por aparelho e perfil",
+      "milestone": "M6",
+      "status": "Backlog"
+    },
+    {
+      "id": "QA-04",
+      "epic": "Produção",
+      "title": "Acessibilidade e controles por usuários",
+      "role": "QA",
+      "hours": 48,
+      "depends": [
+        "DEV-22"
+      ],
+      "accept": "Problemas críticos corrigidos",
+      "milestone": "M6",
+      "status": "Backlog"
+    },
+    {
+      "id": "REL-01",
+      "epic": "Produção",
+      "title": "CI de build, símbolos e assinatura",
+      "role": "Build",
+      "hours": 48,
+      "depends": [
+        "DEV-01"
+      ],
+      "accept": "Release reproduzível sem debug/mocks",
+      "milestone": "M2",
+      "status": "Backlog"
+    },
+    {
+      "id": "REL-02",
+      "epic": "Produção",
+      "title": "Direitos de assets, privacidade e loja",
+      "role": "Product",
+      "hours": 48,
+      "depends": [
+        "PROD-06"
+      ],
+      "accept": "Vendedor/contato reais e documentação revisada",
+      "milestone": "M6",
+      "status": "Backlog"
+    },
+    {
+      "id": "REL-03",
+      "epic": "Produção",
+      "title": "Candidato Android/iOS, restore e rollout",
+      "role": "Release",
+      "hours": 48,
+      "depends": [
+        "QA-02",
+        "QA-03",
+        "QA-04",
+        "SEC-DEV-10",
+        "REL-02"
+      ],
+      "accept": "Gates assinados e monitoramento ativo",
+      "milestone": "M6",
+      "status": "Backlog"
+    }
+  ]
+}

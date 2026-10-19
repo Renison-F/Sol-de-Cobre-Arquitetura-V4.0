@@ -1,0 +1,52 @@
+id,speaker,pt_BR,context,trigger
+DLG-LVL01-SEQ01-01,Mara,O poço não secou durante a noite. Alguém levou a água.,Estação Pôr do Sol,scene_or_context_validated
+DLG-LVL01-SEQ02-01,Mara,"Faísca, esse barulho vem debaixo da estação?",Estação Pôr do Sol,scene_or_context_validated
+DLG-LVL01-SEQ03-01,Fiscal,Circulação sem autorização. Carimbo obrigatório.,Estação Pôr do Sol,scene_or_context_validated
+DLG-LVL01-SEQ04-01,Mara,Minha mãe desenhava este símbolo. E nunca desperdiçava uma linha.,Estação Pôr do Sol,scene_or_context_validated
+DLG-LVL02-SEQ01-01,Mara,Até as pedras estão tentando dizer alguma coisa.,Cânion dos Mil Ecos,scene_or_context_validated
+DLG-LVL02-SEQ02-01,Mara,"Três sinais, uma passagem. Vamos ouvir antes de correr.",Cânion dos Mil Ecos,scene_or_context_validated
+DLG-LVL02-SEQ03-01,Mara,Este rio não evaporou. Foi desviado.,Cânion dos Mil Ecos,scene_or_context_validated
+DLG-LVL02-SEQ04-01,Zé,"Se estiver procurando a saída, péssima notícia: eu também estou!",Cânion dos Mil Ecos,scene_or_context_validated
+DLG-LVL03-SEQ01-01,Zé,"Eu conheço esta mina como a palma... espera, este túnel é novo.",Minas de Ferrugem,scene_or_context_validated
+DLG-LVL03-SEQ02-01,Luna,"Me tirem daqui. E tragam a caixa azul. Nessa ordem, se der.",Minas de Ferrugem,scene_or_context_validated
+DLG-LVL03-SEQ03-01,Mara,A água da estação está indo para a capital?,Minas de Ferrugem,scene_or_context_validated
+DLG-LVL03-SEQ04-01,Luna,"E se você fechar tudo de uma vez, a mina inteira afunda.",Minas de Ferrugem,scene_or_context_validated
+DLG-LVL04-SEQ01-01,Zé,"Trovico! Eu disse para vigiar o céu, não o meu cabelo.",Cidade Fantasma,scene_or_context_validated
+DLG-LVL04-SEQ02-01,Mara,Não são fantasmas. São registros.,Cidade Fantasma,scene_or_context_validated
+DLG-LVL04-SEQ03-01,Luna,Alguém quis que a cidade lembrasse. Mesmo depois de ficar vazia.,Cidade Fantasma,scene_or_context_validated
+DLG-LVL04-SEQ04-01,Maquinista,Última chamada. Nenhum passageiro deve ficar para trás.,Cidade Fantasma,scene_or_context_validated
+DLG-LVL05-SEQ01-01,Luna,"Somos manutenção. Tecnicamente, vamos consertar muita coisa.",O Expresso de Cobre,scene_or_context_validated
+DLG-LVL05-SEQ02-01,Zé,"Um trem, três problemas e nenhum café. Já tive turnos piores.",O Expresso de Cobre,scene_or_context_validated
+DLG-LVL05-SEQ03-01,Isadora,"Se me ouvirem, não cortem o motor. Abram os canais primeiro.",O Expresso de Cobre,scene_or_context_validated
+DLG-LVL05-SEQ04-01,Mara,Ela está viva. E ainda está tentando proteger todo mundo.,O Expresso de Cobre,scene_or_context_validated
+DLG-LVL06-SEQ01-01,Luna,Não precisamos de mais força aqui. Precisamos de equilíbrio.,Oásis das Vozes,scene_or_context_validated
+DLG-LVL06-SEQ02-01,Zé,Entendo por que não confiam. Não vou pedir que esqueçam.,Oásis das Vozes,scene_or_context_validated
+DLG-LVL06-SEQ03-01,Mara,Ela esteve aqui. Esta anotação ainda está fresca.,Oásis das Vozes,scene_or_context_validated
+DLG-LVL06-SEQ04-01,Luna,Sua mãe não desapareceu do mapa. Ela ficou segurando uma parte dele.,Oásis das Vozes,scene_or_context_validated
+DLG-LVL07-SEQ01-01,Zé,A assinatura é minha. E o aviso também chegou até mim.,Serra dos Relâmpagos,scene_or_context_validated
+DLG-LVL07-SEQ02-01,Mara,Por que não disse antes?,Serra dos Relâmpagos,scene_or_context_validated
+DLG-LVL07-SEQ03-01,Zé,Porque contar parecia mais difícil do que fugir. Eu estava errado.,Serra dos Relâmpagos,scene_or_context_validated
+DLG-LVL07-SEQ04-01,Mara,Então fique. Vamos consertar uma coisa de cada vez.,Serra dos Relâmpagos,scene_or_context_validated
+DLG-LVL08-SEQ01-01,Mara,Qual era o nome do rio que eu desenhava ao contrário?,Observatório Perdido,scene_or_context_validated
+DLG-LVL08-SEQ02-01,Isadora,Rio Teimoso. Você dizia que ele é que estava errado.,Observatório Perdido,scene_or_context_validated
+DLG-LVL08-SEQ03-01,Mara,Eu vim buscar você.,Observatório Perdido,scene_or_context_validated
+DLG-LVL08-SEQ04-01,Isadora,Eu sei. Mas primeiro abra os quatro canais. Eu consigo esperar mais um pouco.,Observatório Perdido,scene_or_context_validated
+DLG-LVL09-SEQ01-01,Madame,Uma cidade não pode parar porque vocês encontraram um mapa.,Cidadela Ferrugem,scene_or_context_validated
+DLG-LVL09-SEQ02-01,Luna,É por isso que trouxemos um procedimento. Não uma explosão.,Cidadela Ferrugem,scene_or_context_validated
+DLG-LVL09-SEQ03-01,Zé,O gerador fica ligado. Ninguém vai pagar pela nossa pressa.,Cidadela Ferrugem,scene_or_context_validated
+DLG-LVL09-SEQ04-01,Madame,Essas instruções nunca chegaram ao meu gabinete. Abram o quarto canal.,Cidadela Ferrugem,scene_or_context_validated
+DLG-LVL10-SEQ01-01,Barão,Eu vi vilas matarem por um balde. Dei ao céu uma ordem.,Coração da Tempestade,scene_or_context_validated
+DLG-LVL10-SEQ02-01,Mara,E decidiu que só a sua cidade merecia resposta.,Coração da Tempestade,scene_or_context_validated
+DLG-LVL10-SEQ03-01,Isadora,"Os canais estão abertos. Agora, Mara!",Coração da Tempestade,scene_or_context_validated
+DLG-LVL10-SEQ04-01,Zé,Pode puxar. Desta vez eu não solto ninguém.,Coração da Tempestade,scene_or_context_validated
+DLG-LVL10-SEQ05-01,Mara,"Não precisa mais segurar o céu sozinha, mãe.",Coração da Tempestade,scene_or_context_validated
+DLG-LVL10-SEQ06-01,Barão,Se eu soltar o comando...,Coração da Tempestade,scene_or_context_validated
+DLG-LVL10-SEQ06-02,Mara,A água vai continuar correndo. Esse é o ponto.,Coração da Tempestade,scene_or_context_validated
+DLG-FINAL-01,Mara,"Não precisa mais segurar o céu sozinha, mãe.",SC-11 Primeira chuva,ISADORA_RESCUED_AND_NUCLEO_ESTAVEL
+DLG-FINAL-02,Isadora,Você desenhou um caminho melhor do que o meu.,SC-11 Primeira chuva,ISADORA_RESCUED_AND_NUCLEO_ESTAVEL
+DLG-FINAL-03,Barão,"Sem um dono, quem vai decidir?",SC-11 Primeira chuva,ISADORA_RESCUED_AND_NUCLEO_ESTAVEL
+DLG-FINAL-04,Mara,Quem vive aqui. Juntos.,SC-11 Primeira chuva,ISADORA_RESCUED_AND_NUCLEO_ESTAVEL
+DLG-FINAL-05,Luna,Quatro canais. Nenhuma vila ficou de fora.,SC-11 Primeira chuva,ISADORA_RESCUED_AND_NUCLEO_ESTAVEL
+DLG-FINAL-06,Zé,Acho que finalmente tenho uma história que não preciso aumentar.,SC-11 Primeira chuva,ISADORA_RESCUED_AND_NUCLEO_ESTAVEL
+DLG-FINAL-07,Mara,Ainda tem muita estrada.,SC-11 Primeira chuva,ISADORA_RESCUED_AND_NUCLEO_ESTAVEL
+DLG-FINAL-08,Isadora,Então vamos deixar espaço no mapa.,SC-11 Primeira chuva,ISADORA_RESCUED_AND_NUCLEO_ESTAVEL

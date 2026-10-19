@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "asset_id": "CHR-MARA-VENTO",
+  "rig_type": "Humanoid",
+  "source_file": "Source/CHR_MARA_VENTO.blend",
+  "runtime_file": "Runtime/CHR_MARA_VENTO.fbx",
+  "lods": [
+    {
+      "level": 0,
+      "triangles": null,
+      "material_slots": null
+    },
+    {
+      "level": 1,
+      "triangles": null,
+      "material_slots": null
+    },
+    {
+      "level": 2,
+      "triangles": null,
+      "material_slots": null
+    }
+  ],
+  "deform_bones": null,
+  "max_influences": null,
+  "textures": [
+    {
+      "file": "Textures/BaseColor.png",
+      "width": null,
+      "height": null
+    }
+  ],
+  "sockets": [
+    "hand_r_tool",
+    "hand_l_grip",
+    "belt_lasso",
+    "companion_anchor"
+  ],
+  "clips": [
+    "idle_atlas",
+    "run",
+    "jump_start",
+    "jump_loop",
+    "fall",
+    "land",
+    "lasso_cast",
+    "lasso_hold",
+    "lasso_release",
+    "hurt",
+    "rescue",
+    "hug_isadora"
+  ],
+  "metrics_source": "fill_after_measurement",
+  "reviews": {
+    "technical_views": false,
+    "deformation": false,
+    "unity_import": false,
+    "lod_transition": false,
+    "device_profile": false,
+    "origin_recorded": false
+  },
+  "evidence_files": []
+}

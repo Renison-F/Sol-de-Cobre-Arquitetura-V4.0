@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SC save v3 target",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "slot",
+    "revision",
+    "chapter",
+    "checkpoint",
+    "hero",
+    "flags",
+    "atlas",
+    "written_at",
+    "options"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 3
+    },
+    "slot": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "chapter": {
+      "type": "string",
+      "pattern": "^LVL-(0[1-9]|10)$"
+    },
+    "checkpoint": {
+      "type": "string",
+      "maxLength": 64
+    },
+    "hero": {
+      "enum": [
+        "mara",
+        "ze"
+      ]
+    },
+    "flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 4096,
+      "items": {
+        "type": "string",
+        "maxLength": 128
+      }
+    },
+    "atlas": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 30,
+      "items": {
+        "type": "string",
+        "pattern": "^ATL-(0[1-9]|10)-0[1-3]$"
+      }
+    },
+    "written_at": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "options": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assist",
+        "subtitles",
+        "reduced_flashes"
+      ],
+      "properties": {
+        "assist": {
+          "type": "boolean"
+        },
+        "subtitles": {
+          "type": "boolean"
+        },
+        "reduced_flashes": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

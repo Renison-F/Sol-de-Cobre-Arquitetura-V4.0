@@ -1,0 +1,1020 @@
+{
+  "version": 3,
+  "levels": [
+    {
+      "n": 1,
+      "slug": "estacao-por-do-sol",
+      "name": "Estação Pôr do Sol",
+      "minutes": 22,
+      "boss": "Fiscal de Trilhos",
+      "art": "fiscal-de-trilhos",
+      "arena": "pátio de cargas, 24 m de largura, três plataformas a 0/2/4 m",
+      "win": "prender o carimbo em três blocos de carga e puxar a trava dorsal",
+      "mechanic": "laço em argolas com símbolo de nó; Faísca escava apenas terra marcada",
+      "reveal": "uma placa de Isadora está presa no coletor de água da estação",
+      "end": "Mara segue as coordenadas do cânion; a Companhia fecha o desvio atrás dela",
+      "beats": [
+        [
+          "Poço vazio",
+          "0–3",
+          "A baldeada de Mara volta seca. Faísca segue um cano vibrando sob o bebedouro.",
+          "Andar, saltar dois degraus e examinar o poço; nenhum dano.",
+          "POCO_EXAMINADO"
+        ],
+        [
+          "Telhados da estação",
+          "3–7",
+          "Um vagão de manutenção arranca levando a placa. Mara corre por toldos e caixas.",
+          "Ensinar laço com 3 argolas fixas, 2/3/4 m entre apoios.",
+          "LACO_APRENDIDO"
+        ],
+        [
+          "Sob o depósito",
+          "7–11",
+          "Faísca encontra a derivação clandestina. O túnel leva ao interruptor do portão.",
+          "Comando contextual do mascote, duas rotas com saída comum.",
+          "DESVIO_ENCONTRADO"
+        ],
+        [
+          "Passagem de carga",
+          "11–16",
+          "O Fiscal derruba uma barreira; o cargueiro começa a ganhar velocidade.",
+          "Sequência de três saltos; queda retorna ao início da seção.",
+          "PATIO_ABERTO"
+        ],
+        [
+          "Fiscal de Trilhos",
+          "16–20",
+          "O Fiscal carimba “acesso negado” até o próprio mecanismo emperrar.",
+          "Desviar do braço, prendê-lo no bloco e abrir a traseira.",
+          "BOSS_01_DEFEATED"
+        ],
+        [
+          "Placa e partida",
+          "20–22",
+          "Mara reconhece a marca da mãe. O trilho aponta para uma garganta de pedra.",
+          "Salvar e abrir acesso ao próximo capítulo.",
+          "LVL_01_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Mara",
+          "O poço não secou durante a noite. Alguém levou a água."
+        ],
+        [
+          "Mara",
+          "Faísca, esse barulho vem debaixo da estação?"
+        ],
+        [
+          "Fiscal",
+          "Circulação sem autorização. Carimbo obrigatório."
+        ],
+        [
+          "Mara",
+          "Minha mãe desenhava este símbolo. E nunca desperdiçava uma linha."
+        ]
+      ],
+      "attacks": [
+        [
+          "Carimbo vertical",
+          1.2,
+          0.3,
+          2.5,
+          "sombra retangular e pistão subindo",
+          "sair do retângulo; induzir golpe no bloco"
+        ],
+        [
+          "Varredura de barreira",
+          1.4,
+          0.6,
+          1.8,
+          "braço recua e sino duplo",
+          "saltar sobre a haste a 0,6 m"
+        ]
+      ],
+      "required_flags": [],
+      "on_complete_flags": [
+        "LVL_01_COMPLETE",
+        "M01_COMPLETE"
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "canion-dos-mil-ecos",
+      "name": "Cânion dos Mil Ecos",
+      "minutes": 28,
+      "boss": "Cascavel de Silício",
+      "art": "cascavel-de-silicio",
+      "arena": "terraço de 30 m com três pilares ressonantes e dois refúgios altos",
+      "win": "reproduzir três ecos para expor o chocalho e prendê-lo com laço",
+      "mechanic": "ecos revelam apoios, sempre com contorno e som; nunca apenas pela cor",
+      "reveal": "a água desce por um duto industrial que atravessa a montanha",
+      "end": "um elevador de minério leva Mara ao turno de Zé Trovão",
+      "beats": [
+        [
+          "Ponte partida",
+          "0–4",
+          "Um apito vindo das pedras responde ao assobio de Mara.",
+          "Cruzar apoios visíveis e ativar primeiro sino.",
+          "ECO_1"
+        ],
+        [
+          "Galeria de ressonância",
+          "4–10",
+          "Três sinos devolvem notas com formas distintas: círculo, traço, estrela.",
+          "Repetir sequência 1-3-2; ajuda destaca a próxima forma após duas falhas.",
+          "ECO_2"
+        ],
+        [
+          "Duto suspenso",
+          "10–17",
+          "Uma tubulação esconde o leito do rio no alto do cânion.",
+          "Laço em apoios revelados por pulso; contorno permanece por 8 s.",
+          "DUTO_VISTO"
+        ],
+        [
+          "Corrida de pedras",
+          "17–22",
+          "A Cascavel vibra o paredão. Mara corre entre quedas anunciadas por poeira.",
+          "Três ciclos de queda; faixa segura permanece em cada ciclo.",
+          "ECO_3"
+        ],
+        [
+          "Cascavel",
+          "22–26",
+          "A serpente protege o encaixe de cristal que oculta a entrada da mina.",
+          "Atrair vibração para pilares, expor cauda e puxar.",
+          "BOSS_02_DEFEATED"
+        ],
+        [
+          "Descida",
+          "26–28",
+          "O rio sumiu para dentro da montanha. Uma voz fanfarrona vem do elevador.",
+          "Snapshot e transição ao nível 3.",
+          "LVL_02_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Mara",
+          "Até as pedras estão tentando dizer alguma coisa."
+        ],
+        [
+          "Mara",
+          "Três sinais, uma passagem. Vamos ouvir antes de correr."
+        ],
+        [
+          "Mara",
+          "Este rio não evaporou. Foi desviado."
+        ],
+        [
+          "Zé",
+          "Se estiver procurando a saída, péssima notícia: eu também estou!"
+        ]
+      ],
+      "attacks": [
+        [
+          "Onda de cauda",
+          1.1,
+          0.8,
+          2.0,
+          "chocalho ergue e ondas no chão",
+          "subir em pilar sinalizado"
+        ],
+        [
+          "Bote do arco",
+          1.5,
+          0.4,
+          2.8,
+          "cabeça desenha arco luminoso",
+          "ficar sob apoio sólido e atacar cauda exposta"
+        ]
+      ],
+      "required_flags": [
+        "LVL_01_COMPLETE"
+      ],
+      "on_complete_flags": [
+        "LVL_02_COMPLETE",
+        "M02_COMPLETE"
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "minas-de-ferrugem",
+      "name": "Minas de Ferrugem",
+      "minutes": 34,
+      "boss": "Britador Colosso",
+      "art": "britador-colosso",
+      "arena": "plataforma de 28 m, dois trilhos de broca, três pilares substituíveis",
+      "win": "desviar a broca para pilares e usar impacto de Zé no radiador",
+      "mechanic": "alternância Mara/Zé em chão seguro, impacto e aterramento",
+      "reveal": "Luna demonstra que os dutos abastecem exclusivamente a capital do Barão",
+      "end": "Luna mantém a oficina móvel; grupo toma a estrada para a vila evacuada",
+      "beats": [
+        [
+          "Turno interrompido",
+          "0–5",
+          "Zé segura uma viga enquanto Mara resgata trabalhadores sem nome.",
+          "Introduzir troca de herói, sem inimigos no primeiro uso.",
+          "ZE_JOINED"
+        ],
+        [
+          "Peso e contrapeso",
+          "5–11",
+          "O elevador de Luna trava entre duas galerias.",
+          "Zé empurra bloco de 2 m; Mara prende contrapeso com laço.",
+          "ELEVADOR_ESTAVEL"
+        ],
+        [
+          "Projetos de Luna",
+          "11–18",
+          "Luna recusa sair sem seu condensador: é o mapa da drenagem.",
+          "Mara desvia vapor; Faísca traz fusível do túnel.",
+          "LUNA_RESCUED"
+        ],
+        [
+          "Canal de desvio",
+          "18–26",
+          "Zé percebe sua antiga assinatura no esquema. Esconde o papel por um instante.",
+          "Aterrar duas bobinas e fechar somente desvio industrial, mantendo drenagem segura.",
+          "CONDENSADOR_RECUPERADO"
+        ],
+        [
+          "Britador",
+          "26–32",
+          "A máquina desperta no trilho do elevador.",
+          "Induzir broca, trocar em área segura e golpear radiador.",
+          "BOSS_03_DEFEATED"
+        ],
+        [
+          "O custo do mapa",
+          "32–34",
+          "O mapa revela um cano até a Cidadela. Luna exige que ninguém desligue a água às cegas.",
+          "Salvar Luna aliada; abrir Cidade Fantasma.",
+          "LVL_03_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Zé",
+          "Eu conheço esta mina como a palma... espera, este túnel é novo."
+        ],
+        [
+          "Luna",
+          "Me tirem daqui. E tragam a caixa azul. Nessa ordem, se der."
+        ],
+        [
+          "Mara",
+          "A água da estação está indo para a capital?"
+        ],
+        [
+          "Luna",
+          "E se você fechar tudo de uma vez, a mina inteira afunda."
+        ]
+      ],
+      "attacks": [
+        [
+          "Broca em trilho",
+          1.6,
+          0.7,
+          3.0,
+          "faixa de poeira reta e giro crescente",
+          "ficar atrás de pilar e sair no aviso"
+        ],
+        [
+          "Soco de lastro",
+          1.2,
+          0.4,
+          2.0,
+          "esteiras travam e braço de apoio sobe",
+          "saltar onda e atingir radiador no fim"
+        ]
+      ],
+      "required_flags": [
+        "LVL_02_COMPLETE"
+      ],
+      "on_complete_flags": [
+        "LVL_03_COMPLETE",
+        "M03_COMPLETE"
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "cidade-fantasma",
+      "name": "Cidade Fantasma",
+      "minutes": 29,
+      "boss": "Maquinista Sem Rosto",
+      "art": "maquinista-sem-rosto",
+      "arena": "praça de 26 m com três lampiões de memória e sacadas a 3 m",
+      "win": "acender os três lampiões para revelar cabos do exoesqueleto e soltá-los",
+      "mechanic": "Trovico marca caminho alto; projeção não é plataforma sem borda sólida",
+      "reveal": "a vila foi evacuada para alimentar o primeiro teste climático",
+      "end": "transmissor aponta para um cofre no Expresso de Cobre",
+      "beats": [
+        [
+          "Rua de areia",
+          "0–4",
+          "O sino toca sozinho; uma luz repete passos que ninguém mais dá.",
+          "Caminhar entre dois lampiões e ler o contorno real das plataformas.",
+          "SINO_ATIVO"
+        ],
+        [
+          "O batedor retorna",
+          "4–9",
+          "Trovico pousa no chapéu de Zé trazendo um parafuso do transmissor.",
+          "Comando aéreo em alvos com alcance 8 m e linha de visão.",
+          "TROVICO_JOINED"
+        ],
+        [
+          "Evacuação em ecos",
+          "9–17",
+          "As projeções mostram famílias entrando no trem, não fantasmas hostis.",
+          "Acender três registros; cruzar duas sacadas com janela de luz de 10 s.",
+          "EVACUACAO_VISTA"
+        ],
+        [
+          "Transmissor na torre",
+          "17–23",
+          "Luna ouve o início de uma fita interrompida e reconhece a frequência de Isadora.",
+          "Zé aterra torre, Mara sobe, Trovico destrava o suporte.",
+          "TRANSMISSOR_LOCALIZADO"
+        ],
+        [
+          "Maquinista",
+          "23–27",
+          "O exoesqueleto automatizado repete o último protocolo de evacuação.",
+          "Iluminar cabos e retirar três travas sem ferir humanos.",
+          "BOSS_04_DEFEATED"
+        ],
+        [
+          "Bilhete de embarque",
+          "27–29",
+          "O transmissor anuncia um arquivo protegido no próximo trem.",
+          "Salvar e partir ao desfiladeiro ferroviário.",
+          "LVL_04_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Zé",
+          "Trovico! Eu disse para vigiar o céu, não o meu cabelo."
+        ],
+        [
+          "Mara",
+          "Não são fantasmas. São registros."
+        ],
+        [
+          "Luna",
+          "Alguém quis que a cidade lembrasse. Mesmo depois de ficar vazia."
+        ],
+        [
+          "Maquinista",
+          "Última chamada. Nenhum passageiro deve ficar para trás."
+        ]
+      ],
+      "attacks": [
+        [
+          "Passagem expressa",
+          1.3,
+          0.5,
+          2.2,
+          "apito e trilho fantasma desenhado no piso",
+          "subir sacada e iluminar o cabo"
+        ],
+        [
+          "Apagão programado",
+          1.8,
+          2.0,
+          2.5,
+          "lampiões diminuem em sequência",
+          "seguir bordas claras; reacender lanterna marcada"
+        ]
+      ],
+      "required_flags": [
+        "LVL_03_COMPLETE"
+      ],
+      "on_complete_flags": [
+        "LVL_04_COMPLETE",
+        "M04_COMPLETE"
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "expresso-de-cobre",
+      "name": "O Expresso de Cobre",
+      "minutes": 32,
+      "boss": "Condutor Relâmpago",
+      "art": "condutor-relampago",
+      "arena": "três vagões conectados, 32 m úteis, acoplamentos protegidos por guarda-corpo",
+      "win": "aterrar dois ímãs e puxar o freio de emergência após três curtos controlados",
+      "mechanic": "movimento relativo de trem simulado por cenário; polaridade com símbolos + e −",
+      "reveal": "a fita de Isadora diz que abrir canais deve preceder a parada do núcleo",
+      "end": "salto de fuga leva ao ramal do Oásis, trem para em faixa segura",
+      "beats": [
+        [
+          "Embarque de manutenção",
+          "0–4",
+          "Luna usa antiga credencial; Mara entra pelo teto quando o acesso é negado.",
+          "Introduzir vento lateral moderado e câmera em velocidade fixa.",
+          "TREM_EMBARCADO"
+        ],
+        [
+          "Tetos e pantógrafos",
+          "4–11",
+          "Drones fecham corredores. Trovico marca intervalos entre arcos elétricos.",
+          "Mara usa laço nos tetos; Zé cruza por dentro com aterramento.",
+          "VAGOES_CRUZADOS"
+        ],
+        [
+          "Cofre de voz",
+          "11–17",
+          "A chave da próxima rota está na caixa de Isadora.",
+          "Alinhar dois contatos com sinais opostos; erro reinicia só esse mecanismo.",
+          "FITA_RECUPERADA"
+        ],
+        [
+          "Túnel à vista",
+          "17–25",
+          "O Barão manda desacoplar o vagão do arquivo. A ponte seguinte desaparece na neblina.",
+          "Fuga 120 s com assistente sem limite; falha retorna ao cofre já aberto.",
+          "CHAVE_OBSERVATORIO"
+        ],
+        [
+          "Condutor",
+          "25–30",
+          "O autômato usa os vagões como um circuito.",
+          "Alternar vagão seguro, descarregar ímãs e puxar freio.",
+          "BOSS_05_DEFEATED"
+        ],
+        [
+          "Voz na fita",
+          "30–32",
+          "Isadora ordena: primeiro os canais, depois o núcleo.",
+          "Salvar fita e chave; rampa segura até o ramal.",
+          "LVL_05_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Luna",
+          "Somos manutenção. Tecnicamente, vamos consertar muita coisa."
+        ],
+        [
+          "Zé",
+          "Um trem, três problemas e nenhum café. Já tive turnos piores."
+        ],
+        [
+          "Isadora",
+          "Se me ouvirem, não cortem o motor. Abram os canais primeiro."
+        ],
+        [
+          "Mara",
+          "Ela está viva. E ainda está tentando proteger todo mundo."
+        ]
+      ],
+      "attacks": [
+        [
+          "Polaridade dupla",
+          1.4,
+          1.0,
+          2.4,
+          "ímãs abrem com +/− e tom alternado",
+          "aterrar placa com Zé; usar vagão sem símbolo"
+        ],
+        [
+          "Arco de teto",
+          1.1,
+          0.6,
+          2.0,
+          "pantógrafo recua e arco tracejado",
+          "abaixar no recuo seguro ou saltar ao vagão vizinho"
+        ]
+      ],
+      "required_flags": [
+        "LVL_04_COMPLETE"
+      ],
+      "on_complete_flags": [
+        "LVL_05_COMPLETE",
+        "M05_COMPLETE"
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "oasis-das-vozes",
+      "name": "Oásis das Vozes",
+      "minutes": 30,
+      "boss": "Guardião dos Canais",
+      "art": "guardiao-dos-canais",
+      "arena": "bacia de 30 m com três canais em alturas 0/1,5/3 m e ilhas seguras",
+      "win": "equalizar três reservatórios, corrigir leitura do guardião e preservar comportas",
+      "mechanic": "pressão em faixas com marcas e números; água é caminho, não recurso consumível",
+      "reveal": "diários mostram que Isadora segura pessoalmente a contenção do Pulso",
+      "end": "com canais locais reparados, a Serra fornece o aterramento necessário",
+      "beats": [
+        [
+          "Refúgio desconfiado",
+          "0–4",
+          "Habitantes recuam ao ver as bobinas de Zé. Ele decide guardá-las.",
+          "Explorar sem combate e mostrar prova dos registros.",
+          "OASIS_ACESSO"
+        ],
+        [
+          "Jardim de pressão",
+          "4–10",
+          "Luna troca uma junta rompida e pede que Mara regule o primeiro tanque.",
+          "Válvula de três posições, indicador com números e forma.",
+          "CANAL_1"
+        ],
+        [
+          "Raízes alagadas",
+          "10–18",
+          "Faísca alcança a tubulação fina sem arrancar as raízes.",
+          "Desviar água por rota alternativa; erro volta nível de tanque, não reinicia capítulo.",
+          "CANAL_2"
+        ],
+        [
+          "Diário da nascente",
+          "18–24",
+          "Mara encontra instruções manuscritas e uma marca recente da mãe.",
+          "Último canal exige sequência 2-1-3; dica progressiva.",
+          "CANAL_3"
+        ],
+        [
+          "Guardião",
+          "24–28",
+          "O sensor antigo confunde o condensador de Luna com equipamento da Companhia.",
+          "Equilibrar pressão e recalibrar três sensores.",
+          "BOSS_06_DEFEATED"
+        ],
+        [
+          "A promessa de retorno",
+          "28–30",
+          "Zé entrega sua insígnia à comunidade e promete voltar com água para todas as vilas.",
+          "Salvar reparação; abrir serra e marca de confiança.",
+          "LVL_06_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Luna",
+          "Não precisamos de mais força aqui. Precisamos de equilíbrio."
+        ],
+        [
+          "Zé",
+          "Entendo por que não confiam. Não vou pedir que esqueçam."
+        ],
+        [
+          "Mara",
+          "Ela esteve aqui. Esta anotação ainda está fresca."
+        ],
+        [
+          "Luna",
+          "Sua mãe não desapareceu do mapa. Ela ficou segurando uma parte dele."
+        ]
+      ],
+      "attacks": [
+        [
+          "Jato de limpeza",
+          1.6,
+          0.8,
+          2.6,
+          "reservatório enche e bocal aponta",
+          "subir ilha com seta e girar válvula exposta"
+        ],
+        [
+          "Pulso de pressão",
+          1.5,
+          0.5,
+          2.8,
+          "três medidores sobem com clique",
+          "baixar válvula do tanque correspondente; sem dano se pressão correta"
+        ]
+      ],
+      "required_flags": [
+        "LVL_05_COMPLETE"
+      ],
+      "on_complete_flags": [
+        "LVL_06_COMPLETE",
+        "M06_COMPLETE"
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "serra-dos-relampagos",
+      "name": "Serra dos Relâmpagos",
+      "minutes": 35,
+      "boss": "General Para-Raios",
+      "art": "general-para-raios",
+      "arena": "cume de 32 m, três hastes de aterramento com círculos de refúgio",
+      "win": "desviar três descargas às hastes e desconectar as bobinas do General",
+      "mechanic": "raio prenunciado por círculo, áudio e contagem; Zé conduz somente em placas próprias",
+      "reveal": "Zé confessa que autorizou o desvio de água e ignorou um aviso",
+      "end": "o mapa atmosférico abre rota para o Observatório",
+      "beats": [
+        [
+          "Passarela em silêncio",
+          "0–5",
+          "Trabalhadores reconhecem Zé pelo código do crachá e baixam a ponte.",
+          "Mara entrega provas; travessia curta sem dano enquanto a conversa conclui.",
+          "ZE_RECONHECIDO"
+        ],
+        [
+          "Colunas de descarga",
+          "5–13",
+          "Trovico revela onde o próximo raio atingirá a passarela.",
+          "Aprender ciclo 2 s de aviso/1 s ativo/3 s descanso.",
+          "ATERRAMENTO_1"
+        ],
+        [
+          "Confissão no abrigo",
+          "13–17",
+          "Zé admite que o desvio tinha sua autorização e que preferiu não investigar.",
+          "Interação obrigatória curta ou skip com mesma flag, sem escolha moral falsa.",
+          "ZE_CONFESSED"
+        ],
+        [
+          "Antena no temporal",
+          "17–28",
+          "Zé fica no aterramento enquanto Mara cruza o vão. O metal começa a ceder.",
+          "Três condutores e laço; assistente estende janela, não remove o objetivo.",
+          "ANTENA_ISOLADA"
+        ],
+        [
+          "General",
+          "28–33",
+          "O General desloca hastes, tentando deixar o cume sem abrigo.",
+          "Aterrar descarga e puxar bobina durante resfriamento.",
+          "BOSS_07_DEFEATED"
+        ],
+        [
+          "Uma ponte consertada",
+          "33–35",
+          "Zé repara a passarela antes de partir; o trabalhador abre caminho sem esquecer a dívida.",
+          "Salvar mapa e estado da ponte.",
+          "LVL_07_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Zé",
+          "A assinatura é minha. E o aviso também chegou até mim."
+        ],
+        [
+          "Mara",
+          "Por que não disse antes?"
+        ],
+        [
+          "Zé",
+          "Porque contar parecia mais difícil do que fugir. Eu estava errado."
+        ],
+        [
+          "Mara",
+          "Então fique. Vamos consertar uma coisa de cada vez."
+        ]
+      ],
+      "attacks": [
+        [
+          "Descarga dirigida",
+          2.0,
+          0.8,
+          3.0,
+          "círculo fecha com três tons",
+          "mover a marca até haste e sair"
+        ],
+        [
+          "Marcha de bobinas",
+          1.4,
+          1.0,
+          2.4,
+          "duas bobinas avançam no trilho",
+          "pular lacuna entre bobinas e puxar cabo traseiro"
+        ]
+      ],
+      "required_flags": [
+        "LVL_06_COMPLETE"
+      ],
+      "on_complete_flags": [
+        "LVL_07_COMPLETE",
+        "M07_COMPLETE"
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "observatorio-perdido",
+      "name": "Observatório Perdido",
+      "minutes": 40,
+      "boss": "Oráculo de Latão",
+      "art": "oraculo-de-latao",
+      "arena": "rotunda de 28 m com três espelhos giratórios e apoios presos ao plano lateral",
+      "win": "alterar o padrão de três espelhos para saturar o cálculo do Oráculo",
+      "mechanic": "lentes mudam feixes e plataformas; gravidade episódica limitada a zonas explicitamente marcadas",
+      "reveal": "Isadora está viva no anel de contenção ligado ao núcleo por transmissão",
+      "end": "Barão ameaça reservar toda a chuva à Cidadela; canais de segurança são o próximo alvo",
+      "beats": [
+        [
+          "Porta do atlas",
+          "0–5",
+          "A bússola encaixa no mapa que Isadora desenhou para Mara anos antes.",
+          "Usar chave do trem e alinhar constelação simples.",
+          "OBSERVATORIO_ABERTO"
+        ],
+        [
+          "Galeria de lentes",
+          "5–15",
+          "Feixes revelam apoios presos às órbitas. Luna limita o giro para evitar sobrecarga.",
+          "Girar espelhos em passos de 90 graus e percorrer plataformas.",
+          "LENTES_ALINHADAS"
+        ],
+        [
+          "Anel suspenso",
+          "15–23",
+          "Uma faixa de gravidade permite um salto alongado, sem inverter controles.",
+          "Uma zona baixa segura e depois uma sobre abismo com retorno antes da zona.",
+          "ANEL_CRUZADO"
+        ],
+        [
+          "Voz sem gravação",
+          "23–29",
+          "Mara pergunta algo que nenhuma gravação saberia. Isadora responde e o mapa ganha sentido.",
+          "Revelação incondicional; nenhum segredo opcional bloqueia resgate.",
+          "ISADORA_CONTACTED"
+        ],
+        [
+          "Oráculo",
+          "29–37",
+          "O computador reproduz a primeira solução de Mara. Ela precisa mudar a ordem de acionamento.",
+          "Alternar três espelhos; prever só último padrão registrado, nunca input oculto.",
+          "BOSS_08_DEFEATED"
+        ],
+        [
+          "Protocolo completo",
+          "37–40",
+          "Isadora entrega o protocolo de abertura gradual. O Barão interrompe o sinal.",
+          "Salvar protocolo principal e abrir Cidadela.",
+          "LVL_08_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Mara",
+          "Qual era o nome do rio que eu desenhava ao contrário?"
+        ],
+        [
+          "Isadora",
+          "Rio Teimoso. Você dizia que ele é que estava errado."
+        ],
+        [
+          "Mara",
+          "Eu vim buscar você."
+        ],
+        [
+          "Isadora",
+          "Eu sei. Mas primeiro abra os quatro canais. Eu consigo esperar mais um pouco."
+        ]
+      ],
+      "attacks": [
+        [
+          "Previsão gravada",
+          1.8,
+          0.7,
+          2.6,
+          "órbita repete último símbolo usado",
+          "acionar espelho diferente do anterior"
+        ],
+        [
+          "Feixe de varredura",
+          1.6,
+          1.0,
+          2.8,
+          "lente abre e linha tracejada cruza arena",
+          "mover espelho para refletir no sensor aberto"
+        ]
+      ],
+      "required_flags": [
+        "LVL_07_COMPLETE"
+      ],
+      "on_complete_flags": [
+        "LVL_08_COMPLETE",
+        "M08_COMPLETE"
+      ]
+    },
+    {
+      "n": 9,
+      "slug": "cidadela-ferrugem",
+      "name": "Cidadela Ferrugem",
+      "minutes": 42,
+      "boss": "Madame Engrenagem",
+      "art": "madame-engrenagem",
+      "arena": "pátio industrial de 32 m, quatro consoles protegidos, duas passarelas altas",
+      "win": "quebrar formação de drones sem colapsar o sistema e liberar comando de segurança",
+      "mechanic": "quatro tarefas sequenciais com mascotes e troca segura, sem exigir multiplayer",
+      "reveal": "a própria capital perderá energia se o núcleo parar antes da abertura dos canais",
+      "end": "quatro canais abertos tornam possível subir ao núcleo com segurança",
+      "beats": [
+        [
+          "Cidade que ainda bebe",
+          "0–5",
+          "Há água nas fontes da capital e filas de trabalhadores no turno da noite.",
+          "Rota de infiltração evita civis; mostrar objetivo de preservação.",
+          "CIDADE_ENTRADA"
+        ],
+        [
+          "Canal da terra",
+          "5–13",
+          "Faísca entra no conduto fino; Mara prende o elevador que impediria a saída.",
+          "Laço e escavação; primeiro console persiste ao concluir.",
+          "CANAL_SEGURANCA_1"
+        ],
+        [
+          "Canal da força",
+          "13–21",
+          "Zé empurra o gerador de reserva para não apagar o hospital da cidade.",
+          "Peso e aterramento; puzzle sem cronômetro.",
+          "CANAL_SEGURANCA_2"
+        ],
+        [
+          "Canal do céu",
+          "21–29",
+          "Trovico cruza hélices paradas para destravar a terceira torre.",
+          "Rota aérea com linha de visão; abortar comando retorna mascote seguro.",
+          "CANAL_SEGURANCA_3"
+        ],
+        [
+          "Madame",
+          "29–38",
+          "Madame segue ordens até ver o protocolo que o Barão omitiu.",
+          "Desarmar formação e apresentar prova após terceira janela.",
+          "BOSS_09_DEFEATED"
+        ],
+        [
+          "Quarto canal",
+          "38–42",
+          "Madame abre o comando central e assume a evacuação dos operários.",
+          "Luna confirma quatro canais, snapshot e subida.",
+          "LVL_09_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Madame",
+          "Uma cidade não pode parar porque vocês encontraram um mapa."
+        ],
+        [
+          "Luna",
+          "É por isso que trouxemos um procedimento. Não uma explosão."
+        ],
+        [
+          "Zé",
+          "O gerador fica ligado. Ninguém vai pagar pela nossa pressa."
+        ],
+        [
+          "Madame",
+          "Essas instruções nunca chegaram ao meu gabinete. Abram o quarto canal."
+        ]
+      ],
+      "attacks": [
+        [
+          "Formação tesoura",
+          1.8,
+          1.0,
+          2.8,
+          "dois drones traçam linhas convergentes",
+          "permanecer no intervalo e prender nó de comando"
+        ],
+        [
+          "Cercado de vapor",
+          1.5,
+          1.2,
+          3.0,
+          "válvulas dos lados assobiam alternadas",
+          "subir passarela e desligar console marcado"
+        ]
+      ],
+      "required_flags": [
+        "LVL_08_COMPLETE"
+      ],
+      "on_complete_flags": [
+        "CANAL_SEGURANCA_4",
+        "LVL_09_COMPLETE",
+        "M09_COMPLETE"
+      ]
+    },
+    {
+      "n": 10,
+      "slug": "coracao-da-tempestade",
+      "name": "Coração da Tempestade",
+      "minutes": 47,
+      "boss": "Barão Ferrugem",
+      "art": "barao-ferrugem",
+      "arena": "núcleo com três anéis de 34 m úteis; plataformas de resgate ligadas por cabos",
+      "win": "desarmar blindagem, estabilizar núcleo e retirar Isadora e Barão antes da redistribuição",
+      "mechanic": "síntese de laço, impacto, escavação e reconhecimento; nenhuma habilidade nova",
+      "reveal": "Barão aceita perder o comando para impedir que a reserva se rompa",
+      "end": "Mara reencontra Isadora fisicamente, chuva volta a todas as regiões, Companhia perde monopólio",
+      "beats": [
+        [
+          "Ascensão",
+          "0–6",
+          "A água agora corre nos quatro canais; o anel de Isadora começa a abrir.",
+          "Confirmar flags de segurança; se faltar algo redirecionar ao console da Cidadela.",
+          "NUCLEO_ACESSO"
+        ],
+        [
+          "A proposta do Barão",
+          "6–11",
+          "Ele oferece água para a estação em troca de manter o monopólio. Mara recusa.",
+          "Conversa com skip equivalente; nenhum falso final vendido como escolha.",
+          "BARAO_CONFRONTED"
+        ],
+        [
+          "Blindagem",
+          "11–23",
+          "Zé descarrega bobinas, Mara remove três placas sem atingir a reserva.",
+          "Três janelas alternadas com chão sempre acessível.",
+          "NUCLEO_BLINDAGEM_OFF"
+        ],
+        [
+          "Pulso da tempestade",
+          "23–35",
+          "Faísca solta válvula presa, Trovico orienta a rota entre anéis.",
+          "Três reguladores com save de transição antes da nova arena.",
+          "NUCLEO_ESTAVEL"
+        ],
+        [
+          "Resgate",
+          "35–43",
+          "O passadiço cede. Mara prende o laço em Isadora e depois no Barão; Zé sustenta o cabo.",
+          "Sequência de 90 s ajustável; falha retorna ao começo do resgate já sem refazer chefe.",
+          "ISADORA_RESCUED"
+        ],
+        [
+          "Primeira chuva",
+          "43–47",
+          "A torre devolve as reservas; Madame coordena reparos e o Barão entrega o controle à comunidade.",
+          "Epílogo e créditos puláveis; liberar seleção de capítulos e replay.",
+          "LVL_10_COMPLETE"
+        ]
+      ],
+      "dialog": [
+        [
+          "Barão",
+          "Eu vi vilas matarem por um balde. Dei ao céu uma ordem."
+        ],
+        [
+          "Mara",
+          "E decidiu que só a sua cidade merecia resposta."
+        ],
+        [
+          "Isadora",
+          "Os canais estão abertos. Agora, Mara!"
+        ],
+        [
+          "Zé",
+          "Pode puxar. Desta vez eu não solto ninguém."
+        ],
+        [
+          "Mara",
+          "Não precisa mais segurar o céu sozinha, mãe."
+        ],
+        [
+          "Barão",
+          "Se eu soltar o comando..."
+        ],
+        [
+          "Mara",
+          "A água vai continuar correndo. Esse é o ponto."
+        ]
+      ],
+      "attacks": [
+        [
+          "Garra do reservatório",
+          1.8,
+          0.6,
+          3.2,
+          "braço trava e três marcas mostram área",
+          "desviar e puxar placa enquanto Zé descarrega"
+        ],
+        [
+          "Anel de seca",
+          2.0,
+          1.2,
+          3.0,
+          "anel abre faixa sem energia e sino grave",
+          "cruzar lacuna indicada por Trovico e regular válvula"
+        ]
+      ],
+      "required_flags": [
+        "LVL_09_COMPLETE",
+        "CANAL_SEGURANCA_1",
+        "CANAL_SEGURANCA_2",
+        "CANAL_SEGURANCA_3",
+        "CANAL_SEGURANCA_4"
+      ],
+      "on_complete_flags": [
+        "LVL_10_COMPLETE",
+        "M10_COMPLETE"
+      ]
+    }
+  ]
+}

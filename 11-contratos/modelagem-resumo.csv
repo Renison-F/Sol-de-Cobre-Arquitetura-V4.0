@@ -1,0 +1,18 @@
+asset_id,name,rig,lod0_tri,lod1_tri,lod2_tri,bones_max,materials_max,texture_edge_max,height_m,scale_status,model_status
+CHR-MARA-VENTO,Mara Vento,Humanoid,18000,9000,4500,70,2,2048,1.68,reference,not_produced
+CHR-ZE-TROVAO,Zé Trovão,Humanoid,18000,9000,4500,70,2,2048,1.9,reference,not_produced
+CHR-FAISCA,Faísca,Generic,8000,4000,2000,42,2,1024,0.62,reference,not_produced
+CHR-TROVICO,Trovico,Generic,8000,4000,2000,46,2,1024,0.75,reference,not_produced
+CHR-LUNA-FAGULHA,Luna Fagulha,Humanoid,12000,6000,3000,60,2,1024,1.66,reference,not_produced
+CHR-ISADORA-VEREDAS,Isadora Veredas,Humanoid,12000,6000,3000,60,2,1024,1.7,reference,not_produced
+CHR-BARAO-FERRUGEM,Barão Ferrugem,Humanoid,18000,9000,4500,70,2,2048,1.86,reference,not_produced
+BOSS-01,Fiscal de Trilhos,Generic,20000,10000,5000,40,3,2048,2.4,proposed_blockout,not_produced
+BOSS-02,Cascavel de Silício,Generic,24000,12000,6000,36,3,2048,2.2,proposed_blockout,not_produced
+BOSS-03,Britador Colosso,Generic,45000,22500,11250,40,3,2048,4.2,proposed_blockout,not_produced
+BOSS-04,Maquinista Sem Rosto,Generic,22000,11000,5500,48,3,2048,2.5,proposed_blockout,not_produced
+BOSS-05,Condutor Relâmpago,Generic,22000,11000,5500,48,3,2048,2.3,proposed_blockout,not_produced
+BOSS-06,Guardião dos Canais,Generic,25000,12500,6250,52,3,2048,3.2,proposed_blockout,not_produced
+BOSS-07,General Para-Raios,Generic,25000,12500,6250,52,3,2048,3.4,proposed_blockout,not_produced
+BOSS-08,Oráculo de Latão,Generic,18000,9000,4500,28,3,2048,2.6,proposed_blockout,not_produced
+BOSS-09,Madame Engrenagem,Humanoid,18000,9000,4500,70,3,2048,1.76,proposed_blockout,not_produced
+PROP-MAQUINA-SECA,Máquina da Seca,Generic,45000,22500,11250,40,3,2048,12.0,proposed_blockout,not_produced

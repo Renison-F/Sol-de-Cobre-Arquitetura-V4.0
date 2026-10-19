@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SC1 verified payload",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "app",
+    "installation",
+    "jti",
+    "platform",
+    "subject",
+    "iat",
+    "exp",
+    "offline_until",
+    "v"
+  ],
+  "properties": {
+    "app": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]{1,128}$"
+    },
+    "installation": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]{1,128}$"
+    },
+    "jti": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]{1,128}$"
+    },
+    "platform": {
+      "enum": [
+        "android",
+        "ios"
+      ]
+    },
+    "subject": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]{1,128}$"
+    },
+    "iat": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "exp": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "offline_until": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "v": {
+      "const": 1,
+      "type": "integer"
+    }
+  },
+  "$comment": "Signature, canonical encoding, field equality and relative time constraints must be verified in code."
+}

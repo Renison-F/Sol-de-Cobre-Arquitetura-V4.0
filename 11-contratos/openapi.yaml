@@ -1,0 +1,189 @@
+openapi: 3.1.0
+info:
+  title: Sol de Cobre — API de licenças alvo
+  version: 3.0.0
+  description: Contrato para implementação. Nenhum serviço comercial está implantado neste pacote.
+servers:
+  - url: https://licenses.example.invalid
+    description: Endereço documental reservado; configurar domínio real na implantação.
+security:
+  - InstallationAuth: []
+paths:
+  /v1/challenges:
+    post:
+      operationId: createChallenge
+      description: Bootstrap tem rate limit; ID desconhecido nunca pode substituir chave já registrada.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChallengeRequest'
+      responses:
+        '200':
+          description: Desafio vinculado por 120 segundos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Challenge'
+        '429':
+          $ref: '#/components/responses/Error'
+  /v1/installations/enroll:
+    post:
+      operationId: enrollInstallation
+      description: Verifica compra, prova nativa, posse e associação de chave antes de autenticar instalação. Nunca aceita licensed do cliente.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProofRequest'
+      responses:
+        '201':
+          description: Instalação registrada; credencial curta vinculada à chave, não uma senha universal.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Enrollment'
+        '403':
+          $ref: '#/components/responses/Error'
+        '409':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+  /v1/licenses/renew:
+    post:
+      operationId: renewLicense
+      description: Requer principal de instalação e assinatura da operação. Idempotência 24 h; nonce consumido uma vez.
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProofRequest'
+      responses:
+        '200':
+          description: Licença assinada para instalação autenticada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseResponse'
+        '401':
+          $ref: '#/components/responses/Error'
+        '403':
+          $ref: '#/components/responses/Error'
+        '409':
+          $ref: '#/components/responses/Error'
+        '429':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+  /v1/licenses/restore:
+    post:
+      operationId: restoreLicense
+      description: Restaura titularidade pela loja. Reinstalação matricula uma chave nova primeiro; não transfere compra entre lojas.
+      parameters:
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProofRequest'
+      responses:
+        '200':
+          description: Compra reconhecida e licença emitida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseResponse'
+        '403':
+          $ref: '#/components/responses/Error'
+        '503':
+          $ref: '#/components/responses/Error'
+components:
+  securitySchemes:
+    InstallationAuth:
+      type: http
+      scheme: bearer
+      description: Credencial curta por instalação emitida após matrícula; assinatura de posse obrigatória no proof da operação.
+  parameters:
+    IdempotencyKey:
+      name: Idempotency-Key
+      in: header
+      required: true
+      schema:
+        type: string
+        minLength: 16
+        maxLength: 128
+  responses:
+    Error:
+      description: Erro sanitizado; nunca ecoa prova ou segredo. 429/503 podem trazer Retry-After.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    ChallengeRequest:
+      type: object
+      additionalProperties: false
+      required: [installation, platform, app, operation, key_thumbprint]
+      properties:
+        installation: {type: string, pattern: '^[A-Za-z0-9_.:-]{1,128}$'}
+        platform: {type: string, enum: [android, ios]}
+        app: {type: string, maxLength: 128}
+        operation: {type: string, enum: [enroll, renew, restore]}
+        key_thumbprint: {type: string, maxLength: 128}
+    Challenge:
+      type: object
+      additionalProperties: false
+      required: [challenge, expires_at]
+      properties:
+        challenge: {type: string, minLength: 32, maxLength: 128}
+        expires_at: {type: integer, minimum: 0}
+    ProofRequest:
+      type: object
+      additionalProperties: false
+      required: [challenge, installation, platform, app, operation, key_thumbprint, platform_proof, store_proof, possession_signature]
+      properties:
+        challenge: {type: string, maxLength: 128}
+        installation: {type: string, pattern: '^[A-Za-z0-9_.:-]{1,128}$'}
+        platform: {type: string, enum: [android, ios]}
+        app: {type: string, maxLength: 128}
+        operation: {type: string, enum: [enroll, renew, restore]}
+        key_thumbprint: {type: string, maxLength: 128}
+        platform_proof: {type: string, maxLength: 49152}
+        store_proof: {type: string, maxLength: 49152}
+        possession_signature: {type: string, maxLength: 2048}
+        enrollment_public_key: {type: string, maxLength: 4096}
+        app_attest_key_id: {type: string, maxLength: 256}
+    Enrollment:
+      type: object
+      required: [installation, access_token, expires_in]
+      additionalProperties: false
+      properties:
+        installation: {type: string}
+        access_token: {type: string, maxLength: 8192}
+        expires_in: {type: integer, const: 900}
+    LicenseResponse:
+      type: object
+      additionalProperties: false
+      required: [license, server_time, renew_after]
+      properties:
+        license: {type: string, maxLength: 8192}
+        server_time: {type: integer, minimum: 0}
+        renew_after: {type: integer, minimum: 0}
+    Error:
+      type: object
+      additionalProperties: false
+      required: [code, correlation_id, retryable]
+      properties:
+        code:
+          type: string
+          enum: [INVALID_PROOF, CHALLENGE_EXPIRED, PURCHASE_UNCONFIRMED, RETRY_LATER, RATE_LIMITED, IDEMPOTENCY_CONFLICT, UNAUTHORIZED]
+        correlation_id: {type: string, maxLength: 128}
+        retryable: {type: boolean}
