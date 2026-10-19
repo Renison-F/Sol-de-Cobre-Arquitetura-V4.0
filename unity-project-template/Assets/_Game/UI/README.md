@@ -7,6 +7,9 @@ olha código de tecla.
 
 > Esta pasta fornece os **scripts**; o canvas em si é montado no editor (uGUI) e validado
 > em dispositivo. Não há geração automática do canvas para não entregar cena não compilada.
+>
+> **HUD de jogo** (vida, objetivo, ameaça) alimentado pelo `GameDirector`: ver `HUD-CANVAS.md`.
+> Este documento cobre o **HUD de toque** (direcional + botões).
 
 ## Passos no Unity
 
