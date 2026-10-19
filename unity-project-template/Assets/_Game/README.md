@@ -1,17 +1,20 @@
-# Incrementos A–F (headless) adicionados
+# Incrementos A–G + integração (headless) adicionados
 
 Ver `12-desenvolvimento/15-incrementos-a-d-headless.md`. Resumo do que entrou:
-- **Domain** (engine-free, testado com Roslyn, **69 testes EditMode**): `GamePhase` estendido;
+- **Domain** (engine-free, testado com Roslyn, **84 testes EditMode**): `GamePhase` estendido;
   `Gameplay/AxisProcessing`, `TargetSelection`, `AbilityController`, `CompanionDispatch`,
   `EnemyThreatCycle`, `BossEncounter`, `HeroVitality`; `Narrative/MissionProgress`;
   `Hud/ThreatPresentation`, `PlayerPreferences`, `InputDeviceTracker`, `AudioCueBus`, `HudModel`;
-  `Progression/SaveDataV3`, `SaveValidationV3`, `FlagCatalog`, `SaveMigrator`, `ISaveCodec`, `SaveStore`.
+  `Security/AccessGate`, `RenewalScheduler`, `AccessCoordinator`, `IEntitlement`;
+  `Progression/SaveDataV3`, `SaveValidationV3`, `FlagCatalog`, `SaveMigrator`, `ISaveCodec`,
+  `SaveStore`, `SessionState`.
 - **Runtime:** `GameplayControls`, `PlayerInputBridge` (reescrito), `CameraFollow2_5D`,
   `AbilityTargetSource/Targeting`, `LassoAbility`, `AbilityDriver`, `World/CompanionController`,
   `World/FiscalBoss`, `World/CommonEnemy`, `Narrative/MissionController`, `Hud/AudioDirector`,
-  `Progression/UnityJsonSaveCodec`, `SaveSystem`.
+  `Security/UnconfiguredAccess`, `Progression/UnityJsonSaveCodec`, `SaveSystem`.
 - **UI** (assembly `SolDeCobre.UI`): `TouchHoldButton`, `TouchHud`, `HudController`,
-  `AccessibilityController` (ver `UI/README.md`).
+  `AccessibilityController`, `GameDirector` (composition root) (ver `UI/README.md`).
+- **Editor:** `ProjectBootstrap` (laboratório) e `EstacaoSliceBootstrap` (graybox do slice).
 - Config Git (`.gitignore`/`.gitattributes`) e `Packages/README.md` na raiz do template.
 
 Runtime/Editor/UI só compilam no Unity; Domain foi verificado fora dele. Migrar por diff.

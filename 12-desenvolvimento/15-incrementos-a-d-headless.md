@@ -1,4 +1,4 @@
-# Incrementos A–F (execução headless) — resposta de implementação
+# Incrementos A–G + integração (execução headless) — resposta de implementação
 
 Branch: `feat/incrementos-a-d-headless`. Trabalho sobre o kit `unity-project-template/`
 (o código que se copia para `Game/Assets`). Seguindo `13-handoff-claude-codex.md`:
@@ -107,17 +107,49 @@ F tem duas metades: **leitura da ameaça** (lógica de HUD/áudio — feita e te
 - **Limite:** malhas/rigs/texturas/animações/áudio do trio precisam de Blender/Unity e
   ferramentas de arte na sua máquina (PROD-01). O canvas da HUD é montado no editor.
 
+## G — acesso comercial (esqueleto, sem credenciais)
+
+- **Arquivos (Domain, testado — 11 testes novos):** `Security/AccessGate.cs`,
+  `RenewalScheduler.cs`, `AccessCoordinator.cs`, `IEntitlement.cs` (+`AccessTests.cs`).
+  **Runtime:** `Security/UnconfiguredAccess.cs`.
+- **Funciona (testado):** `AccessGate` mapeia a política de prazo em decisão de acesso e
+  **separa iniciar sessão de continuar até o checkpoint** (não interrompe um salto); nunca
+  estende validade local; `RenewalScheduler` renova após 24 h com rede (não a cada frame);
+  `AccessCoordinator` lê o envelope → verifica → política → portão, e **token ausente/
+  adulterado => NeedsActivation** (nunca libera campanha sem verificação).
+- **Limite real:** os adaptadores comerciais (loja/atestação/KMS/transporte) são
+  **placeholders que FALHAM de propósito** (`UnconfiguredAccess`) — impedem prova de compra
+  falsa. Contas de loja, sandbox, backend de licença e KMS são insumos do proprietário,
+  **não fabricáveis aqui**; trocar pelos reais antes de qualquer build comercial.
+
+## Integração — composition root e slice (graybox)
+
+- **Arquivos (Domain, testado — 4 testes):** `Progression/SessionState.cs`
+  (+`SessionStateTests.cs`). **UI:** `GameDirector.cs`. **Editor:** `EstacaoSliceBootstrap.cs`.
+- **Funciona (testado):** `SessionState` é o snapshot coerente da sessão ↔ contrato V3
+  (flags/atlas únicos, revisão crescente por checkpoint).
+- **Revisado (compila/roda no Unity):** `GameDirector` amarra tudo (sinais, fases, save,
+  missão, HUD, Fiscal): checkpoint grava, morte restaura, pausa congela. `EstacaoSliceBootstrap`
+  gera um **graybox** do slice (pátio 24 m, plataformas 0/2/4 m, player com laço, Fiscal com
+  núcleo laçável, 2 inimigos, checkpoints, câmera) via menu **Sol de Cobre → Bootstrap**.
+- **Limite:** o graybox **não é o slice final** — falta arte/áudio/animação, canvas de HUD
+  montado e balanceamento; é o esqueleto jogável para validar os sistemas no Editor.
+
 ## Como homologar localmente (resumo)
 
 1. Criar projeto URP no Unity **6000.3.24f1**; copiar `_Game` e os arquivos Git (A).
 2. Adicionar `com.unity.inputsystem` e `com.unity.test-framework` (ver `Packages/README.md`).
-3. **Test Runner → EditMode**: devem passar os testes de Domain (os mesmos 44 do harness).
-4. Gerar o laboratório (`Sol de Cobre → Bootstrap`) e validar andar/saltar/câmera.
-5. Montar o HUD de toque (ver `Assets/_Game/UI/README.md`) e validar touch em aparelho.
+3. **Test Runner → EditMode**: devem passar os **84** testes de Domain (os mesmos do harness).
+4. Gerar o laboratório (`Sol de Cobre → Bootstrap → Create movement laboratory`) e validar
+   andar/saltar/câmera.
+5. Gerar o **slice graybox** (`Sol de Cobre → Bootstrap → Create Estação slice`) e validar
+   laço no núcleo do Fiscal, inimigos, checkpoints e save.
+6. Montar o HUD de toque (ver `Assets/_Game/UI/README.md`) e validar touch em aparelho.
 
 ## Próximo passo e pré-condição
 
-Depois do gate acima: produção de arte do trio (PROD-01, no Unity/Blender) e o recorte do
-**slice de 8–12 min** da Estação (Incremento H / `09-ordem-de-implementacao.md`). Em paralelo,
-**G (acesso comercial)** depende de contas/sandbox reais do proprietário (não fabricáveis aqui).
-Pré-condição: Editor compilando o kit e EditMode verde (os mesmos testes do harness).
+Depois do gate acima, o que resta **depende da sua máquina/contas** (não fabricável headless):
+produção de **arte/áudio** do trio e do trecho (PROD-01, Unity/Blender), montagem do **canvas
+de HUD**, **balanceamento** do slice de 8–12 min (Incremento H), e os **adaptadores comerciais
+reais** de G (contas de loja, sandbox, backend de licença, KMS). Pré-condição: Editor
+compilando o kit e EditMode verde (os mesmos 84 testes do harness).
