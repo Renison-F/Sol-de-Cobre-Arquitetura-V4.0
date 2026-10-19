@@ -1,3 +1,19 @@
+# Incrementos A–D (headless) adicionados
+
+Ver `12-desenvolvimento/15-incrementos-a-d-headless.md`. Resumo do que entrou:
+- **Domain** (engine-free, testado com Roslyn, 44 testes EditMode): `GamePhase` estendido;
+  `Gameplay/AxisProcessing`, `TargetSelection`, `AbilityController`, `CompanionDispatch`;
+  `Progression/SaveDataV3`, `SaveValidationV3`, `FlagCatalog`, `SaveMigrator`, `ISaveCodec`, `SaveStore`.
+- **Runtime:** `GameplayControls`, `PlayerInputBridge` (reescrito), `CameraFollow2_5D`,
+  `AbilityTargetSource/Targeting`, `LassoAbility`, `AbilityDriver`, `World/CompanionController`,
+  `Progression/UnityJsonSaveCodec`, `SaveSystem`.
+- **UI** (novo assembly `SolDeCobre.UI`): `TouchHoldButton`, `TouchHud` (ver `UI/README.md`).
+- Config Git (`.gitignore`/`.gitattributes`) e `Packages/README.md` na raiz do template.
+
+Runtime/Editor/UI só compilam no Unity; Domain foi verificado fora dele. Migrar por diff.
+
+---
+
 # Kit de referência Unity V4
 
 Quatro asmdefs, Domain sem UnityEngine, Runtime com Input System, Editor com ProjectBootstrap e quatro testes EditMode. Guia local: `12-desenvolvimento/08-bootstrap-local-v4.md`. O gerador cria assets reais quando executado no Unity; não foi executado neste ambiente. Não copiar esta _Game junto da antiga: migrar por diff para evitar classes duplicadas. QuestState.Ready agora recebe flags; QuestRules adapta QuestDefinition.
