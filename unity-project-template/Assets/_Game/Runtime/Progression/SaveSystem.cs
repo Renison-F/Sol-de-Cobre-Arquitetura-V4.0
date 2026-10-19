@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using SolDeCobre.Core;
 namespace SolDeCobre.Progression
 {
     // Composição de produção do save: três slots sob Application.persistentDataPath,
@@ -15,10 +15,8 @@ namespace SolDeCobre.Progression
                 root ?? Application.persistentDataPath,
                 new UnityJsonSaveCodec(),
                 catalog ?? FlagCatalog.Default(),
-                NowUnix);
+                GameClock.NowUnix);
         }
-
-        static long NowUnix() => DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
         public SaveLoadResult Read(int slot) => store.Read(slot);
         public bool Write(SaveDataV3 data) => store.Write(data);

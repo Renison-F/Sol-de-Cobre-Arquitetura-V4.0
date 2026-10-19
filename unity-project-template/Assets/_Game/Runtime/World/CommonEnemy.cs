@@ -24,6 +24,7 @@ namespace SolDeCobre.World
         Vector3 origin;
         int patrolDir = 1;
         bool frozen;
+        float localTime; // relógio que não avança durante a pausa (sem salto do hover)
 
         public event Action<string> Defeated;
         public string EnemyId => enemyId;
@@ -50,8 +51,9 @@ namespace SolDeCobre.World
 
         void Update()
         {
-            if (frozen) return; // pausa: não anda nem persegue (nem o movimento por Time.time)
+            if (frozen) return; // pausa: não anda nem persegue (nem o movimento do hover)
             float dt = Time.deltaTime;
+            localTime += dt;
             cycle.SetAggro(TargetInSight());
             cycle.Tick(dt);
             Move(dt);
@@ -60,11 +62,18 @@ namespace SolDeCobre.World
         bool TargetInSight()
         {
             if (target == null) return false;
-            Vector3 to = target.position - transform.position;
-            if (to.sqrMagnitude > aggroRadius * aggroRadius) return false;
-            // Linha de visão: nada bloqueando entre inimigo e alvo.
-            return !Physics.Raycast(transform.position, to.normalized, to.magnitude, lineOfSightBlockers,
-                QueryTriggerInteraction.Ignore);
+            Vector3 origin = transform.position;
+            Vector3 to = target.position - origin;
+            float dist = to.magnitude;
+            if (dist > aggroRadius) return false;
+            if (dist < 1e-3f) return true;
+            Vector3 dir = to / dist;
+            // Linha de visão: começa um pouco à frente (não bate no próprio collider) e
+            // aceita o acerto no PRÓPRIO alvo — só perde a visão se um obstáculo estiver no meio.
+            if (Physics.Raycast(origin + dir * 0.15f, dir, out var hit, dist, lineOfSightBlockers,
+                    QueryTriggerInteraction.Ignore))
+                return hit.transform == target || hit.transform.IsChildOf(target);
+            return true;
         }
 
         void Move(float dt)
@@ -80,7 +89,7 @@ namespace SolDeCobre.World
                     break;
                 case EnemyFamily.Hover: // flutua em faixa limitada e volta à origem
                     var h = origin;
-                    h.y = origin.y + Mathf.Sin(Time.time * hoverSpeed) * hoverAmplitude;
+                    h.y = origin.y + Mathf.Sin(localTime * hoverSpeed) * hoverAmplitude;
                     transform.position = h;
                     break;
                 // Dive/Turret: entram parados; trajetória de mergulho e resfriamento de torre

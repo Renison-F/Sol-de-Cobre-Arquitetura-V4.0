@@ -47,6 +47,7 @@ namespace SolDeCobre.Hud
             }
             catch (IOException) { return false; }
             catch (System.UnauthorizedAccessException) { return false; }
+            catch (System.ArgumentException) { return false; }
             catch (System.PlatformNotSupportedException) { return false; }
         }
     }

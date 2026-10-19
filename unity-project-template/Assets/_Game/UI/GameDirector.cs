@@ -65,17 +65,21 @@ namespace SolDeCobre.App
                     break;
                 case SaveLoadStatus.Migrated:
                     session = SessionState.FromSave(result.Data);
-                    saves.Write(session.ToSave(NowUnix())); // promove a cópia v3 migrada
+                    saves.Write(session.ToSave(GameClock.NowUnix())); // promove a cópia v3 migrada
                     break;
                 default: // CorruptPreserved / UnsupportedVersion -> tela de recuperação
                     Debug.LogWarning("Save do slot " + slot + " exige recuperação: " + result.Status);
                     return false;
             }
             RestoreFromSession();
-            // Caminho de fases: Boot/Menu -> Loading -> Playing (Boot->Loading não é válido).
+            // Caminho até Playing a partir de Boot/Menu/Results; se já em Playing/Paused
+            // (reentrada/reinício), mantém. O ESTADO FINAL decide o retorno, não a última aresta.
             if (phase.Current == GamePhase.Boot) phase.TryTransition(GamePhase.Menu);
             phase.TryTransition(GamePhase.Loading);
-            return phase.TryTransition(GamePhase.Playing);
+            phase.TryTransition(GamePhase.Playing);
+            bool playing = phase.Current == GamePhase.Playing;
+            if (playing && boss != null) boss.Begin(); // inicia o encontro (no-op se já ativo)
+            return playing;
         }
 
         void RestoreFromSession()
@@ -108,7 +112,7 @@ namespace SolDeCobre.App
             if (session == null) return;
             session.Checkpoint = checkpointId;
             session.NextRevision();
-            if (!saves.Write(session.ToSave(NowUnix())))
+            if (!saves.Write(session.ToSave(GameClock.NowUnix())))
                 Debug.LogWarning("Falha ao gravar checkpoint; save anterior preservado."); // sem sucesso fictício
         }
 
@@ -135,7 +139,5 @@ namespace SolDeCobre.App
                 device, threat, hintAvailable: false, accessibility != null ? accessibility.Preferences : null);
             hud.SetSnapshot(snapshot);
         }
-
-        static long NowUnix() => DateTimeOffset.UtcNow.ToUnixTimeSeconds();
     }
 }

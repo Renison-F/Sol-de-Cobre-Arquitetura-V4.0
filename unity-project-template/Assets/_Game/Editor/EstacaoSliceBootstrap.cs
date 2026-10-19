@@ -91,6 +91,10 @@ namespace SolDeCobre.EditorTools
                 SetRef(director, "mission", mission);
                 SetRef(director, "boss", boss);
                 SetRef(director, "input", player.GetComponent<PlayerInputBridge>());
+                SetRefArray(director, "enemies", new UnityEngine.Object[]
+                {
+                    enemyA.GetComponent<CommonEnemy>(), enemyB.GetComponent<CommonEnemy>()
+                });
 
                 // Câmera 2.5D perspectiva
                 var camObj = new GameObject("Main Camera"); camObj.tag = "MainCamera";
@@ -189,6 +193,15 @@ namespace SolDeCobre.EditorTools
             var p = so.FindProperty(field);
             if (p == null) throw new InvalidOperationException("Missing serialized field: " + field + " em " + target.GetType().Name);
             p.objectReferenceValue = value; so.ApplyModifiedPropertiesWithoutUndo();
+        }
+        static void SetRefArray(UnityEngine.Object target, string field, UnityEngine.Object[] values)
+        {
+            var so = new SerializedObject(target);
+            var p = so.FindProperty(field);
+            if (p == null) throw new InvalidOperationException("Missing serialized field: " + field);
+            p.arraySize = values.Length;
+            for (int i = 0; i < values.Length; i++) p.GetArrayElementAtIndex(i).objectReferenceValue = values[i];
+            so.ApplyModifiedPropertiesWithoutUndo();
         }
         static void SetField(UnityEngine.Object target, string field, string value)
         {
