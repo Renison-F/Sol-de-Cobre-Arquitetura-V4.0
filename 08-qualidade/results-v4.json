@@ -1,0 +1,26 @@
+{
+  "package": "4.0",
+  "checks": {
+    "content": "passed",
+    "production_specs": 17,
+    "assemblies_acyclic": 4,
+    "handoff_unittest_passed": 12,
+    "docs_server_tests_passed": 15,
+    "portal_views_dom": 22,
+    "gallery_unique": 21,
+    "map_centers": 10,
+    "art_png_unchanged": 22,
+    "runner_dry_run": "passed",
+    "secondary_production_targets": 22
+  },
+  "not_executed": [
+    "Unity compilation",
+    "Unity Editor generation",
+    "4 supplied EditMode tests",
+    "APK/IPA",
+    "Blender/model import",
+    "mobile profiling",
+    "graphical browser layout"
+  ],
+  "limitations": "Manifest validation checks declared metrics and file presence; not actual geometry."
+}
