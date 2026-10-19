@@ -1,15 +1,17 @@
-# Incrementos A–E (headless) adicionados
+# Incrementos A–F (headless) adicionados
 
 Ver `12-desenvolvimento/15-incrementos-a-d-headless.md`. Resumo do que entrou:
-- **Domain** (engine-free, testado com Roslyn, **60 testes EditMode**): `GamePhase` estendido;
+- **Domain** (engine-free, testado com Roslyn, **69 testes EditMode**): `GamePhase` estendido;
   `Gameplay/AxisProcessing`, `TargetSelection`, `AbilityController`, `CompanionDispatch`,
   `EnemyThreatCycle`, `BossEncounter`, `HeroVitality`; `Narrative/MissionProgress`;
+  `Hud/ThreatPresentation`, `PlayerPreferences`, `InputDeviceTracker`, `AudioCueBus`, `HudModel`;
   `Progression/SaveDataV3`, `SaveValidationV3`, `FlagCatalog`, `SaveMigrator`, `ISaveCodec`, `SaveStore`.
 - **Runtime:** `GameplayControls`, `PlayerInputBridge` (reescrito), `CameraFollow2_5D`,
   `AbilityTargetSource/Targeting`, `LassoAbility`, `AbilityDriver`, `World/CompanionController`,
-  `World/FiscalBoss`, `World/CommonEnemy`, `Narrative/MissionController`,
+  `World/FiscalBoss`, `World/CommonEnemy`, `Narrative/MissionController`, `Hud/AudioDirector`,
   `Progression/UnityJsonSaveCodec`, `SaveSystem`.
-- **UI** (novo assembly `SolDeCobre.UI`): `TouchHoldButton`, `TouchHud` (ver `UI/README.md`).
+- **UI** (assembly `SolDeCobre.UI`): `TouchHoldButton`, `TouchHud`, `HudController`,
+  `AccessibilityController` (ver `UI/README.md`).
 - Config Git (`.gitignore`/`.gitattributes`) e `Packages/README.md` na raiz do template.
 
 Runtime/Editor/UI só compilam no Unity; Domain foi verificado fora dele. Migrar por diff.

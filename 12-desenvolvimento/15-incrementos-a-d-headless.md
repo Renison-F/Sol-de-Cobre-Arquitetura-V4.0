@@ -1,4 +1,4 @@
-# Incrementos A–E (execução headless) — resposta de implementação
+# Incrementos A–F (execução headless) — resposta de implementação
 
 Branch: `feat/incrementos-a-d-headless`. Trabalho sobre o kit `unity-project-template/`
 (o código que se copia para `Game/Assets`). Seguindo `13-handoff-claude-codex.md`:
@@ -82,6 +82,31 @@ fora do projeto Unity: **44/44 testes EditMode passam**. Runtime/Editor/UI usam
   dive/turret são trabalho de cena; `CommonEnemy` traz patrol/hover. Validar em 30/60 FPS,
   bordas, callback de animação ausente e reentrada após vitória (QA de BOSS-01.md) no Editor.
 
+## F — apresentação (HUD, áudio, leitura de ameaça; aceite do trio)
+
+F tem duas metades: **leitura da ameaça** (lógica de HUD/áudio — feita e testada aqui) e
+**aceite dos assets** do trio (arte 3D — critério aqui; arquivos no seu PC).
+
+- **Arquivos (Domain, testado — 9 testes novos):** `Hud/ThreatPresentation.cs`,
+  `Hud/PlayerPreferences.cs`, `Hud/InputDeviceTracker.cs`, `Hud/AudioCueBus.cs`,
+  `Hud/HudModel.cs` (+`HudTests.cs`). **Runtime:** `Hud/AudioDirector.cs`,
+  `UI/HudController.cs`, `UI/AccessibilityController.cs`. **Doc:** `09-arte-audio/aceite-blockout-trio.md`.
+- **Funciona (testado):**
+  - **Leitura de ameaça em perfil baixo:** ameaça por **forma + som**, nunca só cor; **flash
+    desligado em "reduzir flashes"** sem perder a leitura; fases do Fiscal/inimigo mapeiam
+    para aviso/ativo.
+  - **Áudio:** prioridade do pool (aviso de dano > diálogo > interação > ambiente > detalhe);
+    aviso continua audível com a música desligada (canais separados).
+  - **Preferências por perfil:** clamp de escala/opacidade/legenda; as três opções do save
+    (assist/subtitles/reduced_flashes) fazem round-trip com SaveOptions.
+  - **Glifo de dispositivo:** rastreia o último usado (teclado/gamepad/touch).
+  - **HudModel:** compõe vida/objetivo/glifo/ameaça para a view.
+- **Aceite de assets:** `09-arte-audio/aceite-blockout-trio.md` lista alvos do trio
+  (de `modelagem.json`) e o checklist no aparelho. O validador existente passa
+  (`tools/test_model_delivery.py`: 12/12).
+- **Limite:** malhas/rigs/texturas/animações/áudio do trio precisam de Blender/Unity e
+  ferramentas de arte na sua máquina (PROD-01). O canvas da HUD é montado no editor.
+
 ## Como homologar localmente (resumo)
 
 1. Criar projeto URP no Unity **6000.3.24f1**; copiar `_Game` e os arquivos Git (A).
@@ -92,7 +117,7 @@ fora do projeto Unity: **44/44 testes EditMode passam**. Runtime/Editor/UI usam
 
 ## Próximo passo e pré-condição
 
-Depois do gate acima: Incremento F (apresentação — Mara/Faísca/Fiscal, trecho da Estação,
-HUD/áudio) e o recorte do slice de 8–12 min (`09-ordem-de-implementacao.md`). Em paralelo,
-G (acesso comercial) depende de contas/sandbox reais do proprietário. Pré-condição: Editor
-compilando o kit e EditMode verde (os mesmos testes do harness).
+Depois do gate acima: produção de arte do trio (PROD-01, no Unity/Blender) e o recorte do
+**slice de 8–12 min** da Estação (Incremento H / `09-ordem-de-implementacao.md`). Em paralelo,
+**G (acesso comercial)** depende de contas/sandbox reais do proprietário (não fabricáveis aqui).
+Pré-condição: Editor compilando o kit e EditMode verde (os mesmos testes do harness).
