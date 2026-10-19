@@ -8,6 +8,7 @@ namespace SolDeCobre.Hud
     // subtitles, reduced_flashes) viajam no SaveOptions; as demais ficam em arquivo
     // de preferências separado (telas-e-fluxos.md: "tudo persiste por perfil").
     // Valores com clamp e defaults documentados; acessibilidade disponível antes de jogar.
+    [System.Serializable]
     public sealed class PlayerPreferences
     {
         public bool Assist;
