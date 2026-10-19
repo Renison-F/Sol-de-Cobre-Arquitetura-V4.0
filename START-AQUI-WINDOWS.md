@@ -25,8 +25,13 @@ Abra o PowerShell e rode (ajuste os caminhos se quiser):
 # clona o repo de arquitetura (este) e prepara dependências não-GUI
 git clone https://github.com/Renison-F/Sol-de-Cobre-Arquitetura-V4.0.git C:\Projetos\SolDeCobre\Arquitetura
 cd C:\Projetos\SolDeCobre\Arquitetura
+# O trabalho A→G + scripts estão na branch de feature até o PR #1 ser mergeado na main:
+git checkout feat/incrementos-a-d-headless
 powershell -ExecutionPolicy Bypass -File tools\setup-windows.ps1 -InstallDeps
 ```
+
+> Depois que o **PR #1** for mergeado na `main`, o `git checkout` acima deixa de ser
+> necessário (a `main` passa a ter tudo).
 
 O script verifica/instala Git/LFS/.NET/Python (com `-InstallDeps` via winget), roda os testes
 de Domain se houver .NET, e imprime os próximos passos. Ainda **não** copia o `_Game` porque
