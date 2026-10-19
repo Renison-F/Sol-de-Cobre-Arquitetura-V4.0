@@ -72,15 +72,18 @@ namespace SolDeCobre.App
                     return false;
             }
             RestoreFromSession();
+            // Caminho de fases: Boot/Menu -> Loading -> Playing (Boot->Loading não é válido).
+            if (phase.Current == GamePhase.Boot) phase.TryTransition(GamePhase.Menu);
             phase.TryTransition(GamePhase.Loading);
-            phase.TryTransition(GamePhase.Playing);
-            return true;
+            return phase.TryTransition(GamePhase.Playing);
         }
 
         void RestoreFromSession()
         {
             hero.Reset();
-            if (mission != null) mission.Restore(session.Flags, rewardGranted: false);
+            // rewardGranted:true => se a missão já está completa no save, o reward já foi
+            // concedido antes (Restore faz rewardGranted && Completed); evita re-conceder.
+            if (mission != null) mission.Restore(session.Flags, rewardGranted: true);
             if (accessibility != null) accessibility.LoadFrom(session.Options);
             foreach (var e in enemies) if (e != null) e.ResetToNeutral();
         }

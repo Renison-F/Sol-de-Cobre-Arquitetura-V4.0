@@ -54,6 +54,20 @@ namespace SolDeCobre.Tests
             Assert.AreEqual(2, m.CompletedCount); // para em DESVIO (ausente); PATIO fora de ordem ignorado
             Assert.AreEqual("DESVIO_ENCONTRADO", m.NextExpected);
         }
+        [Test] public void RestoreCompletedKeepsRewardGrantedAndDoesNotRegrant()
+        {
+            var m = new MissionProgress(M01);
+            m.Restore(new HashSet<string>(M01), rewardGranted: true); // save completo e já recompensado
+            Assert.IsTrue(m.Completed);
+            Assert.IsFalse(m.TryGrantReward()); // não concede de novo ao recarregar
+        }
+        [Test] public void RestoreIncompleteNeverMarksRewardGranted()
+        {
+            var m = new MissionProgress(M01);
+            m.Restore(new HashSet<string> { "POCO_EXAMINADO" }, rewardGranted: true);
+            Assert.IsFalse(m.Completed);
+            Assert.IsFalse(m.TryGrantReward()); // ainda incompleto: nada a conceder
+        }
     }
 
     public sealed class HeroVitalityTests

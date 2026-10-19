@@ -27,8 +27,10 @@ namespace SolDeCobre.World
             boss = new BossEncounter(introSeconds, exposedWindowSeconds, repositionSeconds);
             boss.SetAssist(assist);
         }
-        void OnEnable() { if (lasso != null) lasso.Tethered += OnTethered; }
-        void OnDisable() { if (lasso != null) lasso.Tethered -= OnTethered; }
+        // Liga no ACERTO efetivo (efeito aplicado), não no início do laço: assim
+        // cancelar o laço durante windup/ativo não consome uma exposição.
+        void OnEnable() { if (lasso != null) lasso.Applied += OnLassoApplied; }
+        void OnDisable() { if (lasso != null) lasso.Applied -= OnLassoApplied; }
 
         // Injeta os sinais de domínio (publicação de flags). Chamado pelo bootstrap da cena.
         public void Bind(GameSignals gameSignals) => signals = gameSignals;
@@ -42,7 +44,7 @@ namespace SolDeCobre.World
             if (started) boss.Tick(Time.deltaTime);
         }
 
-        void OnTethered(AbilityTargetSource source)
+        void OnLassoApplied(AbilityTargetSource source)
         {
             if (source == null || source.TargetId != ringTargetId) return; // só o núcleo do chefe
             var result = boss.TryLasso();

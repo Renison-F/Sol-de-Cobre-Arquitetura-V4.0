@@ -23,6 +23,7 @@ namespace SolDeCobre.World
         EnemyThreatCycle cycle;
         Vector3 origin;
         int patrolDir = 1;
+        bool frozen;
 
         public event Action<string> Defeated;
         public string EnemyId => enemyId;
@@ -36,7 +37,7 @@ namespace SolDeCobre.World
             cycle.Activate();
         }
 
-        public void Freeze(bool value) => cycle.Freeze(value);
+        public void Freeze(bool value) { frozen = value; cycle.Freeze(value); }
         public void SetAssist(bool value) => cycle.SetAssist(value);
         public void ResetToNeutral() => cycle.ResetNeutral(); // morte do herói reseta a seção
 
@@ -49,6 +50,7 @@ namespace SolDeCobre.World
 
         void Update()
         {
+            if (frozen) return; // pausa: não anda nem persegue (nem o movimento por Time.time)
             float dt = Time.deltaTime;
             cycle.SetAggro(TargetInSight());
             cycle.Tick(dt);

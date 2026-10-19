@@ -75,9 +75,9 @@ namespace SolDeCobre.EditorTools
                 Block("Step_3", new Vector3(13, 1.2f, 0), new Vector3(2, 2.4f, 3), material);
                 var cameraObject = new GameObject("Main Camera"); cameraObject.tag = "MainCamera";
                 var camera = cameraObject.AddComponent<Camera>();
-                // Perspectiva FOV vertical 35° (camera-2-5d.md); distância em Z precisa
-                // ser calibrada para ~18 m de largura no aspect de referência.
-                camera.orthographic = false; camera.fieldOfView = 35f;
+                // Laboratório: ortográfica, enquadramento estável do teste de movimento.
+                // A câmera do JOGO é perspectiva FOV 35° (ver EstacaoSliceBootstrap e camera-2-5d.md).
+                camera.orthographic = true; camera.orthographicSize = 4.5f;
                 camera.clearFlags = CameraClearFlags.SolidColor;
                 camera.backgroundColor = new Color(.08f, .11f, .17f);
                 cameraObject.transform.position = new Vector3(0, 1, -11);
