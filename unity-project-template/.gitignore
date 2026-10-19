@@ -1,0 +1,47 @@
+# Projeto Unity — Sol de Cobre
+# Copiar para a raiz do projeto Game/ ao migrar o kit (ver 12-desenvolvimento/08-bootstrap-local-v4.md).
+# Versionar Assets/ e seus .meta, ProjectSettings/, Packages/manifest.json e packages-lock.json reais.
+
+# Diretórios gerados pelo Editor
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Artefatos de IL2CPP e Gradle
+/[Aa]ssets/[Aa]ssetStoreTools*
+/[Aa]ssets/[Pp]lugins/[Ee]ditor/JetBrains*
+.gradle/
+
+# IDEs
+.vs/
+.vscode/
+.idea/
+/*.csproj
+/*.sln
+/*.unityproj
+/*.userprefs
+/*.pidb
+/*.booproj
+/*.svd
+/*.user
+
+# SO
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Crash / builds de jogo (não versionar APK/AAB/IPA)
+sysinfo.txt
+*.apk
+*.aab
+*.ipa
+*.app
+
+# NÃO ignorar: o laboratório gerado e seus GUIDs podem ser versionados para a equipe.
+!/[Aa]ssets/_Generated/
