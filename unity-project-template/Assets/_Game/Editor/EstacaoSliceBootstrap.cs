@@ -42,6 +42,10 @@ namespace SolDeCobre.EditorTools
                 var mat = new Material(shader) { name = "SliceSandstone" };
                 mat.SetColor("_BaseColor", new Color(.56f, .37f, .21f));
                 AssetDatabase.CreateAsset(mat, Folder + "/SliceSandstone.mat");
+                // Cores de leitura do graybox: distinguem herói/inimigo/chefe num relance.
+                var matPlayer = MakeMat(shader, "SlicePlayer", new Color(.20f, .45f, .90f), Folder);
+                var matEnemy = MakeMat(shader, "SliceEnemy", new Color(.85f, .20f, .20f), Folder);
+                var matBoss = MakeMat(shader, "SliceBoss", new Color(.95f, .55f, .12f), Folder);
 
                 // Controles e herói
                 var controls = BuildControls();
@@ -56,7 +60,7 @@ namespace SolDeCobre.EditorTools
                 Block("Platform_2", new Vector3(0, 2.0f, 0), new Vector3(4, .5f, 3), mat);
                 Block("Platform_4", new Vector3(8, 4.0f, 0), new Vector3(4, .5f, 3), mat);
 
-                var player = BuildPlayer(hero, controls, mat);
+                var player = BuildPlayer(hero, controls, matPlayer);
 
                 // O laço do player interage com o núcleo-core do chefe
                 var lasso = player.GetComponent<LassoAbility>();
@@ -67,7 +71,7 @@ namespace SolDeCobre.EditorTools
                 var fiscalVisual = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 fiscalVisual.name = "FiscalVisual"; fiscalVisual.transform.SetParent(fiscalObj.transform, false);
                 fiscalVisual.transform.localScale = new Vector3(1.4f, 2.4f, 1.4f);
-                fiscalVisual.GetComponent<Renderer>().sharedMaterial = mat;
+                fiscalVisual.GetComponent<Renderer>().sharedMaterial = matBoss;
                 var ring = new GameObject("BOSS-01_Ring");
                 ring.transform.SetParent(fiscalObj.transform, false);
                 ring.transform.localPosition = new Vector3(0, 1.2f, 0);
@@ -78,8 +82,8 @@ namespace SolDeCobre.EditorTools
                 SetRef(boss, "lasso", lasso);
 
                 // Dois inimigos simples (hover + patrol)
-                var enemyA = BuildEnemy("ENM-01_Hover", EnemyFamily.Hover, "ENM-01", new Vector3(-4, 2.5f, 0), player.transform, mat);
-                var enemyB = BuildEnemy("ENM-04_Patrol", EnemyFamily.Patrol, "ENM-04", new Vector3(2, 0.4f, 0), player.transform, mat);
+                var enemyA = BuildEnemy("ENM-01_Hover", EnemyFamily.Hover, "ENM-01", new Vector3(-4, 2.5f, 0), player.transform, matEnemy);
+                var enemyB = BuildEnemy("ENM-04_Patrol", EnemyFamily.Patrol, "ENM-04", new Vector3(2, 0.4f, 0), player.transform, matEnemy);
 
                 // Checkpoints
                 var cpA = MakeCheckpoint("CP-01-01", new Vector3(-8, 0.4f, 0));
@@ -181,6 +185,14 @@ namespace SolDeCobre.EditorTools
             var marker = cp.AddComponent<CheckpointMarker>();
             SetField(marker, "checkpointId", id);
             return marker;
+        }
+
+        static Material MakeMat(Shader shader, string name, Color color, string folder)
+        {
+            var m = new Material(shader) { name = name };
+            m.SetColor("_BaseColor", color);
+            AssetDatabase.CreateAsset(m, folder + "/" + name + ".mat");
+            return m;
         }
 
         static void Block(string name, Vector3 position, Vector3 scale, Material mat)
