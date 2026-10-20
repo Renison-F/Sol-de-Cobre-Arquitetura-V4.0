@@ -47,6 +47,7 @@ namespace SolDeCobre.EditorTools
                 var controls = BuildControls();
                 var hero = ScriptableObject.CreateInstance<HeroDefinition>();
                 hero.heroId = "mara"; hero.canUseLasso = true;
+                hero.moveSpeed = 7f; hero.jumpHeight = 2.3f; hero.gravity = -32f; // baseline responsivo
                 AssetDatabase.CreateAsset(hero, Folder + "/MaraHero.asset");
 
                 // Pátio 24 m e três plataformas a 0/2/4 m (BOSS-01.md)

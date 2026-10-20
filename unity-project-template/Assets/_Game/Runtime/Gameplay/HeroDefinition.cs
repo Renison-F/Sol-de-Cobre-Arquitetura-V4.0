@@ -5,9 +5,10 @@ namespace SolDeCobre.Gameplay
     public sealed class HeroDefinition : ScriptableObject
     {
         public string heroId;
-        public float moveSpeed = 5f;
-        public float jumpHeight = 2f;
-        public float gravity = -18f;
+        // Baseline "responsivo": gravidade forte evita flutuar; ajuste fino no Inspector.
+        public float moveSpeed = 7f;
+        public float jumpHeight = 2.3f;
+        public float gravity = -32f;
         public bool canUseLasso;
         public bool canUseElectricCharge;
     }

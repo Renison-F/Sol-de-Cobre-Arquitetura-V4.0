@@ -5,7 +5,7 @@ namespace SolDeCobre.Gameplay
     public sealed class PlayerMotor2_5D : MonoBehaviour
     {
         [SerializeField] HeroDefinition hero;
-        [SerializeField] float coyoteTime=0.12f,jumpBuffer=0.15f,acceleration=30f,deceleration=40f;
+        [SerializeField] float coyoteTime=0.12f,jumpBuffer=0.15f,acceleration=70f,deceleration=90f;
         CharacterController controller;
         float verticalSpeed,horizontal,velocityX,lastGround=-100f,jumpAt=-100f,planeZ;
         bool jumpReleased;
