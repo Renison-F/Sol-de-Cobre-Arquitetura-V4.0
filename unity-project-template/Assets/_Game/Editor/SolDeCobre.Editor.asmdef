@@ -4,6 +4,7 @@
   "references": [
     "SolDeCobre.Domain",
     "SolDeCobre.Runtime",
+    "SolDeCobre.UI",
     "Unity.InputSystem"
   ],
   "includePlatforms": [

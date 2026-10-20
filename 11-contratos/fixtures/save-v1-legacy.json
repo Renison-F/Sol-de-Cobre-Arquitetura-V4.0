@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "chapterId": "LVL-03",
+  "checkpointId": "CP-03-02",
+  "heroId": "ze",
+  "questFlags": ["POCO_EXAMINADO", "LACO_APRENDIDO", "DESVIO_ENCONTRADO"]
+}

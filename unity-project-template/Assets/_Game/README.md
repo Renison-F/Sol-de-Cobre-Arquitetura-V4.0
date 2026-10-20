@@ -1,3 +1,26 @@
+# Incrementos A–G + integração (headless) adicionados
+
+Ver `12-desenvolvimento/15-incrementos-a-d-headless.md`. Resumo do que entrou:
+- **Domain** (engine-free, testado com Roslyn, **95 testes EditMode**): `GamePhase` estendido;
+  `Gameplay/AxisProcessing`, `TargetSelection`, `AbilityController`, `CompanionDispatch`,
+  `EnemyThreatCycle`, `BossEncounter`, `HeroVitality`, `HeroSwitcher`; `Narrative/MissionProgress`;
+  `Hud/ThreatPresentation`, `PlayerPreferences`, `InputDeviceTracker`, `AudioCueBus`, `HudModel`;
+  `Security/AccessGate`, `RenewalScheduler`, `AccessCoordinator`, `LicenseRenewalService`, `IEntitlement`;
+  `Progression/SaveDataV3`, `SaveValidationV3`, `FlagCatalog`, `SaveMigrator`, `ISaveCodec`,
+  `SaveStore`, `SessionState`.
+- **Runtime:** `GameplayControls`, `PlayerInputBridge` (reescrito), `CameraFollow2_5D`,
+  `AbilityTargetSource/Targeting`, `LassoAbility`, `AbilityDriver`, `World/CompanionController`,
+  `World/FiscalBoss`, `World/CommonEnemy`, `Narrative/MissionController`, `Hud/AudioDirector`,
+  `Hud/PreferencesStore`, `Security/UnconfiguredAccess`, `Progression/UnityJsonSaveCodec`, `SaveSystem`.
+- **UI** (assembly `SolDeCobre.UI`): `TouchHoldButton`, `TouchHud`, `HudController`,
+  `AccessibilityController`, `GameDirector` (composition root) (ver `UI/README.md`).
+- **Editor:** `ProjectBootstrap` (laboratório) e `EstacaoSliceBootstrap` (graybox do slice).
+- Config Git (`.gitignore`/`.gitattributes`) e `Packages/README.md` na raiz do template.
+
+Runtime/Editor/UI só compilam no Unity; Domain foi verificado fora dele. Migrar por diff.
+
+---
+
 # Kit de referência Unity V4
 
 Quatro asmdefs, Domain sem UnityEngine, Runtime com Input System, Editor com ProjectBootstrap e quatro testes EditMode. Guia local: `12-desenvolvimento/08-bootstrap-local-v4.md`. O gerador cria assets reais quando executado no Unity; não foi executado neste ambiente. Não copiar esta _Game junto da antiga: migrar por diff para evitar classes duplicadas. QuestState.Ready agora recebe flags; QuestRules adapta QuestDefinition.

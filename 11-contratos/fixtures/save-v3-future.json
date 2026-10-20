@@ -1,0 +1,12 @@
+{
+  "schema_version": 4,
+  "slot": 1,
+  "revision": 9,
+  "chapter": "LVL-01",
+  "checkpoint": "CP-01-01",
+  "hero": "mara",
+  "flags": [],
+  "atlas": [],
+  "written_at": 1900000000,
+  "options": { "assist": false, "subtitles": true, "reduced_flashes": true, "future_field": true }
+}

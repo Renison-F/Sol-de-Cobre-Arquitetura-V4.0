@@ -1,0 +1,19 @@
+{
+  "name": "SolDeCobre.UI",
+  "rootNamespace": "SolDeCobre",
+  "references": [
+    "SolDeCobre.Domain",
+    "SolDeCobre.Runtime",
+    "Unity.InputSystem",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

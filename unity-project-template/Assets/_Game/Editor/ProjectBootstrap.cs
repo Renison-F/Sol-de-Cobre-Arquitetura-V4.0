@@ -38,20 +38,9 @@ namespace SolDeCobre.EditorTools
                 material.SetColor("_BaseColor", new Color(.56f, .37f, .21f));
                 AssetDatabase.CreateAsset(material, Folder + "/LabSandstone.mat");
 
-                var actions = ScriptableObject.CreateInstance<InputActionAsset>();
-                try
-                {
-                    var map = actions.AddActionMap("Gameplay");
-                    var move = map.AddAction("Move", InputActionType.Value, expectedControlLayout: "Axis");
-                    move.AddCompositeBinding("1DAxis").With("Negative", "<Keyboard>/a").With("Positive", "<Keyboard>/d");
-                    move.AddCompositeBinding("1DAxis").With("Negative", "<Keyboard>/leftArrow").With("Positive", "<Keyboard>/rightArrow");
-                    move.AddCompositeBinding("1DAxis").With("Negative", "<Gamepad>/dpad/left").With("Positive", "<Gamepad>/dpad/right");
-                    move.AddBinding("<Gamepad>/leftStick/x").WithProcessor("axisDeadzone");
-                    var jump = map.AddAction("Jump", InputActionType.Button);
-                    jump.AddBinding("<Keyboard>/space");
-                    jump.AddBinding("<Gamepad>/buttonSouth");
-                    File.WriteAllText(Folder + "/LabControls.inputactions", actions.ToJson());
-                }
+                // Mapa de controles central (teclado/gamepad/touch por ação).
+                var actions = GameplayControls.Build();
+                try { File.WriteAllText(Folder + "/LabControls.inputactions", actions.ToJson()); }
                 finally { UnityEngine.Object.DestroyImmediate(actions); }
                 AssetDatabase.ImportAsset(Folder + "/LabControls.inputactions");
                 var controls = AssetDatabase.LoadAssetAtPath<InputActionAsset>(Folder + "/LabControls.inputactions");
@@ -86,6 +75,8 @@ namespace SolDeCobre.EditorTools
                 Block("Step_3", new Vector3(13, 1.2f, 0), new Vector3(2, 2.4f, 3), material);
                 var cameraObject = new GameObject("Main Camera"); cameraObject.tag = "MainCamera";
                 var camera = cameraObject.AddComponent<Camera>();
+                // Laboratório: ortográfica, enquadramento estável do teste de movimento.
+                // A câmera do JOGO é perspectiva FOV 35° (ver EstacaoSliceBootstrap e camera-2-5d.md).
                 camera.orthographic = true; camera.orthographicSize = 4.5f;
                 camera.clearFlags = CameraClearFlags.SolidColor;
                 camera.backgroundColor = new Color(.08f, .11f, .17f);
