@@ -28,6 +28,7 @@ namespace SolDeCobre.App
         [SerializeField] bool autoStartOnPlay = true;             // inicia a sessão no Play
         [SerializeField] float hitRange = 1.2f;                   // alcance do dano por contato
         [SerializeField] float checkpointRange = 1.5f;            // raio para ativar checkpoint
+        [SerializeField] bool verboseLog = true;                  // log de depuração (graybox)
 
         readonly GameSignals signals = new GameSignals();
         readonly GamePhaseMachine phase = new GamePhaseMachine();
@@ -120,7 +121,13 @@ namespace SolDeCobre.App
         public void DamageHero(float amount)
         {
             if (phase.Current != GamePhase.Playing) return;
-            if (hero.TakeDamage(amount)) RestoreCheckpoint(); // morte -> volta ao checkpoint
+            bool dead = hero.TakeDamage(amount);
+            if (verboseLog) Debug.Log($"[SC] Dano {amount} -> vida {hero.Current}/{hero.Max}");
+            if (dead)
+            {
+                if (verboseLog) Debug.Log("[SC] Herói caiu -> respawn no checkpoint");
+                RestoreCheckpoint(); // morte -> volta ao checkpoint
+            }
         }
 
         void RestoreCheckpoint()
@@ -137,11 +144,16 @@ namespace SolDeCobre.App
             if (session == null) return;
             session.Checkpoint = checkpointId;
             session.NextRevision();
-            if (!saves.Write(session.ToSave(GameClock.NowUnix())))
-                Debug.LogWarning("Falha ao gravar checkpoint; save anterior preservado."); // sem sucesso fictício
+            if (saves.Write(session.ToSave(GameClock.NowUnix())))
+            { if (verboseLog) Debug.Log("[SC] Checkpoint salvo: " + checkpointId); }
+            else Debug.LogWarning("Falha ao gravar checkpoint; save anterior preservado."); // sem sucesso fictício
         }
 
-        void OnFlagGranted(string flag) => session?.GrantFlag(flag);
+        void OnFlagGranted(string flag)
+        {
+            session?.GrantFlag(flag);
+            if (verboseLog) Debug.Log("[SC] Flag concedida: " + flag);
+        }
 
         public void TogglePause()
         {
