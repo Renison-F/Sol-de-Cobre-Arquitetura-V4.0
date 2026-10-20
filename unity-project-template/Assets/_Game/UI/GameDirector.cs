@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using SolDeCobre.Core;
 using SolDeCobre.Gameplay;
@@ -20,12 +21,20 @@ namespace SolDeCobre.App
         [SerializeField] FiscalBoss boss;
         [SerializeField] AccessibilityController accessibility;
         [SerializeField] PlayerInputBridge input;
+        [SerializeField] Transform heroTransform;                 // posição do herói (dano/checkpoint)
         [SerializeField] CommonEnemy[] enemies = Array.Empty<CommonEnemy>();
+        [SerializeField] CheckpointMarker[] checkpoints = Array.Empty<CheckpointMarker>();
         [SerializeField] int slot = 1;
+        [SerializeField] bool autoStartOnPlay = true;             // inicia a sessão no Play
+        [SerializeField] float hitRange = 1.2f;                   // alcance do dano por contato
+        [SerializeField] float checkpointRange = 1.5f;            // raio para ativar checkpoint
 
         readonly GameSignals signals = new GameSignals();
         readonly GamePhaseMachine phase = new GamePhaseMachine();
         readonly InputDeviceTracker device = new InputDeviceTracker();
+        readonly HashSet<IThreatSource> threatHitThisWindow = new HashSet<IThreatSource>();
+        readonly HashSet<string> checkpointsTriggered = new HashSet<string>();
+        IThreatSource[] threats = Array.Empty<IThreatSource>();
         SaveSystem saves;
         SessionState session;
         HeroVitality hero;
@@ -42,6 +51,21 @@ namespace SolDeCobre.App
             signals.CheckpointReached += OnCheckpoint;
             signals.QuestFlagGranted += OnFlagGranted;
             if (input != null) input.PauseToggled += TogglePause;
+            BuildThreats();
+        }
+
+        void Start()
+        {
+            if (autoStartOnPlay) StartSession();
+        }
+
+        // Coleta as fontes de ameaça (chefe + inimigos) para o aplicador de dano.
+        void BuildThreats()
+        {
+            var list = new List<IThreatSource>();
+            if (boss != null) list.Add(boss);
+            foreach (var e in enemies) if (e != null) list.Add(e);
+            threats = list.ToArray();
         }
         void OnDestroy()
         {
@@ -105,6 +129,7 @@ namespace SolDeCobre.App
             if (result.Data != null) session = SessionState.FromSave(result.Data);
             RestoreFromSession();
             if (boss != null) boss.RestoreCheckpoint();
+            threatHitThisWindow.Clear(); // após respawn, ameaças podem acertar de novo
         }
 
         void OnCheckpoint(string checkpointId)
@@ -130,6 +155,47 @@ namespace SolDeCobre.App
         }
 
         void Update()
+        {
+            ApplyThreatDamage();
+            CheckCheckpoints();
+            UpdateHud();
+        }
+
+        // Dano demonstrável: só na janela Active da ameaça e por alcance; um acerto por
+        // janela (rearma quando a janela fecha). Fora disso, nenhum contato fere.
+        void ApplyThreatDamage()
+        {
+            if (heroTransform == null || phase.Current != GamePhase.Playing) return;
+            foreach (var t in threats)
+            {
+                if (t == null) continue;
+                if (!t.DamageActive) { threatHitThisWindow.Remove(t); continue; }
+                if (threatHitThisWindow.Contains(t) || t.Origin == null) continue;
+                if (Vector3.Distance(t.Origin.position, heroTransform.position) <= hitRange)
+                {
+                    threatHitThisWindow.Add(t);
+                    DamageHero(t.DamageAmount);
+                }
+            }
+        }
+
+        // Checkpoint por proximidade: ativa uma vez e grava o save.
+        void CheckCheckpoints()
+        {
+            if (heroTransform == null || phase.Current != GamePhase.Playing) return;
+            foreach (var cp in checkpoints)
+            {
+                if (cp == null || string.IsNullOrEmpty(cp.CheckpointId)) continue;
+                if (checkpointsTriggered.Contains(cp.CheckpointId)) continue;
+                if (Vector3.Distance(cp.transform.position, heroTransform.position) <= checkpointRange)
+                {
+                    checkpointsTriggered.Add(cp.CheckpointId);
+                    cp.Activate(signals); // -> OnCheckpoint grava o save
+                }
+            }
+        }
+
+        void UpdateHud()
         {
             if (hud == null) return;
             var level = boss != null ? ThreatPresentation.FromBossPhase(boss.Phase) : ThreatLevel.None;

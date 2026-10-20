@@ -9,7 +9,7 @@ namespace SolDeCobre.World
     // Agressão exige alvo em raio de 8 m e linha de visão. Dano só na janela Active.
     // Derrota publica o ID uma vez. Movimento das famílias simples (patrol/hover) aqui;
     // dive/turret entram parados e recebem movimento próprio ao serem produzidos.
-    public sealed class CommonEnemy : MonoBehaviour
+    public sealed class CommonEnemy : MonoBehaviour, IThreatSource
     {
         [SerializeField] string enemyId = "ENM-01";
         [SerializeField] EnemyFamily family = EnemyFamily.Hover;
@@ -30,6 +30,10 @@ namespace SolDeCobre.World
         public string EnemyId => enemyId;
         public bool DealsDamageNow => cycle != null && cycle.DealsDamageNow;
         public float DamageAmount => 1f;
+
+        // IThreatSource (só fere na janela Active).
+        public bool DamageActive => DealsDamageNow;
+        public Transform Origin => transform;
 
         void Awake()
         {

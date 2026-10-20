@@ -82,8 +82,8 @@ namespace SolDeCobre.EditorTools
                 var enemyB = BuildEnemy("ENM-04_Patrol", EnemyFamily.Patrol, "ENM-04", new Vector3(2, 0.4f, 0), player.transform, mat);
 
                 // Checkpoints
-                MakeCheckpoint("CP-01-01", new Vector3(-8, 0.4f, 0));
-                MakeCheckpoint("CP-01-02", new Vector3(0, 2.4f, 0));
+                var cpA = MakeCheckpoint("CP-01-01", new Vector3(-8, 0.4f, 0));
+                var cpB = MakeCheckpoint("CP-01-02", new Vector3(0, 2.4f, 0));
 
                 // Missão e diretor (composition root)
                 var mission = new GameObject("MissionController").AddComponent<MissionController>();
@@ -92,10 +92,12 @@ namespace SolDeCobre.EditorTools
                 SetRef(director, "mission", mission);
                 SetRef(director, "boss", boss);
                 SetRef(director, "input", player.GetComponent<PlayerInputBridge>());
+                SetRef(director, "heroTransform", player.transform);
                 SetRefArray(director, "enemies", new UnityEngine.Object[]
                 {
                     enemyA.GetComponent<CommonEnemy>(), enemyB.GetComponent<CommonEnemy>()
                 });
+                SetRefArray(director, "checkpoints", new UnityEngine.Object[] { cpA, cpB });
 
                 // Câmera 2.5D perspectiva
                 var camObj = new GameObject("Main Camera"); camObj.tag = "MainCamera";
@@ -172,12 +174,13 @@ namespace SolDeCobre.EditorTools
             return e;
         }
 
-        static void MakeCheckpoint(string id, Vector3 pos)
+        static CheckpointMarker MakeCheckpoint(string id, Vector3 pos)
         {
             var cp = new GameObject("Checkpoint_" + id);
             cp.transform.position = pos;
             var marker = cp.AddComponent<CheckpointMarker>();
             SetField(marker, "checkpointId", id);
+            return marker;
         }
 
         static void Block(string name, Vector3 position, Vector3 scale, Material mat)

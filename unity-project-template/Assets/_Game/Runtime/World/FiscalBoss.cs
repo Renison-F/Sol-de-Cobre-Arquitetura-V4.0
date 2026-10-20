@@ -7,7 +7,7 @@ namespace SolDeCobre.World
     // (deadline; não espera callback de animação), laço na janela Exposed pontua,
     // Active abre a janela de dano ao herói, derrota publica BOSS_01_DEFEATED uma vez.
     // A física/arte do confronto e os blocos de carga são trabalho de cena.
-    public sealed class FiscalBoss : MonoBehaviour
+    public sealed class FiscalBoss : MonoBehaviour, IThreatSource
     {
         [SerializeField] LassoAbility lasso;
         [SerializeField] string ringTargetId = "BOSS-01-RING"; // AbilityTargetSource do núcleo exposto
@@ -21,6 +21,11 @@ namespace SolDeCobre.World
         public BossPhase Phase => boss?.Phase ?? BossPhase.Dormant;
         public bool DamageWindowOpen => boss != null && boss.DealsHeroDamageNow; // hitbox lê isto
         public float DamagePerHit => boss?.DamagePerHit ?? 1f;
+
+        // IThreatSource: só fere na janela Active (sem contato quando inativo).
+        public bool DamageActive => DamageWindowOpen;
+        public float DamageAmount => DamagePerHit;
+        public Transform Origin => transform;
 
         void Awake()
         {
